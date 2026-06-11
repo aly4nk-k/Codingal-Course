@@ -1,0 +1,108 @@
+body {
+    background-image:linear-gradient(to left,rgb(0, 0, 0),rgb(7, 173, 185));
+}
+
+.shadow-text {
+    font-family: 'Black Ops One', cursive;
+    text-shadow: 3px 3px cyan,9px 9px 8px black;
+    margin-bottom:25px;
+}
+
+.head-box {
+    border: 2px solid  rgb(12, 126, 126);
+    border-radius:15px;
+    padding:20px;
+    background-image:linear-gradient(to left,black,cyan);
+    width:450px;
+    margin-bottom:40px;
+}
+
+#header-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#header-box h1 {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.size {
+    font-size: 20px;
+    font-family: 'Black Ops One', cursive;
+    text-shadow: 3px -3px cyan, 5px -5px 5px black;
+}
+
+.menu-box {
+    border: 2px solid cyan;
+    padding: 20px;
+    background-image: linear-gradient(to bottom, black, cyan);
+    border-radius: 10px;
+    margin-bottom:20px;
+    width:650px;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    background-color: cyan;
+    border-radius: 50%;
+    animation: twinkle 2s infinite alternate;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes twinkle {
+    from {
+        background-color: cyan;
+    }
+
+    to {
+        background-color: black;
+    }
+}
+
+.underline {
+    text-decoration:underline;
+}
+
+
+.color {
+    font-family: "Bitcount Single", sans-serif;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-image:linear-gradient(to right,cyan,black);
+}
+
+.text-shadow {
+  font-family: "Orbitron", sans-serif;
+  color:cyan;
+text-shadow: 2px 2px black, 4px 4px black, 6px 6px black;
+}
+
+.retro {
+    font-family: "Press Start 2P", cursive;
+    font-size:17px;
+    text-shadow: 3px 3px cyan, 7px 10px 10px black;
+}
+
+.hindi {
+    font-family: "Gajraj One", sans-serif;
+}
+
+footer {
+    border:2px solid cyan;
+    background-image:linear-gradient(to right,cyan,black);
+    padding:15px;
+    border-radius:50px;
+}
