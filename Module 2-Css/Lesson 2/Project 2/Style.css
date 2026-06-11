@@ -21,6 +21,7 @@ header {
 
 #size{
     font-size:60px;
+    animation: floatcloud 1s infinite alternate;
 }
 
 #city {
@@ -44,4 +45,14 @@ header {
 img {
     height:350px;
     border-radius:20px;
+}
+
+@keyframes floatcloud{
+    from {
+        transform: translate(0);
+    }
+
+    to {
+        transform: translate(-20px);
+    }
 }
