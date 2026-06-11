@@ -1,0 +1,47 @@
+.box-card {
+    border-radius:10px;
+    color:white;
+}
+
+h1 {
+    color:white;
+    text-align:center;
+}
+
+.bg {
+    background-image: linear-gradient(to top, rgb(50, 3, 60),rgb(4, 4, 66));
+    background-repeat:no-repeat;
+    height:1100px;
+}
+
+header {
+    background-image:linear-gradient(to right,rgb(55, 5, 55),coral);
+    margin-bottom:20px;
+}
+
+#size{
+    font-size:60px;
+}
+
+#city {
+    font-size:25px;
+}
+
+.weather-today{
+    background-image: linear-gradient(to right,rgb(58, 123, 245),blue);
+    border-radius:20px;
+    padding:20px;
+    margin-bottom:30px;
+}
+/* i learnt about padding while i was doing practice websites and margin  */
+
+.weather-weekly{
+    background-color:skyblue;
+    border-radius:10px;
+    padding:20px;
+}
+
+img {
+    height:350px;
+    border-radius:20px;
+}
