@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Module 2 - Lesson 4 - Activity 1 - My Food Menu</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #fff8f0;
+            padding: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #e65c00;
+        }
+
+        /* Sibling Selector - styles the paragraph right after h1 */
+h1 + p{
+    background-color:red;
+    border-radius:10px;
+    border: 2px solid white;
+    color:white;
+    height:45px;
+    padding:10px 8px;
+    font-size:30px;
+}
+        ul {
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        /* Child Selector - styles only direct li children of ul */
+ul > li{
+    list-style:none;
+    font-size:18px;
+    font-weight:bold;
+    color:coral;
+    background:rgb(255, 245, 213);
+    border-radius:10px;
+    padding:10px 15px;
+    width:250px;
+    margin:15px auto;
+}
+        /* nth-child - highlights the 3rd item as Chef's Special */
+ul li:nth-child(3){
+    background:rgb(255, 255, 201);
+    color:rgb(228, 105, 61)
+}
+        .desc {
+            color:rgb(255, 192, 75);
+            margin-top:20px;
+            font-size:15px;
+            width:200px;
+            margin: 0 auto;
+        }
+
+        /* first-letter - makes the first letter big and bold */
+.desc::first-letter{
+    font-size:220%;
+    color:rgb(255, 176, 29);
+    font-weight:bold;
+}
+
+.links{
+    margin-top: 25px;
+}
+        /* Hover Effect - links glow when mouse moves over them */
+        a {
+            color:rgb(255, 189, 66);
+            text-decoration:none;
+            font-size:15px;
+            border-radius:8px;
+            margin:0 12px;
+            padding:8px 18px;
+            border: 2px solid rgb(255, 206, 114);
+        }
+
+        a:hover {
+            background:rgb(255, 166, 0);
+            color:white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>My Food Menu</h1>
+    <p>Pick your favourite dish and dig in!</p>
+
+    <ul>
+        <li>Pizza</li>
+        <li>Burger</li>
+        <li>Tacos — Chef's Special!</li>
+        <li>Noodles</li>
+        <li>Ice Cream</li>
+    </ul>
+
+    <p class="desc">
+        Every dish on this menu is made with love and loads of flavour. Try them
+        all and find your favourite!
+    </p>
+
+    <div class="links">
+        <a href="#">Order Now</a>
+        <a href="#">See More</a>
+    </div>
+</body>
+
+</html>
