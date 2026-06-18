@@ -27,6 +27,14 @@ body{
 }
 
 
+h2 + p{
+    font-weight:bold;
+}
+
+h2 ~ p{
+    color:rgb(0, 70, 145);
+    font-size:20px;
+}
 .main {
     border: 2px solid rgb(0, 70, 145);
     background: rgb(192, 213, 255);
@@ -51,11 +59,6 @@ body{
     text-shadow:2px -2px rgb(182, 227, 255);
 }
 
-p{
-    color:rgb(0, 70, 145);
-    font-weight:bold;
-    font-size:20px;
-}
 
 ul{
     list-style:none
