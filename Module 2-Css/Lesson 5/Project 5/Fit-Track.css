@@ -111,10 +111,14 @@ background :rgb(255, 100, 39);
     padding:11px 13px;
     color:darkslategray;
     font-weight:bold;
+    width:550px;
 }
 
 .hding {
     text-shadow: 2px -1px 2px white,2px -2px 2px lightseagreen,3px -3px  rgb(245, 94, 94);
-    
+    font-size:35px;
 }
 
+.p {
+    font-size:20px;
+}
