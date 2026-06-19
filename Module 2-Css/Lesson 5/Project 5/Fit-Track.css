@@ -1,0 +1,120 @@
+#shadow {
+    color:darkslategray;
+    text-shadow:2px 1px black, 3px 3px 3px darkslategray;
+    text-align:center;
+    border:2px solid lightseagreen;
+    border-radius:15px;
+    background-color:paleturquoise;
+    width:450px;
+    margin:30px auto;
+}
+
+body {
+    background-color:lightcyan;
+}
+
+.text-card {
+    color:darkslategray;
+    border:2px solid lightseagreen;
+    font-size:20px;
+    font-weight:bold;
+    border-radius:10px;
+    padding:11px 11px;
+    width:500px;
+    background-color:paleturquoise;
+}
+
+.top-cards {
+    border:2px solid lightseagreen;
+    background-color:rgb(253, 253, 231);
+    padding:10px 13px;
+    width:400px;
+    height:250px;
+    font-weight:bold;
+    border-radius:11px;
+    margin-right:20px;
+    margin-bottom:20px;
+}
+
+button {
+    font-weight:bold;
+    border-radius:30px;
+    padding:10px 12px;
+    width:150px;
+    font-size:20px;
+    background-color:lightcyan;
+    margin:0 auto;
+    display:block;
+}
+
+button:hover {
+color :white;
+background :rgb(255, 100, 39);
+}
+
+.color {
+    color:rgb(70, 122, 122);
+}
+
+.color:hover {
+    text-decoration:underline;
+}
+
+.underline:hover {
+    text-decoration:underline;
+}
+
+.underline {
+    text-align:center;
+    font-weight:bold;
+}
+
+.quote {
+    color:rgb(255, 110, 110);
+    font-size:20px;
+    text-align:center;
+}
+
+.quote:hover {
+    border:2px dashed black;
+    color:white;
+    background-color:rgb(237, 165, 165);
+    border-radius:15px;
+}
+
+#align {
+    display:flex;
+}
+
+
+.bottom-cards {
+    border: 2px solid lightseagreen;
+        background-color: rgb(253, 253, 231);
+        padding: 10px 13px;
+        width: 400px;
+        height: 250px;
+        font-weight: bold;
+        border-radius: 11px;
+        margin-right: 20px;
+        margin-bottom:20px;
+}
+
+
+#pt2 {
+    display:flex;
+}
+
+.tips {
+    border:2px solid lightseagreen;
+    background-color:rgb(250, 200, 181);
+    border-radius:25px;
+    padding:11px 13px;
+    color:darkslategray;
+    font-weight:bold;
+}
+
+.hding {
+    text-shadow: 2px -1px 2px white,2px -2px 2px lightseagreen,3px -3px  rgb(245, 94, 94);
+    
+}
+
