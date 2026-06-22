@@ -1,403 +1,285 @@
-.shadow-text{
-    color:darkblue;
-    font-size:30px;
-    margin-left:20px;
-}
-
-.image-bg{
-    background-image:url(bg-img.jpg);
-    height:350px;
-    color:white;
-    padding-top:100px;
-    text-align:center;
-    font-size:25px;
-    font-family: 'Berkshire Swash', cursive;
-    background-repeat:no-repeat;
-    width:100vw;
-    background-size:cover;
-}
-
-.h3{
-    padding:11px 20px;
-    background-color:darkblue;
-    width:100%;
-    text-align:center;
-    color:white;
-}
-
-.h3:hover{
-    background-color:white;
-    color:darkblue;
-    border-bottom:2px solid darkblue;
-}
-
+/* ===== Base ===== */
 body{
     margin:0;
 }
 
-.h3{
-    margin:0;
-    margin-bottom:50px;
+.shadow-text{
+    color: darkblue;
+    font-size: 30px;
+    margin-left: 20px;
 }
 
-.btn{
-    color:white;
-    font-size:20px;
-    text-decoration:none;
-    border:2px solid black;
-    background-color:darkblue;
-    padding:12px 20px;
-    border-radius:20px;
-    margin-left:10px;
-    margin-bottom:20px;
-    margin-top:10px;
+/* ===== Header / Section Titles ===== */
+.h3{
+    padding: 11px 20px;
+    background-color: darkblue;
+    width: 100%;
+    text-align: center;
+    color: white;
+    margin: 0 0 50px 0;
+}
+.h3:hover{
+    background-color: white;
+    color: darkblue;
+    border-bottom: 2px solid darkblue;
 }
 
 .h2{
-    font-size:30px;
-    margin-left:10px;
-    color:darkblue;
+    font-size: 30px;
+    margin-left: 10px;
+    color: darkblue;
 }
 
-.p{
-    margin-left:10px;
-    color:darkblue;
-    font-size:20px;
-    font-weight:bold;
-    border:2px solid white;
-    width:750px;
+.hding{
+    margin-top: 10px;
+    margin-left: 10px;
+    color: darkblue;
+    margin-bottom: 5px;
 }
 
-.img{
-    margin-left:10px;
-    border-radius:10px;
+/* ===== Hero / Background Images ===== */
+.image-bg, .back, .city-img{
+    height: 350px;
+    color: white;
+    padding-top: 100px;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Berkshire Swash', cursive;
+    background-repeat: no-repeat;
+    width: 100vw;
+    background-size: cover;
 }
 
-.border{
-    border-bottom:2px solid darkblue;
-    margin-bottom:30px;
+.image-bg{
+    background-image: url(bg-img.jpg);
 }
-
-.align{
-    display:flex;
-    margin:10px 20px;
+.back{
+    background-image: url(chillax1.jpg);
 }
-
-.fix{
-    text-decoration:none;
-    color:darkblue;
-    border:2px solid black;
-    border-radius:20px;
-    display:inline-block;
-    position:absolute;
-    top:15px;
-    right:50px;
-    margin-bottom:20px;
-    padding:10px 10px;
-    font-weight:bold;
-}
-
-.fix:hover{
-    background-color:darkblue;
-    color:white;
-}
-header{
-    height:80px;
-}
-
-.false:hover{
-    background-color:darkblue;
-    color:white;
-}
-
-.false{
-    text-decoration: none;
-        color: darkblue;
-        border: 2px solid black;
-        border-radius: 20px;
-        display: inline-block;
-        position: absolute;
-        top: 15px;
-        right: 150px;
-        margin-bottom: 20px;
-        padding: 10px 10px;
-        font-weight: bold;
-}
-
-.farther:hover{
-    background-color:darkblue;
-    color:white;
-}
-
-.farther{
-text-decoration: none;
-color: darkblue;
-border: 2px solid black;
-border-radius: 20px;
-display: inline-block;
-position: absolute;
-top: 15px;
-right: 275px;
-margin-bottom: 20px;
-padding: 10px 10px;
-font-weight: bold;
-}
-/*PAGE 2*/
-
-form{
-    width:750px;
-    padding:8px 20px;
-    margin:0 auto;
-    border-radius:15px;
-    border:2px solid white;
-    color:white;
-}
-
-.size{
-    font-size:30px;
-    text-align:center;
-    margin-bottom:15px;
-    margin:0;
-    padding-top:20px;
-    color:white;
-    margin-bottom:10px;
+.city-img{
+    background-image: url(runway3.png);
+    padding-right: 100px;
+    background-position: center;
 }
 
 .bg-image{
-    background-image:url(view.jpg);
-    background-repeat:no-repeat;
-    background-size:cover;
-    width:100vw;
-    height:550px;
+    background-image: url(view.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 550px;
 }
 
-
-label{
-    display:block;
-    font-size:15px;
+.small{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100px;
+    height: 50px;
+    margin-top: 1px;
 }
 
-input{
-    margin-bottom:10px;
-    margin-top:5px;
+/* ===== Buttons / Action Links ===== */
+/* Shared header button base */
+.fix, .false, .farther, .fon, .click1, .fin, .fal, .clicked{
+    text-decoration: none;
+    color: darkblue;
+    border: 2px solid black;
+    border-radius: 20px;
+    display: inline-block;
+    position: absolute;
+    top: 15px;
+    margin-bottom: 20px;
+    padding: 10px 10px;
+    font-weight: bold;
+}
+
+/* Individual horizontal positions and specific overrides */
+.fix{ right: 50px; }
+.false{ right: 150px; }
+.fon{ right: 125px; background-color: white; }
+.click1{ right: 75px; }
+.farther{ right: 275px; }
+.fin{ right: 275px; }
+.fal{ right: 50px; }
+.clicked{
+    right: 250px;
+    color: white;
+    background-color: darkblue;
+}
+
+/* Hover state for header buttons */
+.fix:hover, .false:hover, .farther:hover, .fon:hover, .click1:hover, .fin:hover, .fal:hover, .clicked:hover{
+    background-color: darkblue;
+    color: white;
+}
+
+/* Shared generic button styles */
+.btn, .button, .block{
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn{
+    color: white;
+    font-size: 20px;
+    border: 2px solid black;
+    background-color: darkblue;
+    padding: 12px 20px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.button{
+    text-decoration: none;
+    color: darkblue;
+    border: 2px solid darkblue;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 10px 10px;
+    display: block;
+    width: 135px;
+    margin-bottom: 10px;
 }
 
 .block{
-    display:block;
-    text-decoration:none;
-    font-weight:bold;
-    padding:10px 10px;
-    color:white;
-    border:2px solid white;
-    border-radius:20px;
-    width:50px;
-    margin-top:20px;
+    display: block;
+    padding: 10px 10px;
+    color: white;
+    border: 2px solid white;
+    width: 50px;
+    margin-top: 20px;
 }
 
-.agree{
-    font-size:15px;
-    margin-top:10px;
+.btn:hover, .button:hover, .block:hover{
+    background-color: darkblue;
+    color: white;
+    border: 2px solid darkblue;
 }
 
-.agree:hover{
-    text-decoration:underline;
+/* ===== Layout / Utilities ===== */
+.border{
+    border-bottom: 2px solid darkblue;
+    margin-bottom: 30px;
 }
 
-.remove{
-    text-decoration: none;
-    margin-left:5px;
+.align{
+    display: flex;
+    margin: 10px 20px;
 }
 
-.underline:hover{
-    text-decoration:underline;
-    text-decoration-color:white;
+.img{
+    margin-left: 10px;
+    border-radius: 10px;
 }
 
-.main{
-    color:darkblue;
-    margin-left:10px;
-}
-
-.block:hover{
-    background-color:darkblue;
-    color:white;
-    border:2px solid darkblue;
-}
-
-/*PAGE 3*/
-
-.fon{
-text-decoration: none;
-color: darkblue;
-border: 2px solid black;
-border-radius: 20px;
-display: inline-block;
-position: absolute;
-top: 15px;
-right: 125px;
-margin-bottom: 20px;
-padding: 10px 10px;
-font-weight: bold;
-background-color:white;
-}
-
-.fon:hover{
-    background-color:darkblue;
-    color:white;
-}
-.click1{
-text-decoration:none;
-color:darkblue;
-border:2px solid black;
-border-radius:20px;
-display:inline-block;
-position:absolute;
-top:15px;
-right:75px;
-margin-bottom:20px;
-padding:10px 10px;
-font-weight:bold;
-}
-
-.fin{
-text-decoration:none;
-color:darkblue;
-border:2px solid black;
-border-radius:20px;
-display:inline-block;
-position:absolute;
-top:15px;
-right:275px;
-margin-bottom:20px;
-padding:10px 10px;
-font-weight:bold;
-}
-
-.fin:hover{
-    background-color:darkblue;
-    color:white;
-}
-
-.fal{
-text-decoration: none;
-color: darkblue;
-border: 2px solid black;
-border-radius: 20px;
-display: inline-block;
-position: absolute;
-top: 15px;
-right: 50px;
-margin-bottom: 20px;
-padding: 10px 10px;
-font-weight: bold;
-}
-
-.fal:hover{
-    background-color:darkblue;
-    color:white;
-}
-.hding{
-    margin-top:10px;
-    margin-left:10px;
-    color:darkblue;
-    margin-bottom:5px;
-}
-
-.click1:hover{
-    background-color:darkblue;
-    color:white;
-}
-
-.back{
-    background-image: url(chillax1.jpg);
-        height: 350px;
-        color: white;
-        padding-top: 100px;
-        text-align: center;
-        font-size: 25px;
-        font-family: 'Berkshire Swash', cursive;
-        background-repeat: no-repeat;
-        width: 100vw;
-        background-size: cover;
-}
-
-.box-card{
-    border:2px solid darkblue;
-    color:darkblue;
-    background-color:white;
-    width:650px;
-    text-align:center;
-    border-radius:15px;
-    margin-left:20px;
-    height:450px;
-    font-weight:bold;
-    margin-top:30px;
-}
-
-.img-box {
+.img-box{
     width: 450px;
     height: 250px;
     overflow: hidden;
     border-radius: 10px;
-    border:2px solid darkblue;
-    margin-left:10px;
+    border: 2px solid darkblue;
+    margin-left: 10px;
 }
-
-.img-box img {
+.img-box img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.big{
-    font-size:30px;
+.box-card{
+    border: 2px solid darkblue;
+    color: darkblue;
+    background-color: white;
+    width: 650px;
+    text-align: center;
+    border-radius: 15px;
+    margin-left: 20px;
+    height: 450px;
+    font-weight: bold;
+    margin-top: 30px;
 }
 
 .flex{
-    display:flex;
-    margin-right:10px;
+    display: flex;
+    margin-right: 10px;
 }
 
-.button{
-    text-decoration:none;
-    color:darkblue;
-    border:2px solid darkblue;
-    margin-top:20px;
-    margin-left:20px;
-    border-radius:20px;
-    padding:10px 10px;
-    display:block;
-    width:135px;
-    font-weight:bold;
-    margin-bottom:10px;
+.big{
+    font-size: 30px;
 }
 
-.button:hover{
-    background-color:darkblue;
-    color:white;
-}
-/*PAGE 4*/
-
-.clicked{
-text-decoration: none;
-color: white;
-border: 2px solid black;
-border-radius: 20px;
-display: inline-block;
-position: absolute;
-top: 15px;
-right: 250px;
-margin-bottom: 20px;
-padding: 10px 10px;
-font-weight: bold;
-background-color:darkblue;
+.main{
+    color: darkblue;
+    margin-left: 10px;
 }
 
+.clr{
+    color: darkblue;
+    margin-left: 10px;
+    font-size: 35px;
+}
+
+/* ===== Forms / Inputs ===== */
+form{
+    width: 750px;
+    padding: 8px 20px;
+    margin: 0 auto;
+    border-radius: 15px;
+    border: 2px solid white;
+    color: white;
+}
+
+.size{
+    font-size: 30px;
+    text-align: center;
+    margin: 0 0 10px 0;
+    padding-top: 20px;
+    color: white;
+}
+
+label{
+    display: block;
+    font-size: 15px;
+}
+
+input{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.agree{
+    font-size: 15px;
+    margin-top: 10px;
+}
+.agree:hover{ text-decoration: underline; }
+
+.remove{
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.underline:hover{
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+
+/* ===== Page specific small styles ===== */
+.p{
+    margin-left: 10px;
+    color: darkblue;
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px solid white;
+    width: 750px;
+}
+
+.size{ margin-bottom: 15px; }
+
+/* end of file */
 .city-img{
-    background-image: url(runway3.png);
-        height: 350px;
-        color: white;
-        padding-top: 100px;
         text-align: center;
         font-size: 25px;
         font-family: 'Berkshire Swash', cursive;
