@@ -293,7 +293,7 @@ input {
   margin-left: 5px;
 }
 
-.underline:hover{
+.underline:not([type=submit]):hover{
   text-decoration:underline;
 }
 
