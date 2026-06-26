@@ -1,182 +1,187 @@
-
-header{
-    display:flex;
-    position:fixed;
-    justify-content:space-between;
-    width:100vw;
-    background-color:pink;
-    top:0;
-    left:0;
-    z-index:1;
+header {
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  width: 100vw;
+  background-color: pink;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
-.small{
-    background-size:cover;
-    width:75px;
-    height:75px;
-    display:block;
-    margin-top:15px;
-    margin-left:5px;
-    margin-right:15px;
-    margin-bottom:10px;
+.small {
+  background-size: cover;
+  width: 75px;
+  height: 75px;
+  display: block;
+  margin-top: 15px;
+  margin-left: 5px;
+  margin-right: 15px;
+  margin-bottom: 10px;
 }
 
-.logo{
-    display:flex;
-    color:white;
+.logo {
+  display: flex;
+  color: white;
 }
 
-.nav-link{
-    border:2px solid rgb(214, 243, 255);
-    background-color:skyblue;
-    text-decoration:none;
-    color:white;
-    border-radius:20px;
-    padding:10px 15px;
-    display:inline-block;
-    margin-top:20px;
-    margin-right:15px;
+.nav-link {
+  border: 2px solid rgb(214, 243, 255);
+  background-color: skyblue;
+  text-decoration: none;
+  color: white;
+  border-radius: 20px;
+  padding: 10px 15px;
+  display: inline-block;
+  margin-top: 20px;
+  margin-right: 15px;
 }
 
-.nav-link:hover{
-    background-color:pink;
-    border:2px solid rgb(255, 135, 155);
-    color:white;
+.nav-link:hover {
+  background-color: pink;
+  border: 2px solid rgb(255, 135, 155);
+  color: white;
 }
 
-.spacer{
-    height:150px;
-    margin-bottom:20px;
+.spacer {
+  height: 150px;
+  margin-bottom: 20px;
 }
 
-#adopt{
-    background-color:pink;
-    border:2px solid rgb(255, 135, 155);
-    color:white;
-    border-radius:15px;
-    width:750px;
-    padding:10px 15px;
-    text-align:center;
+#adopt {
+  background-color: pink;
+  border: 2px solid rgb(255, 135, 155);
+  color: white;
+  border-radius: 15px;
+  width: 750px;
+  padding: 10px 15px;
+  text-align: center;
 }
 
-.li{
-    border:2px solid rgb(214, 243, 255);
-    background-color:skyblue;
-    border-radius:15px;
-    margin-top:20px;
-    padding:10px 10px;
-    list-style: none;
-    text-align:center;
-    position:relative;
+.li {
+  border: 2px solid rgb(214, 243, 255);
+  background-color: skyblue;
+  border-radius: 15px;
+  margin-top: 20px;
+  padding: 10px 10px;
+  list-style: none;
+  text-align: center;
+  position: relative;
 }
 
-.li:hover{
-    background-color:pink;
-    border:2px solid rgb(255, 135, 155);
+.li:hover {
+  background-color: pink;
+  border: 2px solid rgb(255, 135, 155);
 }
 
-.hding{
-    font-size:45px;
-    color:white;
+.hding {
+  font-size: 45px;
+  color: white;
 }
 
-table, th, td{
-    border:3px solid rgb(255, 135, 155);
-    background-color:pink;
-    padding:10px 15px;
-    color:white;
-    border-radius:10px;
+table,
+th,
+td {
+  border: 3px solid rgb(255, 135, 155);
+  background-color: pink;
+  padding: 10px 15px;
+  color: white;
+  border-radius: 10px;
 }
 
-th:hover{
-    background-color:rgb(214, 243, 255);
-    border:3px solid skyblue;
+th:hover {
+  background-color: rgb(214, 243, 255);
+  border: 3px solid skyblue;
 }
 
-td:hover{
-    background-color:rgb(214, 243, 255);
-    border:3px solid skyblue;
+td:hover {
+  background-color: rgb(214, 243, 255);
+  border: 3px solid skyblue;
 }
 
-th{
-    font-size:20px;
+th {
+  font-size: 20px;
 }
 
-.h2{
-    color:white;
-    font-size:45px;
-    text-align:center;
+.h2 {
+  color: white;
+  font-size: 45px;
+  text-align: center;
 }
 
-#rescued{
-    background-color:rgb(214, 243, 255);
-    border:3px solid skyblue;
-    border-radius:15px;
-    width:700px;
-    padding:10px 15px;
-    margin-left:20px;
+#rescued {
+  background-color: rgb(214, 243, 255);
+  border: 3px solid skyblue;
+  border-radius: 15px;
+  width: 700px;
+  padding: 10px 15px;
+  margin-left: 20px;
 }
 
-.adopted{
-    position: absolute;
-        top: 0px;
-        right: 0px;
-        background-color: red;
-        color: white;
-        padding: 4px 8px;
-        border-radius: 15px;
+.adopted {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: red;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 15px;
 }
 
-.flex{
-    display:flex;
+.flex {
+  display: flex;
 }
 
-.dot{
- width:10px;
-    height:10px;
-    background-color:white;
-    border-radius:50%;
-    animation: twinkle 0.5s infinite alternate;
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  animation: twinkle 0.5s infinite alternate;
 }
 
 @keyframes twinkle {
-    from {background-color:white;}
-    to { background-color:green;}
+  from {
+    background-color: white;
+  }
+  to {
+    background-color: green;
+  }
 }
 
-#ongoing{
-    background-color:pink;
-    border:2px solid rgb(255, 135, 155);
-    padding:10px 15px;
-    border-radius:15px;
-    margin-top:20px;
-    width:850px;
-    position:relative;
-    left:350px;
+#ongoing {
+  background-color: pink;
+  border: 2px solid rgb(255, 135, 155);
+  padding: 10px 15px;
+  border-radius: 15px;
+  margin-top: 20px;
+  width: 850px;
+  position: relative;
+  left: 350px;
 }
 
-.blink{
-    display:flex;
-    align-items:center;
-    gap:10px;
+.blink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.box{
-    border:2px solid rgb(214, 243, 255);
-    background-color:skyblue;
-    border-radius:15px;
-    padding:10px 15px;
-    color:white;
-    font-weight:bold;
-    width:450px;
+.box {
+  border: 2px solid rgb(214, 243, 255);
+  background-color: skyblue;
+  border-radius: 15px;
+  padding: 10px 15px;
+  color: white;
+  font-weight: bold;
+  width: 450px;
 }
 
-.box:hover{
-    background-color:pink;
-    border:2px solid rgb(255, 135, 155);
+.box:hover {
+  background-color: pink;
+  border: 2px solid rgb(255, 135, 155);
 }
 
-.ul{
-    position:sticky;
-    top:250px;
+.ul {
+  position: sticky;
+  top: 250px;
 }
