@@ -1,11 +1,116 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>School Clubs</title>
-</head>
-<body>
-    
-</body>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        background-color: rgb(255, 255, 221);
+      }
+
+      h1 {
+        border: 2px solid forestgreen;
+        background-image: linear-gradient(to right,rgb(189, 254, 189),rgb(255, 255, 192) );
+        width: 750px;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 20px;
+        color: forestgreen;
+        padding: 10px 10px;
+        border-radius: 15px;
+      }
+
+      .box{
+        border:2px solid forestgreen;
+        background-color:rgb(255, 255, 192);
+        border-radius:10px;
+        color:rgb(28, 129, 28);
+        margin-top:20px;
+      }
+     
+      .add{
+        position:relative
+      }
+
+      .badge{
+        position: absolute;
+        top: 0;
+        right: 0px;
+        background-color: red;
+        color: white;
+        padding: 4px 8px;
+        border-radius: 8px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>My School Club Cards</h1>
+    </header>
+
+    <main>
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 box col-12 col-md-6">
+<h2>Chess Club</h2>
+<p>The Chess Club is a place where students learn and enjoy the game of chess.
+     Members practice different strategies, play friendly matches, and improve their thinking skills. 
+</p>
+            </div>
+
+            <div class="col-lg-4 box col-12 col-md-6">
+<h2>Book Club</h2>
+<p>The Book Club encourages students to develop a love for reading and literature.
+     Members read and discuss different books, share their ideas, and improve their communication skills.
+      The club helps build creativity, imagination, and a lifelong reading habit.
+</p>
+            </div>
+
+            <div class="col-lg-4 box add col-12 col-md-6">
+<h2>Sports Club</h2>
+<p>The Sports Club promotes fitness, teamwork, and a healthy lifestyle among students.
+     Members participate in various games and activities that improve their physical skills and sportsmanship.
+      The club encourages discipline, cooperation, and active participation.
+</p>
+<div class="badge">Popular!</div>
+            </div>
+
+            <div class="col-lg-4 box col-12 col-md-6">
+<h2>Drama Club</h2>
+<p>The Drama Club allows students to express their creativity through acting and performances.
+     Members take part in plays, skits, and stage activities to improve their confidence and communication skills. 
+     The club encourages teamwork, imagination, and artistic talent.
+</p>
+            </div>
+
+            <div class="col-lg-4 box add col-12 col-md-6">
+<h2>Debate Club</h2>
+<p>The Debate Club helps students improve their speaking and critical thinking skills. 
+    Members discuss different topics, share opinions, and participate in debates.
+     The club builds confidence, communication, and the ability to express ideas clearly.
+</p>
+<div class="badge">NEW</div>
+            </div>
+
+            <div class="col-lg-4 box col-12 col-md-6">
+<h2>Art Club</h2>
+<p>The Art Club encourages students to explore their creativity through drawing, painting, and other art activities.
+     Members develop their artistic skills and express their ideas through different forms of art.
+      The club promotes imagination, creativity, and self-expression.
+</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
