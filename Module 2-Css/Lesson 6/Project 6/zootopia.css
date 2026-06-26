@@ -7,6 +7,7 @@ header{
     background-color:pink;
     top:0;
     left:0;
+    z-index:1;
 }
 
 .small{
@@ -66,6 +67,7 @@ header{
     padding:10px 10px;
     list-style: none;
     text-align:center;
+    position:relative;
 }
 
 .li:hover{
@@ -75,4 +77,106 @@ header{
 
 .hding{
     font-size:45px;
+    color:white;
+}
+
+table, th, td{
+    border:3px solid rgb(255, 135, 155);
+    background-color:pink;
+    padding:10px 15px;
+    color:white;
+    border-radius:10px;
+}
+
+th:hover{
+    background-color:rgb(214, 243, 255);
+    border:3px solid skyblue;
+}
+
+td:hover{
+    background-color:rgb(214, 243, 255);
+    border:3px solid skyblue;
+}
+
+th{
+    font-size:20px;
+}
+
+.h2{
+    color:white;
+    font-size:45px;
+    text-align:center;
+}
+
+#rescued{
+    background-color:rgb(214, 243, 255);
+    border:3px solid skyblue;
+    border-radius:15px;
+    width:700px;
+    padding:10px 15px;
+    margin-left:20px;
+}
+
+.adopted{
+    position: absolute;
+        top: 0px;
+        right: 0px;
+        background-color: red;
+        color: white;
+        padding: 4px 8px;
+        border-radius: 15px;
+}
+
+.flex{
+    display:flex;
+}
+
+.dot{
+ width:10px;
+    height:10px;
+    background-color:white;
+    border-radius:50%;
+    animation: twinkle 0.5s infinite alternate;
+}
+
+@keyframes twinkle {
+    from {background-color:white;}
+    to { background-color:green;}
+}
+
+#ongoing{
+    background-color:pink;
+    border:2px solid rgb(255, 135, 155);
+    padding:10px 15px;
+    border-radius:15px;
+    margin-top:20px;
+    width:850px;
+    position:relative;
+    left:350px;
+}
+
+.blink{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.box{
+    border:2px solid rgb(214, 243, 255);
+    background-color:skyblue;
+    border-radius:15px;
+    padding:10px 15px;
+    color:white;
+    font-weight:bold;
+    width:450px;
+}
+
+.box:hover{
+    background-color:pink;
+    border:2px solid rgb(255, 135, 155);
+}
+
+.ul{
+    position:sticky;
+    top:250px;
 }
