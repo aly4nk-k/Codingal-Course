@@ -1,0 +1,11 @@
+.hero{
+    background-image:url(bg.jpg);
+    background-size:cover;
+    width:100vw;
+    height:550px;
+    background-repeat:no-repeat;
+    color:white;
+    font-size:45px;
+    text-align:center;
+    padding-top:150px;
+}
