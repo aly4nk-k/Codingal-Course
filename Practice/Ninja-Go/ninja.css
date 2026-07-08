@@ -1,11 +1,17 @@
 .hero{
-    background-image:url(bg.jpg);
-    background-size:cover;
-    width:100vw;
-    height:550px;
-    background-repeat:no-repeat;
-    color:white;
-    font-size:45px;
-    text-align:center;
-    padding-top:150px;
+   height: 350px;
+  color: white;
+  padding-top: 100px;
+  text-align: center;
+  font-size: 45px;
+  text-shadow:2px -3px 2px black;
+  background-image:url(monastery.png);
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+}
+
+header{
+  display:flex;
+  justify-content:space-between;
 }
