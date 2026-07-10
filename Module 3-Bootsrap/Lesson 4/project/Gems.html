@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>School</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <script>
+      const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)");
+
+      function updateTheme() {
+        const savedTheme = localStorage.getItem("theme");
+
+        if (savedTheme) {
+          document.documentElement.setAttribute("data-theme", savedTheme);
+        } else {
+          const theme = prefersDarkMode.matches ? "dark" : "light";
+          document.documentElement.setAttribute("data-theme", theme);
+        }
+      }
+
+      updateTheme();
+
+      prefersDarkMode.addEventListener("change", updateTheme);
+    </script>
+    <style>
+      [data-theme="light"] {
+        --section-bg: rgb(239, 239, 239);
+        --heading: #17a2b8;
+        --text: #343a40;
+        --box-bg: white;
+        --jumbotron: #17a2b8;
+        --button: #17a2b8;
+        --button-text: white;
+        --button-focus: #17a2b8;
+        --mark-bg: #17a2b8;
+        --box-heading: #17a2b8;
+        --main-hding: #17a2b8;
+      }
+
+      [data-theme="dark"] {
+        --section-bg: darkgrey;
+        --box-bg: rgb(31, 31, 31);
+        --heading: black;
+        --text: rgb(170, 170, 170);
+        --jumbotron: black;
+        --button: black;
+        --button-text: white;
+        --button-focus: white;
+        --mark-bg: white;
+        --box-heading: white;
+        --main-hding: white;
+      }
+
+      header,
+      footer {
+        background-color: var(--box-bg);
+        color: var(--heading);
+        top: 0;
+        left: 0;
+        z-index: 1;
+        padding: 5px 5px;
+      }
+
+      body {
+        color: var(--text);
+      }
+
+      .flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .jumbotron {
+        border-left: 6px solid var(--jumbotron);
+        background-color: var(--section-bg);
+        margin-left: 1px;
+      }
+
+      .text-dark {
+        color: var(--text) !important;
+      }
+      .spacer {
+        border: 2px white;
+        height: 75px;
+      }
+
+      .subject-box {
+        border: 2px solid black;
+        width: 100%;
+        max-width: 350px;
+        min-height: 175px;
+        padding: 10px 15px;
+        margin-left: 30px;
+        background-color: var(--box-bg);
+        border-radius: 15px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+      }
+
+      .info-box {
+        width: 100%;
+        max-width: 300px;
+        border: 2px solid black;
+        border-radius: 20px;
+        background-color: var(--box-bg);
+        min-height: 200px;
+        margin-left: 20px;
+      }
+
+      .bg {
+        background-color: var(--section-bg);
+        padding-top: 40px;
+        margin-bottom: 30px;
+      }
+
+      .review-box {
+        border: 2px solid black;
+        background-color: var(--box-bg);
+        width: 100%;
+        max-width: 450px;
+        margin-left: 20px;
+        border-radius: 20px;
+        padding: 10px 15px;
+        min-height: 300px;
+        margin-right: 15px;
+      }
+
+      .bg-2 {
+        background-color: var(--section-bg);
+        padding-top: 40px;
+        margin-bottom: 30px;
+      }
+
+      .progress-bar-box {
+        border: 2px solid black;
+        background-color: var(--box-bg);
+        width: 100%;
+        max-width: 850px;
+        min-height: 650px;
+        border-radius: 20px;
+      }
+
+      .bg-3 {
+        background-color: var(--section-bg);
+        padding-top: 40px;
+        margin-bottom: 30px;
+      }
+
+      .heading {
+        color: var(--heading);
+      }
+
+      .btn {
+        background-color: var(--button);
+        color: var(--button-text);
+      }
+
+      .btn:hover {
+        color: var(--button-text) !important;
+      }
+
+      .btn:focus {
+        box-shadow: 0 0 10px var(--button-focus) !important;
+      }
+
+      body,
+      header,
+      section,
+      footer,
+      div,
+      .jumbotron,
+      .subject-box,
+      .info-box,
+      .review-box,
+      .progress-bar-box,
+      .btn {
+        transition:
+          background-color 0.9s ease,
+          color 0.9s ease,
+          border-color 0.9s ease;
+      }
+
+      mark {
+        background-color: var(--mark-bg);
+        color: var(--box-bg);
+      }
+
+      .main-hding {
+        color: var(--main-hding);
+      }
+
+      .box-heading {
+        color: var(--box-heading);
+      }
+    </style>
+  </head>
+
+  <body>
+    <header
+      class="container-fluid position-fixed d-flex main-hding justify-content-between"
+    >
+      <h3>Gems High-School</h3>
+      <nav>
+        <button id="theme-toggle" class="btn">Dark Mode</button>
+      </nav>
+    </header>
+    <div class="spacer"></div>
+    <main>
+      <section class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="main-hding">Track Your Subject Completion Progress</h1>
+          <p class="main-hding lead">
+            Get Monthly Progress Reports With Our New Fastly.ai
+          </p>
+        </div>
+      </section>
+      <section>
+        <h2 class="heading text-center">Subject Descriptions</h2>
+
+        <div class="bg">
+          <div class="flex">
+            <div class="subject-box text-center">
+              <h3 class="box-heading">Science</h3>
+              <p class="text-dark">
+                Master the fundamentals of Biology, Chemistry, and Physics
+                through hands-on experiments and real-world applications.
+              </p>
+            </div>
+
+            <div class="subject-box text-center">
+              <h3 class="box-heading">Mathematics</h3>
+              <p class="text-dark">
+                Build a strong foundation from basic arithmetic operators to
+                advanced problem-solving techniques.
+              </p>
+            </div>
+
+            <div class="subject-box text-center">
+              <h3 class="box-heading">English</h3>
+              <p class="text-dark">
+                Master grammar, tenses, and critical reading skills to become a
+                confident communicator and writer.
+              </p>
+            </div>
+
+            <div class="subject-box text-center">
+              <h3 class="box-heading">Computer Science</h3>
+              <p class="text-dark">
+                Dive into computer basics and advanced topics like coding,
+                algorithms, and tech fundamentals.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2 class="heading text-center">Progress Report</h2>
+
+        <div class="bg">
+          <div class="flex">
+            <div class="info-box">
+              <h3 class="box-heading text-center">July</h3>
+              <p class="text-center text-dark">
+                This Progress Report is generated by Fastly.ai - Some categories
+                may not be accurate.
+              </p>
+              <p class="box-heading text-center">
+                <strong>Exceptional Performance!</strong>
+              </p>
+              <p class="box-heading text-center">
+                <strong>Average Rating : 4.5 Stars</strong>
+              </p>
+
+              <div class="text-center">
+                <button type="button" class="btn rounded my-2">
+                  View Report
+                </button>
+              </div>
+            </div>
+
+            <div class="info-box">
+              <h3 class="box-heading text-center">June</h3>
+              <p class="text-center text-dark">
+                This Progress Report is generated by Fastly.ai - Some categories
+                may not be accurate.
+              </p>
+              <p class="box-heading text-center">
+                <strong>Improvements Needed!</strong>
+              </p>
+              <p class="box-heading text-center">
+                <strong>Average Rating : 3.0 Stars</strong>
+              </p>
+
+              <div class="text-center">
+                <button type="button" class="btn rounded my-2">
+                  View Report
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2 class="heading text-center">Project Ratings</h2>
+        <p class="lead heading text-center">
+          ( Ratings are Updated Monthly by Our New Fastly.ai )
+        </p>
+        <div class="bg-2">
+          <div class="flex">
+            <div class="review-box">
+              <h2 class="box-heading text-center">Science</h2>
+              <h4 class="box-heading">
+                Project Rating:
+                <span class="badge badge-success badge-pill">4 Stars</span>
+              </h4>
+              <p class="lead text-dark">
+                <strong>Feedback From Teacher:</strong>
+              </p>
+              <p class="text-dark text-center">
+                <small
+                  >Excellent work! Your project clearly explains the
+                  <mark class="rounded">scientific concepts</mark> and
+                  demonstrates strong research...</small
+                >
+              </p>
+              <div class="text-center">
+                <button type="button" class="btn rounded my-3">
+                  View More
+                </button>
+              </div>
+            </div>
+            <div class="review-box">
+              <h2 class="box-heading text-center">Mathematics</h2>
+              <h4 class="box-heading">
+                Project Rating:
+                <span class="badge badge-warning badge-pill text-white"
+                  >3.5 Stars</span
+                >
+              </h4>
+              <p class="lead text-dark">
+                <strong>Feedback From Teacher:</strong>
+              </p>
+              <p class="text-dark text-center">
+                <small
+                  >Good effort and understanding of the concepts. Try showing
+                  more <mark class="rounded">detailed steps</mark> in your
+                  calculations and in Homework...</small
+                >
+              </p>
+              <div class="text-center">
+                <button type="button" class="btn rounded my-3">
+                  View More
+                </button>
+              </div>
+            </div>
+            <div class="review-box">
+              <h2 class="box-heading text-center">English</h2>
+              <h4 class="box-heading">
+                Project Rating:
+                <span class="badge badge-info badge-pill">5 Stars</span>
+              </h4>
+              <p class="lead text-dark">
+                <strong>Feedback From Teacher:</strong>
+              </p>
+              <p class="text-dark text-center">
+                <small
+                  >Exceptional work! Your project demonstrates
+                  <mark class="rounded">strong communication skills</mark>,
+                  creativity, and a great understanding of English
+                  concepts...</small
+                >
+              </p>
+              <div class="text-center">
+                <button type="button" class="btn rounded my-3">
+                  View More
+                </button>
+              </div>
+            </div>
+            <div class="review-box">
+              <h2 class="box-heading text-center">Computer Science</h2>
+              <h4 class="box-heading">
+                Project Rating:
+                <span class="badge badge-danger badge-pill">2.5 Stars</span>
+              </h4>
+              <p class="lead text-dark">
+                <strong>Feedback From Teacher:</strong>
+              </p>
+              <p class="text-dark text-center">
+                <small
+                  >The project shows some basic understanding of computer
+                  science concepts, but more
+                  <mark class="rounded">effort is needed</mark></small
+                >
+              </p>
+              <div class="text-center">
+                <button type="button" class="btn rounded my-3">
+                  View More
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2 class="heading text-center">Progress Bar</h2>
+        <p class="lead heading text-center">
+          Check Your Subject Completion Progress Below!
+        </p>
+        <div class="bg-3">
+          <div class="progress-bar-box container">
+            <h2 class="text-center box-heading">Subject Completion Progress</h2>
+            <p class="box-heading text-center">
+              <small
+                >( Progress Bar is Updated Based on How many Projects are
+                Submitted and Attendance Record )</small
+              >
+            </p>
+            <div class="my-4"></div>
+            <p class="box-heading">Color Category:</p>
+            <p>
+              <span class="badge badge-danger badge-pill text-danger mx-2"
+                >.</span
+              >Below 33% <small>( Bad )</small>
+            </p>
+            <p>
+              <span class="badge badge-warning badge-pill text-warning mx-2"
+                >.</span
+              >Above 33% - Below 69% <small>( Below Average )</small>
+            </p>
+            <p>
+              <span class="badge badge-success badge-pill text-success mx-2"
+                >.</span
+              >Above 69% <small>( Average - Excellent )</small>
+            </p>
+            <div class="my-5"></div>
+            <h3 class="box-heading">Science</h3>
+            <div class="progress my-3">
+              <div class="progress-bar bg-success" style="width: 75%">75%</div>
+            </div>
+            <h3 class="box-heading">Mathematics</h3>
+            <div class="progress my-3">
+              <div class="progress-bar bg-warning" style="width: 55%">55%</div>
+            </div>
+            <h3 class="box-heading">English</h3>
+            <div class="progress my-3">
+              <div class="progress-bar bg-success" style="width: 95%">95%</div>
+            </div>
+            <h3 class="box-heading">Computer Science</h3>
+            <div class="progress my-3">
+              <div class="progress-bar bg-danger" style="width: 20%">20%</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="container-fluid main-hding">
+      <p>© 2026 Gems High-School. All rights reserved</p>
+    </footer>
+    <script>
+      const themeButton = document.getElementById("theme-toggle");
+
+      themeButton.addEventListener("click", () => {
+        const currentTheme =
+          document.documentElement.getAttribute("data-theme");
+
+        if (currentTheme === "dark") {
+          document.documentElement.setAttribute("data-theme", "light");
+          localStorage.setItem("theme", "light");
+          themeButton.innerHTML = " Dark Mode";
+        } else {
+          document.documentElement.setAttribute("data-theme", "dark");
+          localStorage.setItem("theme", "dark");
+          themeButton.innerHTML = " Light Mode";
+        }
+      });
+    </script>
+  </body>
+</html>
