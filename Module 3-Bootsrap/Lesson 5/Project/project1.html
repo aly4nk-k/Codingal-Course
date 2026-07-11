@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Mission : Space</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    />
+
+    <style>
+      :root {
+        --heading-color: rgb(90, 0, 90);
+        --box-heading: orange;
+        --border-color: coral;
+      }
+
+      body {
+        background: linear-gradient(to right, #0f172a, #3b0764);
+        min-height: 100vh;
+        color: white;
+      }
+
+      header {
+        background: linear-gradient(to right, yellow, rgb(118, 0, 118));
+        z-index: 10;
+      }
+
+      .nav-link {
+        color: white;
+        font-size: 18px;
+        border: 2px solid white;
+        border-radius: 20px;
+        margin-left: 15px;
+        padding: 8px 15px;
+      }
+
+      .nav-link:hover {
+        background-color: rgb(143, 65, 143);
+        color: white;
+      }
+
+      .text-clr {
+        color: var(--heading-color);
+        font-size: 28px;
+      }
+
+      .dropdown {
+        position: relative;
+      }
+
+      .dropdown-menu {
+        display: none;
+        position: absolute;
+        border-radius: 20px;
+        text-align: center;
+      }
+
+      .dropdown:hover .dropdown-menu {
+        display: block;
+      }
+
+      main {
+        padding-top: 160px;
+      }
+
+      .header-box {
+        max-width: 650px;
+        border: 2px solid var(--border-color);
+        border-radius: 20px;
+        padding: 25px;
+        text-align: center;
+        color: var(--box-heading);
+      }
+
+      .card {
+        border: 2px solid var(--border-color);
+        border-radius: 25px;
+        overflow: hidden;
+        background: white;
+        height: 100%;
+        color: black;
+      }
+
+      .card img {
+        height: 250px;
+        object-fit: cover;
+      }
+
+      .card-title {
+        color: var(--box-heading);
+      }
+
+      mark {
+        background: coral;
+        color: white;
+        border-radius: 5px;
+      }
+
+      .fact-box{
+        border: 2px solid var(--border-color);
+        background-color:white;
+        min-height:400px;
+        margin-bottom:30px;
+        border-radius:20px;
+        width:100%;
+        max-width:900px;
+      }
+
+      .page-item{
+        border:2px solid var(--border-color);
+      }
+
+      .page-link{
+        color:var(--box-heading);
+        background-color:rgb(255, 229, 200);
+      }
+
+    .page-link:hover{
+      color:var(--box-heading);
+      background-color:rgb(242, 232, 219);
+    }
+    </style>
+  </head>
+
+  <body>
+    <header class="container-fluid fixed-top">
+      <nav class="navbar navbar-expand-lg justify-content-between">
+        <h1 class="navbar-brand text-clr">Mission : Space</h1>
+
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="#facts" class="nav-link">Facts</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="#planets" class="nav-link">Planets</a>
+
+            <ul class="dropdown-menu">
+              <li>Earth</li>
+              <li>Jupiter</li>
+              <li>Saturn</li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="#missions" class="nav-link">Missions</a>
+
+            <ul class="dropdown-menu">
+              <li>Apollo 11</li>
+              <li>Voyager 1</li>
+              <li>Artemis</li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="planets">
+        <div class="header-box container mb-5">
+          <h2>Introduction To The Planets</h2>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <img src="mercury.jpg" />
+
+                <div class="card-body">
+                  <h3 class="card-title">Mercury</h3>
+                  <p>
+                    Mercury is the <mark>smallest and closest planet</mark> to
+                    the Sun.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <img src="venus.jpg" />
+
+                <div class="card-body">
+                  <h3 class="card-title">Venus</h3>
+                  <p>
+                    Venus is the <mark>2nd closest planet</mark> to the Sun.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <img src="earth.jpg" />
+
+                <div class="card-body">
+                  <h3 class="card-title">Earth</h3>
+                  <p>Earth is the only known planet with <mark>life</mark>.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <img src="mars.jpg" />
+
+                <div class="card-body">
+                  <h3 class="card-title">Mars</h3>
+                  <p>Mars is known as the <mark>Red Planet</mark>.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <img src="jupiter.png" />
+
+                <div class="card-body">
+                  <h3 class="card-title">Jupiter</h3>
+                  <p>
+                    Jupiter is the <mark>largest planet</mark> in our solar
+                    system.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <img src="saturn.jpg" />
+
+                <div class="card-body">
+                  <h3 class="card-title">Saturn</h3>
+                  <p>Saturn is famous for its <mark>beautiful rings</mark>.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="missions">
+        <div class="header-box container mb-5 mt-5">
+          <h2>Missions to Space</h2>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <img src="rocket.jpg" />
+
+                <div class="card-body">
+                  <h3 class="card-title">Apollo 11</h3>
+                  <p>
+                    Apollo 11 was the
+                    <mark>first mission to land humans on the Moon</mark>. Neil
+                    Armstrong and Buzz Aldrin successfully walked on the lunar
+                    surface.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <img src="voyage.jpg" />
+
+                <div class="card-body">
+                  <h3 class="card-title">Voyager 1</h3>
+                  <p>
+                    Voyager 1 is the
+                    <mark>farthest human-made object in space</mark>. It
+                    continues to send valuable data from beyond our solar
+                    system.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <img src="rocket2.jpg" />
+
+                <div class="card-body">
+                  <h3 class="card-title">Artemis</h3>
+                  <p>
+                    Artemis is a
+                    <mark>mission to return humans to the Moon</mark>. It will
+                    help prepare astronauts for future journeys to Mars.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="facts">
+         <div class="header-box container mb-5 mt-5">
+          <h2>Fun Facts</h2>
+        </div>
+        <div class="fact-box container">
+<h2 style="color:var(--box-heading); font-size:40px;" class="text-center mt-2 mb-5">Did You Know!</h2>
+<h3 style="color:var(--box-heading);">There are 4 Planets in Our Solar System with Rings</h3>
+<div style="font-size:25px;">
+<div class="spinner-border text-warning" style="width:100px; height:100px;"></div>
+<div class="spinner-border " style="color:rgb(0, 0, 213);width:100px; height:100px;"></div>
+<div class="spinner-border" style="color:rgb(0, 0, 150);width:100px; height:100px;"></div>
+<div class="spinner-border" style="color:var(--box-heading);width:100px; height:100px;"></div>
+</div>
+<ul class="pagination justify-content-center" style="margin-top:125px;">
+        <li class="page-item"><a class="page-link">Previous</a></li>
+        <li class="page-item"><a href="#facts" class="page-link">1</a></li>
+        <li class="page-item"><a class="page-link">2</a></li>
+        <li class="page-item"><a class="page-link">3</a></li>
+        <li class="page-item"><a class="page-link">Next</a></li>
+      </ul>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
