@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>My Animal Safari</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    />
+    <style>
+      .safari-slide {
+        height: 200px;
+        text-align: center;
+        padding-top: 75px;
+        font-size: 1.8rem;
+        color: white;
+      }
+
+      .slide-forest {
+        background: darkgreen;
+      }
+
+      .slide-ocean {
+        background: steelblue;
+      }
+
+      .slide-desert {
+        background: orange;
+      }
+
+      .section {
+        padding: 70px 20px;
+        min-height: 300px;
+      }
+
+      .nav-link.active {
+        border-bottom: 2px solid #fff;
+      }
+
+      #forest {
+        background: honeydew;
+        height: 700px;
+      }
+
+      #ocean {
+        background: aliceblue;
+        height: 700px;
+      }
+
+      #desert {
+        background: lightyellow;
+        height: 700px;
+      }
+    </style>
+  </head>
+  <body data-spy="scroll" data-target="#safariNav" data-offset="60">
+    <!-- TOPIC 1, 2, 3: CAROUSEL -->
+<div id="safariCarousel" class="carousel slide" data-ride="carousel">
+<ol class="carousel-indicators">
+<li class="active" data-target="#safariCarousel" data-slide-to="0"></li>
+<li data-target="#safariCarousel" data-slide-to="1"></li>
+<li data-target="#safariCarousel" data-slide-to="2"></li>
+</ol>
+
+<div class="carousel-inner">
+<div class="carousel-item safari-slide slide-forest active">🌿Forest</div>
+<div class="carousel-item safari-slide slide-ocean">🌊Ocean</div>
+<div class="carousel-item safari-slide slide-desert">🏜️Desert</div>
+</div>
+
+<a class="carousel-control-prev" href="#safariCarousel" data-slide="prev">
+<span class="carousel-control-prev-icon"></span>
+</a>
+
+<a class="carousel-control-next" href="#safariCarousel" data-slide="next">
+<span class="carousel-control-next-icon"></span>
+</a>
+
+</div>
+
+    <!-- TOPIC 4: SCROLLSPY -->
+<nav id="safariNav" class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+<span class="navbar-brand">Safari Guide</span>
+<ul class="navbar-nav">
+    <li class="nav-item">
+        <a href="#forest" class="nav-link">Forest</a>
+    </li>
+    <li class="nav-item">
+        <a href="#ocean" class="nav-link">Ocean</a>
+    </li>
+    <li class="nav-item">
+        <a href="#desert" class="nav-link">Desert</a>
+    </li>
+</ul>
+</nav>
+
+    <div class="container">
+      <div id="forest" class="section">
+        <h2>🌿 Forest Safari</h2>
+        <p>Explore tall trees and discover tigers, elephants, and monkeys!</p>
+      </div>
+      <div id="ocean" class="section">
+        <h2>🌊 Ocean Safari</h2>
+        <p>Dive deep and meet dolphins, sharks, and colourful clownfish!</p>
+      </div>
+      <div id="desert" class="section">
+        <h2>🏜️ Desert Safari</h2>
+        <p>
+          Trek across the sand dunes and spot camels, lizards, and desert foxes!
+        </p>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+
