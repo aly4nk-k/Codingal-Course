@@ -1,0 +1,298 @@
+/*universal / Reusable */
+
+:root{
+    --primary-color:#ffc107;
+    --villain:#dc3545;
+}
+
+
+main{
+    margin-top:100px;
+    margin-bottom:30px;
+}
+
+body{
+    padding:0;
+    margin:0;
+    background-color:black;
+}
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    background-color: black;
+    width:100%;
+    max-width:100%;
+    padding-left:15px;
+    padding-right:15px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul{
+    list-style: none;
+    display:flex;
+    gap:15px;
+    margin: 0;
+    padding: 0;
+    font-size:20px;
+}
+
+.rocker{
+    font-family: "New Rocker", system-ui;
+}
+
+.font{
+    font-family: "Carter One", system-ui;
+}
+
+hr{
+    background-color: var(--primary-color);
+}
+
+.title-link:hover{
+ text-decoration: none;
+ color:white;
+}
+
+.flex{
+    display:flex;
+    gap:15px;
+}
+/*team page*/
+.team{
+    display:flex;
+    flex-wrap: wrap;
+    gap:50px;
+    justify-content: center;
+}
+
+.team-box{
+    display:flex;
+    flex-direction: column;
+    border:2px solid var(--primary-color);
+    text-align:center;
+    width:350px;
+    height:450px;
+}
+
+.team-box p{
+    color:white;
+    font-size:15px;
+    margin-left:10px;
+    margin-right:10px;
+}
+
+.box-img{
+  object-fit:cover;
+  width:345px;
+  height:300px;
+}
+
+.title-underline{
+    width:500px;
+    height:2px;
+    background-color: var(--primary-color);
+
+}
+/*about page*/
+
+.hero-img{
+    background-image: url(cloud.png);
+    background-repeat:no-repeat;
+    background-size: cover;
+    max-width:100vw;
+    width:100vw;
+    height:500px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.styling{
+    font-family:  "New Rocker", system-ui;
+    color:white;
+    font-size:200px;
+    text-shadow:5px 7px black;
+}
+
+.text-img{
+    background-repeat: no-repeat;
+    object-fit: cover;
+    width:400px;
+    height:300px;
+    border-radius:20px;
+}
+
+.box{
+    border:2px solid var(--primary-color);
+    border-radius:20px;
+    padding:10px 10px;
+    margin-left:20px;
+    width:900px;
+    margin:0 auto;
+}
+
+.lore-box{
+   border:2px solid var(--primary-color);
+   margin:0 auto;
+   width:100%;
+   max-width:1200px;
+   border-radius:20px;
+   min-height:500px;
+   margin-top:50px;
+}
+
+.fsm{
+    border-radius:20px;
+    border:2px solid var(--primary-color);
+    margin-top:20px;
+    margin-left:30px;
+}
+
+#info{
+    border:2px solid var(--primary-color);
+    border-radius:20px;
+    width:90%;
+    max-width:1300px;
+    margin:0 auto;
+}
+/*villain page*/
+
+.dark{
+    background-image: url(dark.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:100vw;
+    min-height:400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-text{
+    color:white;
+    font-family:   "New Rocker", system-ui;
+    font-size:50px;
+}
+
+
+/* RESPONSIVE FIXES */
+
+/* Tablets and smaller */
+@media (max-width: 900px){
+
+    header{
+        flex-direction: column;
+        gap:15px;
+        padding-bottom:15px;
+    }
+
+    nav ul{
+        flex-wrap: wrap;
+        justify-content:center;
+        font-size:18px;
+    }
+
+    main{
+        margin-top:160px;
+    }
+
+    #info{
+        width:95%;
+    }
+
+    .box{
+        width:90%;
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .text-img{
+        width:100%;
+        max-width:400px;
+        height:auto;
+    }
+
+    .flex{
+        flex-wrap:wrap;
+    }
+
+    .fsm{
+        width:90%;
+        height:auto;
+        margin:20px auto;
+    }
+
+    .lore-box{
+        width:95%;
+    }
+
+    .styling{
+        font-size:120px;
+    }
+
+}
+
+
+/* Phones */
+@media (max-width:600px){
+
+    header{
+        padding-left:5px;
+        padding-right:5px;
+    }
+
+    nav ul{
+        gap:8px;
+        font-size:14px;
+    }
+
+    main{
+        margin-top:180px;
+    }
+
+    .hero-img{
+        height:300px;
+    }
+
+    .styling{
+        font-size:70px;
+        text-align:center;
+    }
+
+
+    #info h2{
+        font-size:35px !important;
+    }
+
+
+    .box{
+        padding:15px;
+    }
+
+
+    .box h3{
+        font-size:24px !important;
+    }
+
+
+    .box p{
+        font-size:14px;
+        text-align:center;
+    }
+
+
+    .lore-box h3{
+        font-size:35px !important;
+    }
+
+
+    .lore-box p{
+        padding:0 15px;
+        text-align:center;
+    }
+
+}
