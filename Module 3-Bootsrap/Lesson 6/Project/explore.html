@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorer's Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <style>
+header{
+    position:fixed;
+    top: 0;
+    left: 0;
+}
+
+.nav-link{
+    color:lightgray;
+    font-size:20px;
+}
+
+.nav-link.active{
+    border-bottom:2px solid white;
+    color:white;
+}
+
+.nav-link:hover{
+    color:white;
+}
+
+main{
+    margin-top:100px;
+}
+
+.section-size{
+    min-height:500px;
+    width:750px;
+    margin:0 auto;
+    margin-top:50px;
+    border-radius:20px;
+    padding-top:50px;
+}
+
+.img-size{
+    width:400px;
+    height:300px;
+    object-fit: cover;
+    border-radius:20px;
+}
+    </style>
+</head>
+<body data-spy="scroll" data-target="#exploreNav" data-offset="60">
+<header class="bg-success container-fluid">
+<nav id="exploreNav" class="navbar navbar-expand-lg justify-content-between text-light">
+<h1 class="navbar-brand">Explorers Hub</h1>
+
+<ul class="navbar-nav">
+<li class="nav-item"><a href="#jungle" class="nav-link">Jungle</a></li>
+<li class="nav-item"><a href="#safari" class="nav-link">Safari</a></li>
+<li class="nav-item"><a href="#ocean" class="nav-link">Ocean</a></li>
+<li class="nav-item"><a href="#desert" class="nav-link">Desert</a></li>
+</ul>
+</nav>
+</header>
+
+<main>
+    <section id="exploreCarousel" class="carousel-slide" data-ride="carousel">
+<ol class="carousel-indicators">
+<li class="active" data-target="#exploreCarousel" data-slide-to="0"></li>
+<li data-target="#exploreCarousel" data-slide-to="1"></li>
+<li data-target="#exploreCarousel" data-slide-to="2"></li>
+</ol>
+    </section>
+
+    
+    <section id="jungle" class="section-size bg-success text-light text-center">
+<h2>Jungle Section</h2>
+<p>Explore the Wilderness</p>
+<img src="jungle.jpg" alt="jungle" class="img-size">
+    </section>
+
+    <section id="safari" class="section-size text-center" style="background-color:lightyellow;">
+<h2>Safari Section</h2>
+<p>Take a Ride Through the African Grasslands</p>
+<img src="safari.jpg" alt="safari" class="img-size">
+    </section>
+
+    <section id="ocean" class=" section-size text-light text-center" style="background-color: rgb(0, 0, 117);">
+<h2>Ocean Section</h2>
+<p>Explore the Great Depts of the Ocean</p>
+<img src="ocean.jpg" class="img-size">
+    </section>
+
+    <section id="desert" class="section-size bg-warning text-center">
+<h2>Desert Section</h2>
+<p>Explore the Giant Pyramids and Climb Sand Mountains</p>
+<img src="desert.jpg" class="img-size">
+    </section>
+</main>
+
+<footer class="container-fluid bg-success text-light">
+  © 2026 Explorer's Hub. All rights reserved.
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>
