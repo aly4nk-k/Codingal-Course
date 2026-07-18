@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mathly</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <style>
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    background-color: lightblue;
+}
+
+.box{
+    border:2px solid black;
+    width:50px;
+    height:50px;
+    margin:0 auto;
+    margin-top:5px;
+    margin-bottom:5px;
+    font-weight: bold;
+    padding-top:10px;
+}
+
+main{
+    margin-top:100px;
+}
+
+.header-box{
+    text-align: center;
+    border:2px solid darkblue;
+    background-color:lightblue;
+    width:600px;
+    margin:0 auto;
+    border-radius:20px;
+    padding:10px 10px;
+}
+
+.card-box{
+    border:2px solid darkblue;
+    background-color: lightblue;
+    margin-top:50px;
+    width:100%;
+    max-width:400px;
+    border-radius:20px;
+    text-align: center;
+    min-height:300px;
+    margin-left:70px;
+}
+
+.flex{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.bold p{
+    font-weight: bold;
+}
+
+footer{
+    background-color:lightblue;
+    padding:5px 5px;
+}
+    </style>
+</head>
+<body>
+<header class="container-fluid text-dark p-2">
+    <h3>Mathly</h3>
+</header>
+
+<main>
+    <div class="header-box">
+    <h2>Get Pre-Calculated Answers </h2>
+    <p class="font-weight-bold">(using 10 and 2)</p>
+    </div>
+    <section class="flex bold">
+    <div class="card-box">
+        <h3>Addition</h3>
+    <div class="box">10</div>
+    <p>+</p>
+    <div class="box">2</div>
+    <p>=</p>
+    <div  id="sum" class="box"></div>
+    </div>
+
+    <div class="card-box">
+        <h3>Subtraction</h3>
+        <div class="box">10</div>
+        <p>-</p>
+        <div class="box">2</div>
+        <p>=</p>
+        <div id="sub" class="box"></div>
+    </div>
+
+    <div class="card-box">
+        <h3>Multiplication</h3>
+        <div class="box">10</div>
+        <p>x</p>
+        <div class="box">2</div>
+        <p>=</p>
+        <div id="multi" class="box"></div>
+    </div>
+
+    <div class="card-box">
+        <h3>Division</h3>
+        <div class="box">10</div>
+        <p>÷</p>
+        <div class="box">2</div>
+        <p>=</p>
+        <div id="divide" class="box"></div>
+    </div>
+
+    <div class="card-box">
+        <h3>Get Remainder</h3>
+        <div class="box">10</div>
+        <p>%</p>
+        <div class="box">2</div>
+        <p>=</p>
+        <div id="remain" class="box"></div>
+    </div>
+
+    <div class="card-box">
+        <h3>Find Power</h3>
+        <div class="box">10</div>
+        <p>to the power</p>
+        <div class="box">2</div>
+        <p>=</p>
+        <div id="power" class="box"></div>
+    </div>
+    </section>
+</main>
+
+<footer class="container-fluid mt-5">
+    <p>© 2026 Mathly. All rights reserved</p>
+</footer>
+
+    <script>
+let num1 = 10;
+let num2 = 2;
+
+let sum = num1 + num2;
+
+document.getElementById("sum") .innerHTML = sum;
+
+let difference = num1 - num2;
+
+document.getElementById("sub") .innerHTML = difference;
+
+let multiply = num1 * num2;
+
+document.getElementById("multi") .innerHTML = multiply;
+
+let divide = num1 / num2;
+
+document.getElementById("divide") .innerHTML = divide;
+
+let remainder = num1 % num2;
+
+document.getElementById("remain") .innerHTML = remainder;
+
+let power = num1 ** num2;
+
+document.getElementById("power") .innerHTML = power;
+    </script>
+</body>
+</html>
