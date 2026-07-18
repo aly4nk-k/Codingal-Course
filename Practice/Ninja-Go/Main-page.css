@@ -82,6 +82,43 @@ hr{
     text-shadow: 3px 5px black;
 }
 
+.clicked{
+    border:2px solid var(--primary-color);
+    padding:5px 5px;
+    color:var(--primary-color);
+    border-radius:15px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+}
+
+nav a:hover{
+    color:var(--primary-color);
+    text-decoration:none;
+    transition:0.2s;
+}
+
+.clicked:hover{
+    text-decoration:none;
+    color:white !important;
+}
+
+footer{
+    width:100vw;
+    text-align: center;
+    color:white;
+    border-top:2px solid var(--primary-color);
+    min-height:200px;
+    padding-top:50px;
+    margin-top:50px;
+}
+
+footer p{
+    color:var(--primary-color);
+}
+
 .text-img{
     width:400px;
     height:200px;
