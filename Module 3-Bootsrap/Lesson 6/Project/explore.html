@@ -9,33 +9,67 @@
     <style>
 header{
     position:fixed;
-    top: 0;
-    left: 0;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+}
+
+.navbar-brand{
+    color:white !important;
 }
 
 .nav-link{
-    color:lightgray;
+    color:lightgray !important;
     font-size:20px;
 }
 
 .nav-link.active{
     border-bottom:2px solid white;
-    color:white;
+    color:white !important;
 }
 
 .nav-link:hover{
-    color:white;
+    color:white !important;
 }
 
 main{
-    margin-top:100px;
+    margin-top:76px;
+}
+
+.carousel-item{
+    height:500px;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    text-align: center;
+    padding-top:150px;
+    color:white;
+    font-size:70px;
+    font-weight:bold;
+    text-shadow:2px 2px 8px black;
+}
+
+.jungle-img{
+    background-image:url("forest.jpg");
+}
+
+.safari-img{
+    background-image:url("explore.jpg");
+}
+
+.ocean-img{
+    background-image:url("dept.jpg");
+}
+
+.desert-img{
+    background-image:url("desert.jpg");
 }
 
 .section-size{
     min-height:500px;
     width:750px;
-    margin:0 auto;
-    margin-top:50px;
+    margin:50px auto;
     border-radius:20px;
     padding-top:50px;
 }
@@ -43,10 +77,15 @@ main{
 .img-size{
     width:400px;
     height:300px;
-    object-fit: cover;
+    object-fit:cover;
     border-radius:20px;
 }
-    </style>
+
+footer{
+    padding:15px;
+    text-align:center;
+}
+</style>
 </head>
 <body data-spy="scroll" data-target="#exploreNav" data-offset="60">
 <header class="bg-success container-fluid">
@@ -63,12 +102,41 @@ main{
 </header>
 
 <main>
-    <section id="exploreCarousel" class="carousel-slide" data-ride="carousel">
+    <section id="exploreCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
 <ol class="carousel-indicators">
 <li class="active" data-target="#exploreCarousel" data-slide-to="0"></li>
 <li data-target="#exploreCarousel" data-slide-to="1"></li>
 <li data-target="#exploreCarousel" data-slide-to="2"></li>
+<li data-target="#exploreCarousel" data-slide-to="3"></li>
 </ol>
+
+<div class="carousel-inner">
+
+<div class="carousel-item active jungle-img">
+    <h2>Jungle</h2>
+</div>
+
+<div class="carousel-item safari-img">
+    <h2>Safari</h2>
+</div>
+
+<div class="carousel-item ocean-img">
+    <h2>Ocean</h2>
+</div>
+
+<div class="carousel-item desert-img">
+    <h2>Desert</h2>
+</div>
+
+</div>
+
+<a class="carousel-control-prev" href="#exploreCarousel" data-slide="prev">
+<span class="carousel-control-prev-icon"></span>
+</a>
+
+<a class="carousel-control-next" href="#exploreCarousel" data-slide="next">
+<span class="carousel-control-next-icon"></span>
+</a>
     </section>
 
     
