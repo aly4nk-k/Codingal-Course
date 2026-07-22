@@ -1,0 +1,213 @@
+/*reuseable*/
+
+:root {
+  --primary: rgb(57, 211, 57);
+  --font: "archivo Black", sans-serif;
+}
+
+/* |*********************|
+   |    Home Page        |  
+   |*********************|
+                          */
+
+/*Hero Section*/
+
+.hero {
+  background-image: url("wc.jpg");
+  width: 100vw;
+  min-height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.hero-texts {
+  color: white;
+  text-shadow: 4px 5px black;
+  font-family: var(--font);
+}
+
+.hero-texts h2 {
+  font-size: 70px;
+}
+
+.hero-texts h5 {
+  font-size: 30px;
+}
+
+/*Recent Section*/
+
+hr {
+  width: 100%;
+  background-image: linear-gradient(to right, rgb(57, 211, 57), white);
+  height: 3px;
+}
+
+.home-img {
+  object-fit: cover;
+  max-width: 400px;
+  max-height: 200px;
+  border-radius: 20px;
+}
+
+.recent {
+  max-width: 800px;
+  padding: 20px 30px;
+}
+
+/*flashback section*/
+
+.flashback-img {
+  object-fit: cover;
+  max-width: 300px;
+  max-height: 200px;
+  border-radius: 20px;
+}
+
+.flashback-box {
+  max-width: 800px;
+}
+
+.gap {
+  gap: 50px !important;
+}
+
+.gap-0 {
+  gap: 0 !important;
+}
+
+.highlight {
+  max-width: 300px;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+/* |*********************|
+   |    Matches Page     |  
+   |*********************|
+                          */
+
+.match-card {
+  border: 2px solid var(--primary);
+  border-radius: 20px;
+  padding: 10px 10px;
+  margin-bottom: 30px;
+}
+
+/* |*********************|
+   |    Teams Page       |  
+   |*********************|
+                          */
+.navbar-link {
+  border: 2px solid var(--primary);
+  padding: 10px 15px;
+  border-radius: 20px;
+  user-select: none;
+}
+
+.navbar {
+  border-top: 2px solid var(--primary);
+  border-bottom: 2px solid var(--primary);
+  position: sticky;
+  top: 10px;
+  padding: 30px 10px;
+}
+
+.league-box {
+  border: 2px solid var(--primary);
+  border-radius: 15px;
+  width: 100%;
+  min-height: 300px;
+  color: white;
+  padding: 15px 30px;
+  font-weight: bold;
+}
+
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 30px;
+}
+
+.club-logo {
+  object-fit: contain;
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+
+#liga,
+#serie {
+  display: none;
+}
+
+/* |*********************|
+   |  Responsive Fixes   |  
+   |*********************|
+                          */
+
+/*Tablet / mobile */
+
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  ul {
+    gap: 15px;
+    font-size: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    min-height: 350px;
+  }
+
+  .hero-texts h2 {
+    font-size: 45px;
+  }
+
+  .hero-texts h5 {
+    font-size: 22px;
+  }
+
+  .flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .recent {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .home-img {
+    width: 100%;
+    max-width: 350px;
+    height: 200px;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  .flashback-img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .highlight {
+    width: 100%;
+    max-width: 350px;
+    height: 200px;
+  }
+}

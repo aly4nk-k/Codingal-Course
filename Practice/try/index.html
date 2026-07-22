@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .teams{
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap:20px;
+        }
+
+        .teams2{
+            display:grid;
+            grid-template-columns:repeat(autofil minmax(350px, 1fr));
+            gap:20px;
+        }
+
+        .card{
+            border:2px solid black;
+            border-radius:20px;
+            min-height:200px;
+            padding:10px 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="teams">
+
+<div class="card">Real Madrid</div>
+<div class="card">Barcelona</div>
+<div class="card">Arsenal</div>
+<div class="card">Chelsea</div>
+<div class="card">Liverpool</div>
+<div class="card">City</div>
+
+</div>
+
+
+<div class="teams2">
+
+<div class="card">Real Madrid</div>
+<div class="card">Barcelona</div>
+<div class="card">Arsenal</div>
+<div class="card">Chelsea</div>
+<div class="card">Liverpool</div>
+<div class="card">City</div>
+
+</div>

@@ -1,0 +1,91 @@
+:root {
+  --primary: rgb(57, 211, 57);
+  --font: "archivo Black", sans-serif;
+}
+
+main {
+  margin-top: 100px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  width: 100%;
+  padding: 10px 20px;
+}
+
+.primary {
+  color: var(--primary);
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.font {
+  font-family: var(--font);
+}
+
+nav a:hover {
+  color: var(--primary);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+main .hero {
+  margin-top: 0 !important;
+}
+
+span {
+  margin: 0px 2px;
+}
+
+.flex {
+  display: flex;
+  gap: 10px;
+}
+
+.clicked {
+  color: var(--primary) !important;
+  border-bottom: 2px solid var(--primary);
+}
+
+.clicked:hover {
+  color: white !important;
+  transition: 0.2s;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+abbr {
+  text-decoration: none !important;
+}
