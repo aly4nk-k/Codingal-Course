@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" onclick="add(5,9)">Calculate</button>
+
+    <button type="button" onclick="changeColor('red')">Change to Red</button>
+    <p id="result"></p>
+    <script>
+         // let a = 5;
+         // let b = 9;
+          
+          function add(a,b){
+        let sum = a + b;
+        document.getElementById("result").innerHTML = sum;
+          }
+
+function changeColor(c){
+document.getElementById("result").style.color =c;
+}        
+    </script>
+</body>
+</html>
