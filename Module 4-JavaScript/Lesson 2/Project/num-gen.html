@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Boogaloo&display=swap" rel="stylesheet">
+    <style>
+        header{
+            position:fixed;
+            top:0;
+            left:0;
+            z-index:1;
+        }
+
+        .font{
+            font-family: "Boogaloo", sans-serif;
+        }
+
+        main{
+            margin-top:100px;
+        }
+
+        .fs-20{
+            font-size:20px;
+        }
+
+        .generated{
+            border:2px solid black;
+            border-radius:15px;
+            width:100px;
+            height:50px;
+            margin:0 auto;
+            padding:10px 10px;
+            font-weight: bold;
+              opacity: 0;
+    transition: 0.4s ease;
+        }
+
+        .card{
+            border:2px solid #ffc107;
+            width:100%;
+            min-height:300px;
+            border-radius:20px;
+            margin-top:30px;
+        }
+
+        .grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit, minmax(350px,1fr));
+            gap:20px;
+        }
+
+    .btn{
+        width:100px;
+    }
+    </style>
+</head>
+<body>
+    <header class="container-fluid bg-warning p-3 font">
+<h1>Num-Gen</h1>
+    </header>
+    <main>
+<section class="container">
+<div class="text-center">
+<h2 class="text-center">
+   <span class="font">Generate a Random Number</span> 
+   <span class="fs-20">(Generate once only)</span>
+</h2>
+
+<button class="btn btn-warning rounded font-weight-bold mt-3" type="button" onclick="generate(7,9)">Generate</button>
+<p id="gen" class="generated mt-3"></p>
+</div>
+</section>
+<section>
+    <div class="grid">
+    <div class="card">
+        <div class="text-center">
+<h3>Addition</h3>
+<button type="button" class="btn btn-warning rounded font-weight-bold mt-3" onclick="showSum">ADD</button>
+<p class="gen"></p>
+</div>
+    </div>
+    <div class="card">
+
+    </div>
+    <div class="card">
+
+    </div>
+    </div>
+</section>
+    </main>
+    <script>
+        function generate(){
+            let a = 7;
+            let b = 9;
+            
+            document.getElementById("gen").innerHTML = `${a} and ${b}`;
+            document.getElementById("gen").style.opacity = "1";
+        }
+        
+        let num1 = 7;
+        let num2 = 9;
+
+        
+    </script>
+</body>
+</html>

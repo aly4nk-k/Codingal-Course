@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methods - Loops</title>
+</head>
+<body>
+    <script>
+        var str = "Today is a Thursday in July";
+        document.write(str);
+        document.write("<br>");
+        document.write(str.toLowerCase());
+        document.write("<br>");
+
+        document.write(str.toUpperCase());
+
+        //string methods cannot be used for numbers
+       // let a = 5;
+        //console.log(a.toUpperCase());
+
+ document.write("<br>");
+        document.write(str.startsWith("mango"));
+         document.write("<br>");
+
+         //Regular Expressions
+         let pattern = new RegExp("an Ka")
+         let result = pattern.test(str);
+         document.write(result);
+  document.write("<br>");
+         document.write(str.includes("July"))
+         document.write("<br>");
+    </script>
+</body>
+</html>
