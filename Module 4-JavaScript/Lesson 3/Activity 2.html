@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="fruits"></ul>
+
+    <p id="choice"></p>
+    <script>
+      //fruits is an array (or list) variable
+      let fruits = ["Apple", "Banana", "Mango", "Grapes", "Strawberry","Cherry"];
+
+      //Creating an Empty String Variable
+      let items = "";
+
+      for (let i = 0; i < fruits.length; i++) {
+        items += "<li>" + fruits[i] + "</li>";
+      }
+
+      document.getElementById("fruits").innerHTML = items;
+
+
+      //random number generation
+
+      let randomIndex = Math.floor(Math.random() * fruits.length);
+      document.getElementById("choice").innerHTML = fruits[randomIndex];
+    </script>
+  </body>
+</html>
