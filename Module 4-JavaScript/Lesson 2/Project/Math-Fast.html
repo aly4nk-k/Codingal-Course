@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Math-Fast</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
@@ -72,20 +72,20 @@
   </head>
   <body>
     <header class="container-fluid bg-warning p-3 font">
-      <h1>Num-Gen</h1>
+      <h1>Math-Fast</h1>
     </header>
     <main>
       <section class="container">
         <div class="text-center">
           <h2 class="text-center">
-            <span class="font">Generate a Random Number</span>
+            <span class="font">Generate Your Number</span>
             <span class="fs-20">(Generate once only)</span>
           </h2>
 
           <button
             class="btn btn-warning rounded font-weight-bold mt-3"
             type="button"
-            onclick="generate(7, 9)"
+            onclick="generate()"
           >
             Generate
           </button>
@@ -100,7 +100,7 @@
               <button
                 type="button"
                 class="btn btn-warning rounded font-weight-bold mt-3"
-                onclick="showSum(7, 9)"
+                onclick="showSum()"
               >
                 ADD
               </button>
@@ -114,7 +114,7 @@
               <button
                 type="button"
                 class="btn btn-warning rounded font-weight-bold mt-3"
-                onclick="showDiff(7, 9)"
+                onclick="showDiff()"
               >
                 SUBTRACT
               </button>
@@ -130,7 +130,7 @@
               <button
                 type="button"
                 class="btn btn-warning rounded font-weight-bold mt-3"
-                onclick="showProduct(7, 9)"
+                onclick="showProduct()"
               >
                 Multiply
               </button>
@@ -144,7 +144,7 @@
               <button
                 type="button"
                 class="btn btn-warning rounded font-weight-bold mt-3"
-                onclick="showQuo(7, 9)"
+                onclick="showQuo()"
               >
                 Divide
               </button>
@@ -157,10 +157,8 @@
     </main>
     <script>
       function generate() {
-        let a = 7;
-        let b = 9;
 
-        document.getElementById("gen").innerHTML = `${a} and ${b}`;
+        document.getElementById("gen").innerHTML = "7 and 9";
         document.getElementById("gen").style.opacity = "1";
         document.getElementById("show").style.opacity = "1";
       }
