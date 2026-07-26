@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+.bg-img{
+    background-image:url("tech.png");
+}
+    </style>
+</head>
+<body>
+    <header class="flex justify-between text-blue-800 p-2 text-3xl">
+        <h1>Tailwind.CSS</h1>
+    </header>
+    <main>
+        <section class="bg-img w-full  text-center bg-cover h-64">
+            <h2 class="text-white text-5xl pt-10 font-extrabold">Never Leave Your HTML</h2>
+        </section>
+        <section class="flex">
+            <div class="border border-black rounded-lg p-5 mt-10 ml-10 h-80 w-96 text-center">
+                <h2 class="text-4xl text-blue-900 font-extrabold ">Our Utility Classes</h2>
+                <p class="text-blue-900 font-bold mt-8">Here are Some Common classes you would need in your html</p>
+                <ul>
+                    <li>flex - this class makes the applied tag flexed</li>
+                    <li>text-(color)-(shade) - Add color to text</li>
+                    <li>bg-(color)-(shade) - add color to your background</li>
+                    <li>border border-(color)-(shade) - border adds the border and the border-clr-shd class adds color to the border</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
