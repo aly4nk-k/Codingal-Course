@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Phone Contact</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #f0f0f2;
+      }
+
+      h1 {
+        color: #ff5a43;
+      }
+
+      .card-label {
+        font-size: 11px;
+        color: #999;
+        text-transform: uppercase;
+      }
+
+      pre {
+        font-size: 13px;
+        color: #333;
+      }
+
+      .card {
+        max-width: 400px;
+      }
+
+      .card-title,
+      h6 {
+        color: #ff5a43;
+      }
+    </style>
+  </head>
+  <body class="py-4">
+    <div class="container">
+      <h1 class="mb-1">My Phone Contact</h1>
+      <p class="text-muted mb-4">Introduction to Objects in JavaScript</p>
+
+      <!-- Contact Card -->
+      <div class="card shadow-sm mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Contact Details</h5>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <span class="card-label d-block">Name</span>
+              <strong id="name"></strong>
+            </li>
+            <li class="list-group-item">
+              <span class="card-label d-block">Phone</span>
+                <strong id="phone"></strong>
+            </li>
+            <li class="list-group-item">
+              <span class="card-label d-block">School</span>
+              <strong id="school"></strong>
+            </li>
+            <li class="list-group-item">
+              <span class="card-label d-block">City</span>
+              <strong id="city"></strong>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Code Box -->
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h6>JavaScript Object Used</h6>
+          <pre id="display">
+
+          </pre>
+        </div>
+      </div>
+    </div>
+
+    <script>
+        let myContact = {
+            name: "Alyan Kabir",
+            phone: "0556100799",
+            school: "International Community School",
+            city: "Abu Dhabi"
+        };
+
+        // This is the  Dot Notation to Access Object Properties
+        document.getElementById("name").innerHTML = myContact.name;
+        document.getElementById("phone").innerHTML = myContact.phone;
+
+        // This is the Bracket Notation to access object properties
+        document.getElementById("school").innerHTML = myContact["school"];
+        document.getElementById("city").innerHTML = myContact["city"];
+
+        document.getElementById("display").innerHTML = JSON.stringify(myContact);
+    </script>
+  </body>
+</html>
