@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nex-Gaming v1</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jaro&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Nex.css" />
+  </head>
+  <body>
+    <header
+      class="primary p-3 container-fluid font d-flex justify-content-between"
+    >
+      <h1>NEX-Gaming</h1>
+
+      <nav>
+        <ul>
+          <li><a href="#profile">Profile</a></li>
+          <li><a href="#inventory">Inventory</a></li>
+          <li><a href="#games">Games</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="flex-box" id="profile">
+        <div class="section-box">
+          <h2 class="primary font text-center mb-4 fs-35">
+            Create Your Profile
+          </h2>
+          <div class="flex">
+            <img src="pfp.jpg" alt="pfp img" class="rounded-circle pfp-img" />
+            <input type="text" placeholder="Enter Name..." class="pf-name" />
+          </div>
+          <div>
+            <textarea
+              placeholder="Enter Description... Ex - I Love Gaming"
+              class="description"
+            ></textarea>
+          </div>
+        </div>
+        <div class="section-box">
+          <h2 class="primary font text-center mb-4 fs-35">About Us</h2>
+          <h3 class="font primary">Contact-Us :</h3>
+          <ul class="contact">
+            <li>Email : NexGaming@gmail.com</li>
+            <li>Phone : 055 982 0733</li>
+          </ul>
+          <hr />
+          <h3 class="font primary">Our Motto :</h3>
+          <blockquote>
+            <p>
+              "We don't just create games, we create experiences that connect
+              players worldwide."
+            </p>
+            <p>- Alyan Kabir, Founder & CEO of Nex-Gaming</p>
+          </blockquote>
+        </div>
+      </section>
+
+      <section id="inventory" class="inv-box">
+        <h2 class="text-center primary fs-35 font mb-3">Your Inventory</h2>
+        <div class="grid">
+          <div class="item-box">
+            <h3 class="font primary fs-35" id="sword"></h3>
+          </div>
+          <div class="item-box">
+            <h3 class="font primary fs-35" id="shield"></h3>
+          </div>
+          <div class="item-box">
+            <h3 class="font primary fs-35" id="sniper"></h3>
+          </div>
+          <div class="item-box">
+            <h3 class="font primary fs-35" id="gun"></h3>
+          </div>
+          <div class="item-box">
+            <h3 class="font primary fs-35" id="grenade"></h3>
+          </div>
+          <div class="item-box">
+            <h3 class="font primary fs-35" id="rifle"></h3>
+          </div>
+          <div class="item-box">
+            <h3 class="font primary fs-35" id="katana"></h3>
+          </div>
+          <div class="item-box">
+            <h3 class="font primary fs-35" id="revolver"></h3>
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          <button class="delete" onclick="remove()" id="btn-1">
+            Delete Item
+          </button>
+          <button
+            class="delete"
+            onclick="removeItm()"
+            id="btn-2"
+            style="display: none"
+          >
+            Delete Item
+          </button>
+          <button
+            class="delete"
+            onclick="removeItm2()"
+            id="btn-3"
+            style="display: none"
+          >
+            Delete Item
+          </button>
+          <button
+            class="delete"
+            onclick="removeItm3()"
+            id="btn-4"
+            style="display: none"
+          >
+            Delete Item
+          </button>
+          <p class="primary font fs-35" style="display: none" id="text">
+            MIN 4 ITEMS !!
+          </p>
+        </div>
+      </section>
+
+      <section id="games">
+        <div class="flex-box font primary">
+          <div class="game-card">
+            <h1 id="hding1"></h1>
+            <p id="info1"></p>
+          </div>
+          <div class="game-card">
+            <h1 id="hding2"></h1>
+            <p id="info2"></p>
+          </div>
+          <div class="game-card">
+            <div class="badge badge-pill">Scheduled</div>
+            <h1 id="hding3"></h1>
+            <p id="info3"></p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2026 Nex-Gaming. All rights reserved.</p>
+    </footer>
+
+    <script>
+      let inventory = [
+        "Sword",
+        "Shield",
+        "Sniper",
+        "Hand-Gun",
+        "Grenade",
+        "Rifle",
+        "Katana",
+        "Revolver",
+      ];
+
+      document.getElementById("sword").innerHTML = inventory[0];
+      document.getElementById("shield").innerHTML = inventory[1];
+      document.getElementById("sniper").innerHTML = inventory[2];
+      document.getElementById("gun").innerHTML = inventory[3];
+      document.getElementById("grenade").innerHTML = inventory[4];
+      document.getElementById("rifle").innerHTML = inventory[5];
+      document.getElementById("katana").innerHTML = inventory[6];
+      document.getElementById("revolver").innerHTML = inventory[7];
+
+      function remove() {
+        inventory.pop();
+        document.getElementById("revolver").innerHTML = "";
+        document.getElementById("btn-1").style.display = "none";
+        document.getElementById("btn-2").style.display = "inline-block";
+      }
+
+      function removeItm() {
+        inventory.pop();
+        document.getElementById("katana").innerHTML = "";
+        document.getElementById("btn-2").style.display = "none";
+        document.getElementById("btn-3").style.display = "inline-block";
+      }
+
+      function removeItm2() {
+        inventory.pop();
+        document.getElementById("rifle").innerHTML = "";
+        document.getElementById("btn-3").style.display = "none";
+        document.getElementById("btn-4").style.display = "inline-block";
+      }
+
+      function removeItm3() {
+        inventory.pop();
+        document.getElementById("grenade").innerHTML = "";
+        document.getElementById("btn-4").style.display = "none";
+        document.getElementById("text").style.display = "inline-block";
+      }
+
+      let gamesInfo = {
+        game1: "Fortnite",
+        info1: "Multiplayer Gun Game",
+        game2: "Roblox",
+        info2: "Popular Online Game",
+        game3: "Gta 6",
+        info3: "Realistic Game",
+      };
+
+      document.getElementById("hding1").innerHTML = gamesInfo.game1;
+      document.getElementById("info1").innerHTML = gamesInfo.info1;
+      document.getElementById("hding2").innerHTML = gamesInfo.game2;
+      document.getElementById("info2").innerHTML = gamesInfo.info2;
+      document.getElementById("hding3").innerHTML = gamesInfo["game3"];
+      document.getElementById("info3").innerHTML = gamesInfo["info3"];
+    </script>
+  </body>
+</html>
