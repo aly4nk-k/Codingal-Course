@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Module 5 - Lesson 1 - Activity 1 - My Game Profile</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: aliceblue;
+        text-align: center;
+        padding: 30px;
+      }
+      h1 {
+        color: navy;
+      }
+      button {
+        background: navy;
+        color: white;
+        padding: 10px 25px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+      div {
+        border: 1px solid navy;
+        width: 280px;
+        margin: 6px auto;
+        padding: 8px 12px;
+        text-align: left;
+        border-radius: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My Game Profile</h1>
+
+    <button onclick="showProfile()">Show Profile</button>
+
+    <div><strong>Name: </strong><span id="name"></span></div>
+    <div><strong>Score: </strong><span id="score"></span></div>
+    <div><strong>Top Score: </strong><span id="record"></span></div>
+    <div><strong>Rank: </strong><span id="rank"></span></div>
+    <div><strong>Greeting: </strong><span id="greeting"></span></div>
+    <div><strong>Stars: </strong><span id="stars"></span></div>
+    <div><strong>Bonus Level: </strong><span id="bonus"></span></div>
+    <div><strong>Team Name: </strong><span id="team"></span></div>
+
+    <script>
+        function showProfile() {
+            let name = "Alyan Kabir"
+            document.getElementById("name").innerHTML = name;
+
+            let myScore = 500;
+            let highScore = 1000;
+            document.getElementById("score").innerHTML = myScore + " out of " + highScore;
+
+            //Comparing the equality of 2 variables with ==
+            let isTopScore = myScore == highScore;
+
+            let record;
+
+            // Since isTopScore is true, this code will run
+            if (isTopScore) {
+                record = "✅";
+            }  else {
+                record = "❌"
+            }
+
+            document.getElementById("record").innerHTML = record;
+
+            let rank;
+
+            if (myScore >= 800) {
+                rank = "🏅";
+            } else if (myScore >=500) {
+                rank = "🥈";
+            } else {
+                rank = "🥉";
+            }
+            document.getElementById("rank").innerHTML = rank;
+
+            let hour = new Date().getHours();
+            let greeting;
+            if (hour < 12) {
+                greeting = "Good Morning";
+            } else if (hour < 18) {
+                greeting = "Good Afternoon";
+            } else{
+                greeting = "Good Evening";
+            }
+
+            document.getElementById("greeting").innerHTML = greeting;
+
+            //Empty String
+            let stars = "";
+            let count = 0;
+
+            //loop - it will repeat the inner statements 5 times
+            while (count < 5) {
+                stars = stars + "⭐";
+                count = count + 1;
+            }
+
+            document.querySelector("#stars").innerHTML = stars;
+
+            let bonus = null;
+            let team;
+
+            document.getElementById("bonus").innerHTML = bonus;
+            document.getElementById("team").innerHTML = team;
+        }
+    </script>
+  </body>
+</html>
+
