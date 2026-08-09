@@ -1,0 +1,212 @@
+/* =============================
+Global Styles
+=============================== */
+
+:root{
+    --main-color: #5ac8da;
+    --bg: rgb(0, 30, 65);
+    --font:"Jaro", sans-serif;
+    --stroke:rgb(0, 74, 158);
+    --text-shadow:0px 0px 50px var(--stroke);
+}
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    background-color:var(--bg);
+    margin:0;
+    padding:0;
+    letter-spacing:2px;
+}
+
+main{
+    padding:150px 20px;
+}
+
+/* =========================
+Re-Usable Styles
+=========================== */
+
+.flex{
+    display:flex;
+    gap:50px;
+    align-items:center;
+}
+
+.column{
+    display:flex;
+    flex-direction:column;
+}
+
+.pfp{
+    width:200px;
+    height:200px;
+    object-fit:cover;
+    border-radius:50%;
+    margin-bottom:30px;
+}
+
+input{
+    width:600px;
+    max-width:100%;
+    height:50px;
+    border-radius:20px;
+    outline:none;
+    border:2px solid var(--main-color);
+    background-color:var(--bg);
+    padding:5px 20px;
+    color:var(--main-color);
+    font-size:30px;
+    font-family:var(--font);
+}
+
+label{
+    color:var(--main-color);
+    font-size:75px;
+    font-family:var(--font);
+    text-shadow:var(--text-shadow);
+}
+
+::placeholder{
+    color:var(--main-color);
+    font-family:var(--font);
+}
+
+
+/* =========================
+SIGN-UP PAGE
+=========================== */
+
+.sign-up-head{
+    font-family:var(--font);
+    color:var(--main-color);
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+    padding:5px 15px;
+    height:100px;
+    width:100%;
+    border-bottom:2px solid var(--main-color);
+    box-shadow:0px 10px 40px var(--main-color);
+    font-size:25px;
+    background-color:var(--bg);
+    text-shadow:var(--text-shadow);
+}
+
+.form-box{
+    width:80%;
+    min-height:700px;
+    border:2px solid var(--main-color);
+    margin:0 auto;
+    border-radius:20px;
+    padding:50px 100px;
+}
+
+.spacer{
+    margin:30px 0px;
+}
+
+.form-box h3{
+    color:var(--main-color);
+    text-shadow:var(--text-shadow);
+    font-size:35px;
+    font-family:var(--font);
+    margin:5px 0px;
+}
+
+.form-box button{
+    display:block;
+    margin:75px auto 0;
+    padding:10px 15px;
+    color:var(--main-color);
+    border:2px solid var(--main-color);
+    background-color:var(--bg);
+    font-size:25px;
+    font-family:var(--font);
+    border-radius:20px;
+}
+
+
+/* =========================
+TABLET
+=========================== */
+
+@media(max-width:800px){
+
+    main{
+        padding:130px 15px;
+    }
+
+    .form-box{
+        width:95%;
+        padding:40px 30px;
+    }
+
+    label{
+        font-size:55px;
+    }
+
+    input{
+        font-size:25px;
+    }
+
+    .flex{
+        gap:25px;
+    }
+}
+
+
+/* =========================
+PHONE
+=========================== */
+
+@media(max-width:1300px){
+
+    .sign-up-head{
+        height:80px;
+        font-size:20px;
+    }
+
+    main{
+        padding-top:120px;
+    }
+
+    .form-box{
+        width:100%;
+        padding:30px 15px;
+        min-height:auto;
+    }
+
+    .flex{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .pfp{
+        width:140px;
+        height:140px;
+    }
+
+    label{
+        font-size:40px;
+        text-align:center;
+    }
+
+    input{
+        width:100%;
+        height:45px;
+        font-size:20px;
+    }
+
+    .form-box h3{
+        font-size:25px;
+    }
+
+    .form-box button{
+        font-size:20px;
+        margin-top:40px;
+    }
+}
