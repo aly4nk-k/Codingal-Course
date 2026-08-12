@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Module 5 - Lesson 2 - Activity 1 - My Song Cards</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        font-family: Arial;
+        background: #f0f4ff;
+        padding: 30px;
+        text-align: center;
+      }
+      h1 {
+        color: #0ea75b;
+      }
+      p {
+        color: #555;
+      }
+      .song-name {
+        font-size: 22px;
+        font-weight: bold;
+        color: #333;
+      }
+      .song-fact {
+        color: #666;
+        margin-top: 10px;
+        font-size: 14px;
+      }
+      button {
+        background: #0ea75b;
+        color: white;
+        border: none;
+        padding: 12px 28px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🎧 My Songs Playlist</h1>
+    <p>Use a JavaScript class to build song cards!</p>
+    <button onclick="showSongs()">Show Songs!</button>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-4">
+          <div id="card1"></div>
+        </div>
+        <div class="col-4">
+          <div id="card2"></div>
+        </div>
+        <div class="col-4">
+          <div id="card3"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      class Song {
+        constructor(name, artist, album, release_year, production_label) {
+          this.name = name;
+          this.artist = artist;
+          this.album = album;
+          this.release_year = release_year;
+          this.production_label = production_label;
+        }
+
+        describe() {
+          return this.name + " : " + this.artist;
+        }
+
+        createCard() {
+          return `<div class="card shadow p-2 border border-success border-3">
+<div class="card-body">
+<div class="song-name">
+    ${this.name}
+    </div>
+    <div class="song-fact">
+<p><strong>Artist :</strong> ${this.artist}</p>
+<p><strong>Album :</strong> ${this.album}</p>
+<p><strong>Release Year :</strong> ${this.release_year}</p>
+<p><strong>Label :</strong> ${this.production_label}</p>
+    </div>
+</div>
+                    </div>`;
+        }
+      }
+
+      function showSongs() {
+        let song1 = new Song(
+          "Dandelions",
+          "Ruth B.",
+          "Safe Haven",
+          2017,
+          "Columbia/Sony",
+        );
+        let song2 = new Song("Choom", "BABYMONSTER", "CHOOM", 2026, "YG Entertainment");
+
+        let song3 = new Song("Dai Dai", "Shakira & Burna Boy", "Dai Dai", 2026, "Sony Music Latin");
+        document.getElementById("card1").innerHTML = song1.createCard();
+        document.getElementById("card2").innerHTML = song2.createCard();
+        document.getElementById("card3").innerHTML = song3.createCard();
+      }
+    </script>
+  </body>
+</html>
