@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja-Verse | Home</title>
+    <link rel="stylesheet" href="ninjaverse.css">
+    <link href="https://fonts.googleapis.com/css2?family=New+Rocker&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+<h1>
+    <span class="light">Ninja</span>
+    <span class="primary">Verse</span>
+</h1>
+<div>
+    <button onclick="revealMenu()">☰</button>
+</div>
+    </header>
+
+    <main>
+        <article class="menu menu-hide">
+           <button class="remove" onclick="hideMenu()">&times;</button>
+<div class="menu-box"><button class="menu-item"><a href="ninjaverse.html">Home</a></button></div>
+<div class="menu-box"><button class="menu-item"><a href="character.html">Characters</a></button></div>
+<div class="menu-box"><button class="menu-item"><a href="">Elements | Weapons</a></button></div>
+<div class="menu-box"><button class="menu-item"><a href="about.html">About Us</a></button></div>
+<div class="menu-box"><button class="menu-item"><a href="">Seasons</a></button></div>
+<div class="menu-box"><button class="menu-item"><a href="">News</a></button></div>
+<div class="menu-box"><button class="menu-item"><a href="">Community</a></button></div>
+        </article>
+
+        <section class="about-content">
+<h4>Learn More about</h4>
+<h2>
+    <span class="light">Ninja</span>
+    <span class="primary">Verse</span>
+</h2>
+
+<div class="about-box">
+<h3 class="primary">Why i Made <span class="light">Ninja</span> Verse</h3>
+<p> I made Ninja Verse so ninjago fans can explore ninjago content and easily access it through the website's navigation system and character search bar.</p>
+</div>
+<div class="about-box">
+<h3 class="light">What to <span class="primary">Expect</span></h3>
+<p>Ninja Verse features a home page, character page, about us page, news page, seasons page, elements and weapons page, and a community page. So feel free to enjoy exploring ninja verse.</p>
+</div>
+<div class="about-box">
+<h3 class="light">Made <span class="primary">By</span></h3>
+<p>Ninja Verse is coded, structured, and designed by Me (Alyan Kabir / Spinjitzu_Shorts). Some Things inside Ninja Verse were given as ideas  by my amazing supporters and fans.</p>
+</div>
+<div class="about-box">
+<h3 class="light">Lego  <span class="primary">Ninja</span> and <span class="primary">Ninjago</span> Wiki <span class="primary"> Rights</span></h3>
+<p>NinjaVerse is an unofficial fan-made website created for Ninjago fans and is not affiliated with, endorsed by, or sponsored by LEGO or any other official Ninjago rights holder. NINJAGO and related names, characters, logos, artwork, images, videos, and other materials remain the property of their respective copyright and trademark owners. NinjaVerse does not claim ownership of these materials and uses third-party media for informational, reference, and fan-community purposes.
+
+Some information may be researched using resources such as the Ninjago Wiki. NinjaVerse is an independent project and is not affiliated with or operated by the Ninjago Wiki or Fandom. Ninjago Wiki's text content is generally available under a Creative Commons Attribution-ShareAlike license unless otherwise stated, while individual images and other media may have separate licensing requirements.
+
+All images and other third-party materials used on NinjaVerse remain subject to their respective licenses and copyrights. Where applicable, credit and attribution are provided to the original creators or rights holders. If you believe that content on NinjaVerse infringes your rights, please contact the site owner so the material can be reviewed and, where appropriate, removed.
+</p>
+</div>
+        </section>
+</main>
+ <script>
+    function revealMenu() {
+        document.querySelector(".menu-hide").style.display = "flex";
+        document.querySelector(".menu-hide").style.position = "fixed"
+        document.body.style.overflow = "hidden";
+    }
+
+    function hideMenu() {
+         document.querySelector(".menu-hide").style.display = "none"
+          document.body.style.overflow = "auto";
+    }
+    </script>
+</body>

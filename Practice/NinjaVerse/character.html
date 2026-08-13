@@ -24,7 +24,7 @@
 <div class="menu-box"><button class="menu-item"><a href="ninjaverse.html">Home</a></button></div>
 <div class="menu-box"><button class="menu-item"><a href="character.html">Characters</a></button></div>
 <div class="menu-box"><button class="menu-item"><a href="">Elements | Weapons</a></button></div>
-<div class="menu-box"><button class="menu-item"><a href="">About</a></button></div>
+<div class="menu-box"><button class="menu-item"><a href="about.html">About Us</a></button></div>
 <div class="menu-box"><button class="menu-item"><a href="">Seasons</a></button></div>
 <div class="menu-box"><button class="menu-item"><a href="">News</a></button></div>
 <div class="menu-box"><button class="menu-item"><a href="">Community</a></button></div>
@@ -40,196 +40,895 @@
 <button class="search-button" onclick="search()">Search</button>
 </div>
 <div class="select-box">
-<button>All</button>
+    <div class="flex-select">
+<button onclick="showAll()">All</button>
 <h3>|</h3>
 <button onclick="showVillains()">Villains</button>
 <h3>|</h3>
-<button>Ninja Team</button>
+<button onclick="showNinja()">Ninja Team</button>
+<h3>|</h3>
+<button onclick="showElemental()">Elementa Masters</button>
+</div>
+<div>
+    <button class="view" onclick="showPop()">List</button>
+</div>
 </div>
 <div class="flex-box">
- <div class="team-box villain garmadon">
+ <div class="team-box villain garmadon Elemental">
             <img src="Images/garamdon.jpg" class="box-img">
             <h4>Garmadon</h4>
             <p>Garmadon is the son of First Spinjitzu Master and the older brother of Wu, once corrupted by the Great Devourer’s venom.</p>
         </div>
-        <div class="team-box villain">
+        <div class="team-box villain overlord">
     <img src="Images/crystal king.jpg" class="box-img">
     <h4>The Overlord</h4>
     <p>The ancient embodiment of darkness and the sworn enemy of the First Spinjitzu Master and his descendants.</p>
 </div>
 
-<div class="team-box villain">
+<div class="team-box villain samukai">
     <img src="Images/samukai.jpg" class="box-img">
     <h4>Samukai</h4>
     <p>A four-armed skeleton warlord who served Garmadon and once ruled the Underworld.</p>
 </div>
 
-<div class="team-box villain">
+<div class="team-box villain pythor">
     <img src="Images/pythor.jpg" class="box-img">
     <h4>Pythor</h4>
     <p>The last known Anacondrai and a cunning leader who sought to revive the Great Devourer.</p>
 </div>
 
-<div class="team-box villain">
+<div class="team-box villain skales">
     <img src="Images/skales.jpg" class="box-img">
     <h4>Skales</h4>
     <p>A powerful Hypnobrai general who became the leader of the Serpentine after Pythor's defeat.</p>
 </div>
 
-<div class="team-box villain">
+<div class="team-box villain chen">
     <img src="Images/chen.jpg" class="box-img">
     <h4>Master Chen</h4>
     <p>A manipulative warlord who sought to conquer Ninjago using the power of Anacondrai.</p>
 </div>
 
-<div class="team-box villain">
+<div class="team-box villain clouse">
     <img src="Images/clouse.jpg" class="box-img">
     <h4>Clouse</h4>
     <p>Master Chen's right-hand man and a powerful practitioner of dark magic.</p>
 </div>
 
-<div class="team-box villain">
+<div class="team-box villain morro Elemental">
     <img src="Images/morro.png" class="box-img">
     <h4>Morro</h4>
     <p>A former student of Wu who became the master of wind and sought to fulfill a dark prophecy.</p>
 </div>
 
-<div class="team-box villain">
+<div class="team-box villain nadakhan">
     <img src="Images/nadakhan.jpg" class="box-img">
     <h4>Nadakhan</h4>
     <p>A Djinn pirate who used magical wishes to manipulate others and restore his kingdom of Djinjago.</p>
 </div>
 
-<div class="team-box villain">
+<div class="team-box villain krux elemental">
     <img src="Images/krux.jpg" class="box-img">
     <h4>Krux</h4>
     <p>An Elemental Master of Time who betrayed his fellow masters and plotted to change history.</p>
 </div>
 
-<div class="team-box villain">
+<div class="team-box villain acronix elemental">
     <img src="Images/acronix.jpg" class="box-img">
     <h4>Acronix</h4>
     <p>An Elemental Master of Time who joined his brother Krux in their plan to conquer Ninjago.</p>
 </div>
 
-<div class="team-box villain">
+<div class="team-box villain cryptor">
     <img src="Images/cryptor.jpg" class="box-img">
     <h4>General Cryptor</h4>
     <p>A Nindroid general who served the Overlord and commanded the Nindroid army.</p>
 </div>
 
-<div class="team-box villain">
+<div class="team-box villain mister">
     <img src="Images/mister.jpg" class="box-img">
     <h4>Mister E</h4>
     <p>A mysterious Nindroid and member of the Sons of Garmadon who hunted the ninja.</p>
 </div>
 
-<div class="team-box villain">
+<div class="team-box villain harumi">
     <img src="Images/harumi.jpg" class="box-img">
     <h4>Harumi</h4>
     <p>The Quiet One and adopted daughter of the Emperor and Empress of Ninjago City.</p>
 </div>
 
-<div class="team-box villain">
+<div class="team-box villain killow">
     <img src="Images/killow.jpg" class="box-img">
     <h4>Killow</h4>
     <p>A powerful member of the Sons of Garmadon and the leader of the Street Rats.</p>
 </div>
 
-<div class="team-box villain">
+<div class="team-box villain ultra">
     <img src="Images/ultra.jpg" class="box-img">
     <h4>Ultra Violet</h4>
     <p>A reckless and dangerous member of the Sons of Garmadon known for her fearless attitude.</p>
 </div>
 
-<div class="team-box villain">
+<div class="team-box villain ironbaron">
     <img src="Images/ironbaron.webp" class="box-img">
     <h4>Iron Baron</h4>
     <p>A ruthless dragon hunter who ruled the Dragon Hunters in the First Realm.</p>
 </div>
 
-<div class="team-box villain">
+<div class="team-box villain omega">
     <img src="Images/omega.jpg" class="box-img">
     <h4>The Omega</h4>
     <p>The leader of the Oni who sought to cover Ninjago and the realms in darkness.</p>
 </div>
 
-<div class="team-box villain">
+<div class="team-box villain aspheera">
     <img src="Images/aspheera.jpg" class="box-img">
     <h4>Aspheera</h4>
     <p>A powerful Serpentine sorceress who mastered forbidden fire and sought revenge against Wu.</p>
 </div>
 
-<div class="team-box villain">
+<div class="team-box villain unagami">
     <img src="Images/unagami.jpg" class="box-img">
     <h4>Unagami</h4>
     <p>The artificial intelligence behind Prime Empire who sought to become a real living being.</p>
 </div>
 
-<div class="team-box villain">
+<div class="team-box villain mechanic">
     <img src="Images/mechanic.jpg" class="box-img">
     <h4>Mechanic</h4>
     <p>The Mechanic is a skilled criminal and inventor who uses advanced technology to carry out his schemes.</p>
 </div>
 
-<div class="team-box villain">
+<div class="team-box villain skullsorcerer">
     <img src="Images/skullsorcerer.jpg" class="box-img">
     <h4>Skull Sorcerer</h4>
     <p>A mysterious sorcerer who used the Shadow of the Skull to control the creatures beneath Shintaro.</p>
 </div>
 
-<div class="team-box villain">
+<div class="team-box villain kalmaar">
     <img src="Images/princekalmaar.jpg" class="box-img">
     <h4>Prince Kalmaar</h4>
     <p>The arrogant prince of Merlopia who plotted against his father and sought to control Wojira.</p>
 </div>
 
-<div class="team-box villain">
+<div class="team-box villain beatrix">
     <img src="Images/beatrix.jpg" class="box-img">
     <h4>Empress Beatrix</h4>
     <p>The ruthless Empress of Imperium who used dragon energy to maintain control over her realm.</p>
 </div>
 
-<div class="team-box villain">
+<div class="team-box villain rapton">
     <img src="Images/rapton.jpg" class="box-img">
     <h4>Rapton</h4>
     <p>A dragon hunter who served Lord Ras and helped capture dragons for Imperium.</p>
 </div>
 
-<div class="team-box villain">
+<div class="team-box villain ras">
     <img src="Images/ras.jpg" class="box-img">
     <h4>Lord Ras</h4>
     <p>A tiger-like warrior who manipulates others while pursuing his mysterious plans across the realms.</p>
 </div>
 
-<div class="team-box villain">
+<div class="team-box villain jordana">
     <img src="Images/jordana.jpg" class="box-img">
     <h4>Jordana</h4>
     <p>A skilled warrior who became involved with Lord Ras and his plans against the ninja.</p>
 </div>
 
-<div class="team-box villain">
+<div class="team-box villain forbiddenfive elemental">
     <img src="Images/forbiddenfive.jpg" class="box-img">
     <h4>Forbidden Five</h4>
     <p>A group of ancient and powerful warriors who seek to conquer the realms.</p>
 </div>
 
-<div class="team-box villain">
+<div class="team-box villain zilvar">
     <img src="Images/zilvar.jpg" class="box-img">
     <h4>Zilvar</h4>
     <p>Major villain in season 4 part 2 trying to save his tribe.</p>
 </div>
 
-<div class="team-box villain">
+<div class="team-box villain larow">
     <img src="Images/larow.jpg" class="box-img">
     <h4>Dr Larow</h4>
     <p>Dr. LaRow is a evil scientist who follows empress beatrix.</p>
 </div>
-        
+       
+<div class="team-box villain elemental cinder">
+<img src="Images/cinder.jpg" alt="cinder" class="box-img">
+<h4>Cinder</h4>
+<p>The Elemental Master of Smoke and a skilled warrior who opposes the Ninja.</p>
+</div>
+<div class="team-box ninja lloyd elemental">
+    <img src="Images/lloyd.png" class="box-img">
+    <h4>Lloyd Garmadon</h4>
+    <p>The Legendary Green Ninja and Master of Energy.</p>
+</div>
+
+<div class="team-box ninja kai elemental">
+    <img src="Images/kai.png" class="box-img">
+    <h4>Kai Smith</h4>
+    <p>The brave Red Ninja and Master of Fire.</p>
+</div>
+
+<div class="team-box ninja cole elemental">
+    <img src="Images/cole.png" class="box-img">
+    <h4>Cole</h4>
+    <p>The strong Black Ninja and Master of Earth.</p>
+</div>
+
+<div class="team-box ninja jay elemental">
+    <img src="Images/jay.png" class="box-img">
+    <h4>Jay Walker</h4>
+    <p>The funny Blue Ninja and Master of Lightning.</p>
+</div>
+
+<div class="team-box ninja nya elemental">
+    <img src="Images/nya.png" class="box-img">
+    <h4>Nya Smith</h4>
+    <p>The determined Water Ninja and Master of Water.</p>
+</div>
+
+<div class="team-box ninja zane elemental">
+    <img src="Images/zane.png" class="box-img">
+    <h4>Zane</h4>
+    <p>The wise White Ninja and Master of Ice.</p>
+</div>
+
+<div class="team-box ninja pixal elemental">
+    <img src="Images/pixal.jpg" class="box-img">
+    <h4>P.I.X.A.L</h4>
+    <p>The intelligent Nindroid and former Samurai X.</p>
+</div>
+<div class="team-box ninja arin">
+    <img src="Images/arin.jpg" class="box-img">
+    <h4>Arin</h4>
+    <p>The energetic Ninja and Master of Spinjitzu.</p>
+</div>
+
+<div class="team-box ninja sora elemental">
+    <img src="Images/sora.jpg" class="box-img">
+    <h4>Sora</h4>
+    <p>The talented Ninja and Elemental Master of Technology.</p>
+</div>
+
+<div class="team-box ninja wyldfyre elemental">
+    <img src="Images/wyldyre.jpg" class="box-img">
+    <h4>Wyldfyre</h4>
+    <p>The fierce Elemental Master of Heat.</p>
+</div>
+
+<div class="team-box ninja frak elemental">
+    <img src="Images/frak.jpg" class="box-img">
+    <h4>Frak</h4>
+    <p>The determined Dragonian and skilled fighter.</p>
+</div>
+
+<div class="team-box ninja riyu">
+    <img src="Images/riyu.jpg" class="box-img">
+    <h4>Riyu</h4>
+    <p>The young dragon and loyal companion of the Ninja.</p>
+</div>
+
+<div class="team-box ninja euphrasia elemental">
+    <img src="Images/euphrasia.jpg" class="box-img">
+    <h4>Euphrasia</h4>
+    <p>The Elemental Master of Wind and ally of the Ninja.</p>
+</div>
+<div class="team-box  skylor elemental">
+    <img src="Images/skylor.jpg" class="box-img">
+    <h4>Skylor</h4>
+    <p>The Elemental Master of Amber and ally of the Ninja.</p>
+</div>
+
+<div class="team-box  karlof elemental">
+    <img src="Images/karlof.jpg" class="box-img">
+    <h4>Karlof</h4>
+    <p>The Elemental Master of Metal and ally of the Ninja.</p>
+</div>
+
+<div class="team-box  griffin elemental">
+    <img src="Images/griffin.jpg" class="box-img">
+    <h4>Griffin Turner</h4>
+    <p>The Elemental Master of Speed and ally of the Ninja.</p>
+</div>
+
+<div class="team-box  neuro elemental">
+    <img src="Images/nuero.jpg" class="box-img">
+    <h4>Neuro</h4>
+    <p>The Elemental Master of Mind and ally of the Ninja.</p>
+</div>
+
+<div class="team-box  bolobo elemental">
+    <img src="Images/bolobo.jpg" class="box-img">
+    <h4>Bolobo</h4>
+    <p>The Elemental Master of Nature and ally of the Ninja.</p>
+</div>
+
+<div class="team-box  jacob elemental">
+    <img src="Images/jacob.jpg" class="box-img">
+    <h4>Jacob</h4>
+    <p>The Elemental Master of Sound and ally of the Ninja.</p>
+</div>
+
+<div class="team-box  chamille elemental">
+    <img src="Images/chamille.jpg" class="box-img">
+    <h4>Chamille</h4>
+    <p>The Elemental Master of Form and ally of the Ninja.</p>
+</div>
+
+<div class="team-box  gravis elemental">
+    <img src="Images/gravis.jpg" class="box-img">
+    <h4>Gravis</h4>
+    <p>The Elemental Master of Gravity and ally of the Ninja.</p>
+</div>
+
+<div class="team-box  ash elemental">
+    <img src="Images/ash.jpg" class="box-img">
+    <h4>Ash</h4>
+    <p>The Elemental Master of Smoke and ally of the Ninja.</p>
+</div>
+
+<div class="team-box  tox elemental">
+    <img src="Images/tox.jpg" class="box-img">
+    <h4>Tox</h4>
+    <p>The Elemental Master of Poison and ally of the Ninja.</p>
+</div>
+
+<div class="team-box shade elemental">
+    <img src="Images/shade.jpg" class="box-img">
+    <h4>Shade</h4>
+    <p>The Elemental Master of Shadow and ally of the Ninja.</p>
+</div>
+
+<div class="team-box  paleman elemental">
+    <img src="Images/paleman.jpg" class="box-img">
+    <h4>Paleman</h4>
+    <p>The Elemental Master of Light and ally of the Ninja.</p>
+</div>
+
+<div class="team-box  geo elemental">
+    <img src="Images/geo.jpg" class="box-img">
+    <h4>Geo</h4>
+    <p>The Elemental Master of Fusion and ally of the Ninja.</p>
+</div>
+
+<div class="team-box dareth">
+    <img src="Images/dareth.jpg" class="box-img">
+    <h4>Dareth</h4>
+    <p>The self-proclaimed Brown Ninja and owner of the Mojo Dojo.</p>
+</div>
+
+<div class="team-box nelson">
+    <img src="Images/nelson.jpg" class="box-img">
+    <h4>Nelson</h4>
+    <p>A young fan of the Ninja who became a hero in his own right.</p>
+</div>
+
+<div class="team-box antonia">
+    <img src="Images/antonia.jpg" class="box-img">
+    <h4>Antonia</h4>
+    <p>Nelson's best friend and a brave ally of the Ninja.</p>
+</div>
+
+<div class="team-box ronin">
+    <img src="Images/ronin.jpg" class="box-img">
+    <h4>Ronin</h4>
+    <p>A skilled bounty hunter and occasional ally of the Ninja.</p>
+</div>
+
+<div class="team-box cyrus">
+    <img src="Images/cyrus.jpg" class="box-img">
+    <h4>Cyrus Borg</h4>
+    <p>A brilliant inventor and founder of Borg Industries.</p>
+</div>
+
+<div class="team-box misako">
+    <img src="Images/misako.jpg" class="box-img">
+    <h4>Misako</h4>
+    <p>Lloyd's mother and a knowledgeable historian of Ninjago.</p>
+</div>
+
+<div class="team-box wu elemental">
+    <img src="Images/wu.jpg" class="box-img">
+    <h4>Master Wu</h4>
+    <p>The wise master who trained the Ninja and guided them through countless battles.</p>
+</div>
+
+<div class="team-box ed">
+    <img src="Images/ed.jpg" class="box-img">
+    <h4>Ed</h4>
+    <p>Jay's adoptive father and a skilled mechanic.</p>
+</div>
+
+<div class="team-box edna">
+    <img src="Images/edna.jpg" class="box-img">
+    <h4>Edna</h4>
+    <p>Jay's adoptive mother and a loving member of his family.</p>
+</div>
+
+<div class="team-box ray">
+    <img src="Images/ray.jpg" class="box-img">
+    <h4>Ray</h4>
+    <p>Kai and Nya's father and former Elemental Master of Fire.</p>
+</div>
+
+<div class="team-box maya">
+    <img src="Images/maya.jpg" class="box-img">
+    <h4>Maya</h4>
+    <p>Kai and Nya's mother and former Elemental Master of Water.</p>
+</div>
+
+<div class="team-box benthomaar">
+    <img src="Images/benthomar.jpg" class="box-img">
+    <h4>Benthomaar</h4>
+    <p>The adopted brother of Kalmaar and a loyal ally of the Ninja.</p>
+</div>
+
+<div class="team-box vania">
+    <img src="Images/vania.jpg" class="box-img">
+    <h4>Vania</h4>
+    <p>The princess of Shintaro and a brave ally of the Ninja.</p>
+</div>
+
+<div class="team-box faith">
+    <img src="Images/faith.jpg" class="box-img">
+    <h4>Faith</h4>
+    <p>A skilled Dragon Hunter who became an ally of the Ninja.</p>
+</div>
+
+<div class="team-box drjulien">
+    <img src="Images/julien.jpg" class="box-img">
+    <h4>Dr. Julien</h4>
+    <p>The brilliant inventor who created Zane and served as his father.</p>
+</div>
+
+<div class="team-box fsm eleemntal">
+    <img src="Images/fsm.jpg" class="box-img">
+    <h4>First Spinjitzu Master</h4>
+    <p>The Creator of Ninjago, Part oni and part dragon.</p>
+</div>
+
+<div class="team-box wyplash">
+    <img src="Images/wyplash.jpg" class="box-img">
+    <h4>Wyplash</h4>
+    <p>A Skulkin general who served Garmadon in the Underworld.</p>
+</div>
+
+<div class="team-box kruncha">
+    <img src="Images/kruncha.jpg" class="box-img">
+    <h4>Kruncha</h4>
+    <p>A Skulkin general who fought alongside Nuckal and Garmadon.</p>
+</div>
+
+<div class="team-box nuckal">
+    <img src="Images/nuckal.jpg" class="box-img">
+    <h4>Nuckal</h4>
+    <p>A Skulkin general known for his strength and short temper.</p>
+</div>
+
+<div class="team-box fangtom elemental">
+    <img src="Images/fangtom.jpg" class="box-img">
+    <h4>Fangtom</h4>
+    <p>A two-headed Venomari warrior and leader of the Fangpyres.</p>
+</div>
+
+<div class="team-box fang-suei">
+    <img src="Images/fangsuei.jpg" class="box-img">
+    <h4>Fang-Suei</h4>
+    <p>A Fangpyre warrior who served under the Serpentine leaders.</p>
+</div>
+
+<div class="team-box skalidor">
+    <img src="Images/skalidor.jpg" class="box-img">
+    <h4>Skalidor</h4>
+    <p>A powerful Constrictai warrior and former Serpentine general.</p>
+</div>
+
+<div class="team-box mezmo">
+    <img src="Images/mezmo.jpg" class="box-img">
+    <h4>Mezmo</h4>
+    <p>A Hypnobrai warrior who served under Skales.</p>
+</div>
+
+<div class="team-box rattla">
+    <img src="Images/rattla.jpg" class="box-img">
+    <h4>Rattla</h4>
+    <p>A Hypnobrai warrior and member of Skales' tribe.</p>
+</div>
+
+<div class="team-box acidicus">
+    <img src="Images/acidius.jpg" class="box-img">
+    <h4>Acidicus</h4>
+    <p>A Venomari general who helped lead the Serpentine.</p>
+</div>
+
+<div class="team-box arcturus">
+    <img src="Images/arcturus.jpg" class="box-img">
+    <h4>Arcturus</h4>
+    <p>The leader of the legendary Anacondrai generals.</p>
+</div>
+
+<div class="team-box clancee">
+    <img src="Images/clancee.jpg" class="box-img">
+    <h4>Clancee</h4>
+    <p>A loyal and somewhat clumsy pirate who served Nadakhan.</p>
+</div>
+
+<div class="team-box doubloon">
+    <img src="Images/doubloon.jpg" class="box-img">
+    <h4>Doubloon</h4>
+    <p>A skilled pirate who became one of Nadakhan's most dangerous crew members.</p>
+</div>
+
+<div class="team-box dogshank">
+    <img src="Images/dogshank.jpg" class="box-img">
+    <h4>Dogshank</h4>
+    <p>A powerful pirate and member of Nadakhan's crew.</p>
+</div>
+
+<div class="team-box monkeywretch">
+    <img src="Images/monkeywretch.jpg" class="box-img">
+    <h4>Monkey Wretch</h4>
+    <p>A mechanical monkey and member of Nadakhan's pirate crew.</p>
+</div>
+
+<div class="team-box flintlocke">
+    <img src="Images/flintloke.jpg" class="box-img">
+    <h4>Flintlocke</h4>
+    <p>A skilled marksman and pirate who served Nadakhan.</p>
+</div>
+
+<div class="team-box bucko">
+    <img src="Images/bucko.jpg" class="box-img">
+    <h4>Bucko</h4>
+    <p>A pirate and member of Nadakhan's crew.</p>
+</div>
+
+<div class="team-box cyren">
+    <img src="Images/cyren.jpg" class="box-img">
+    <h4>Cyren</h4>
+    <p>A pirate musician who served as part of Nadakhan's crew.</p>
+</div>
+
+<div class="team-box soto">
+    <img src="Images/soto.jpg" class="box-img">
+    <h4>Captain Soto</h4>
+    <p>A legendary pirate captain who once terrorized the seas of Ninjago.</p>
+</div>
+
+<div class="team-box echozane">
+    <img src="Images/echozane.jpg" class="box-img">
+    <h4>Echo Zane</h4>
+    <p>A nindroid resembling Zane who lives on the Lighthouse Island.</p>
+</div>
+
+<div class="team-box kozu">
+    <img src="Images/kozu.jpg" class="box-img">
+    <h4>General Kozu</h4>
+    <p>A stone warrior general who served the Overlord.</p>
+</div>
+
+<div class="team-box akita elemental">
+    <img src="Images/akita.jpg" class="box-img">
+    <h4>Akita</h4>
+    <p>A shapeshifting wolf and ally of the Ninja in the Never-Realm.</p>
+</div>
+
+<div class="team-box kataru">
+    <img src="Images/kataru.jpg" class="box-img">
+    <h4>Kataru</h4>
+    <p>Akita's brother who helped protect the people of the Never-Realm.</p>
+</div>
+
+<div class="team-box char">
+    <img src="Images/char.jpg" class="box-img">
+    <h4>Char</h4>
+    <p>A Serpentine warrior who served the fire sorceress Aspheera.</p>
+</div>
+
+<div class="team-box vex">
+    <img src="Images/vex.jpg" class="box-img">
+    <h4>Vex</h4>
+    <p>A manipulative advisor who helped the Ice Emperor conquer the Never-Realm.</p>
+</div>
+
+<div class="team-box grimfax">
+    <img src="Images/grimfax.jpg" class="box-img">
+    <h4>Grimfax</h4>
+    <p>The former leader of the Wolf Tribe in the Never-Realm.</p>
+</div>
+
+<div class="team-box miltondyer">
+    <img src="Images/miltondyer.jpg" class="box-img">
+    <h4>Milton Dyer</h4>
+    <p>The brilliant creator of Prime Empire and the artificial intelligence Unagami.</p>
+</div>
+
+<div class="team-box scott">
+    <img src="Images/scott.jpg" class="box-img">
+    <h4>Scott</h4>
+    <p>A former Prime Empire player who became an ally of the Ninja.</p>
+</div>
+
+<div class="team-box okino">
+    <img src="Images/okino.jpg" class="box-img">
+    <h4>Okino</h4>
+    <p>A samurai from Prime Empire who helped the Ninja reach the Temple of Madness.</p>
+</div>
+
+<div class="team-box racerseven">
+    <img src="Images/racerseven.jpg" class="box-img">
+    <h4>Racer Seven</h4>
+    <p>A skilled racer who helped Lloyd during the Speedway Five-Billion.</p>
+</div>
+
+<div class="team-box mammatus">
+    <img src="Images/mammatus.jpg" class="box-img">
+    <h4>Mammatus</h4>
+    <p>The leader of the Keepers who guarded the Storm Amulet.</p>
+</div>
+
+<div class="team-box gripe">
+    <img src="Images/gripe.jpg" class="box-img">
+    <h4>Gripe</h4>
+    <p>A Keeper who helped protect the Storm Amulet on the island.</p>
+</div>
+
+<div class="team-box glutinos">
+    <img src="Images/glutinos.jpg" class="box-img">
+    <h4>Glutinous</h4>
+    <p>A Merlopian scientist who served Prince Kalmaar.</p>
+</div>
+
+<div class="team-box vangelis">
+    <img src="Images/vangelis.jpg" class="box-img">
+    <h4>Vangelis</h4>
+    <p>The ruthless Skull Sorcerer who ruled the Kingdom of Shintaro.</p>
+</div>
+
+<div class="team-box fugidove">
+    <img src="Images/fugidove.jpg" class="box-img">
+    <h4>Fugi-Dove</h4>
+    <p>A strange and eccentric hero who frequently crosses paths with the Ninja.</p>
+</div>
+
+<div class="team-box bonzle">
+    <img src="Images/bonzle.jpg" class="box-img">
+    <h4>Bonzle</h4>
+    <p>A mysterious ally who became part of the Ninja's adventures.</p>
+</div>
+
+<div class="team-box frohicky">
+    <img src="Images/frohicky.jpg" class="box-img">
+    <h4>Mr. Frohicky</h4>
+    <p>A friendly shopkeeper and ally who helps the Ninja on their adventures.</p>
+</div>
+
+<div class="team-box gandalaria">
+    <img src="Images/gandalaria.jpg" class="box-img">
+    <h4>Gandalaria</h4>
+    <p>A former Imperium citizen who became an ally of the Ninja.</p>
+</div>
+
+<div class="team-box arrakore">
+    <img src="Images/arrakore.jpg" class="box-img">
+    <h4>Arrakore</h4>
+    <p>A powerful dragon and former ally of the Forbidden Five.</p>
+</div>
+
+<div class="team-box egalt">
+    <img src="Images/egalt.jpg" class="box-img">
+    <h4>Egalt</h4>
+    <p>An ancient Source Dragon who trained Arin and Sora.</p>
+</div>
+
+<div class="team-box rontu">
+    <img src="Images/rontu.jpg" class="box-img">
+    <h4>Rontu</h4>
+    <p>A powerful dragon and companion of Egalt.</p>
+</div>
+
+<div class="team-box fritz">
+    <img src="Images/fritz.jpg" class="box-img">
+    <h4>Fritz</h4>
+    <p>A young dragon who became involved with the Ninja's adventures.</p>
+</div>
+
+<div class="team-box spitz">
+    <img src="Images/spitz.jpg" class="box-img">
+    <h4>Spitz</h4>
+    <p>A dragon who became involved in the Ninja's adventures.</p>
+</div>
+
+<div class="team-box percival">
+    <img src="Images/percival.jpg" class="box-img">
+    <h4>Percival Tartigrade</h4>
+    <p>A brave ally who helps the Ninja across the realms.</p>
+</div>
+
+<div class="team-box roby">
+    <img src="Images/roby.jpg" class="box-img">
+    <h4>Roby</h4>
+    <p>A loyal friend and ally who assists the Ninja.</p>
+</div>
+
+<div class="team-box gulch">
+    <img src="Images/gulch.jpg" class="box-img">
+    <h4>Chancellor Gulch</h4>
+    <p>The Chancellor of the Geckles who became involved with the Ninja.</p>
+</div>
 </div>
         </section>
 
+        <section class="overlay">
+<div class="alert">
+<h2>
+    <span class="light">Ninja</span>
+    <span class="primary">Verse</span>
+</h2>
+<p class="unable"></p>
+<button class="try" onclick="removeAlert()">Try Again</button>
+</div>
+        </section>
+
+          <section class="overlay2">
+<div class="alert2 position">
+    <button class="close" onclick="removePop()">&times;</button>
+    <div class="column-character">
+<h2>
+    <span class="light">Ninja</span>
+    <span class="primary">Verse</span>
+</h2>
+<ul>
+    <li>garmadon</li>
+    <li>overlord</li>
+    <li>samukai</li>
+    <li>pythor</li>
+    <li>skales</li>
+    <li>master chen</li>
+    <li>clouse</li>
+    <li>morro</li>
+    <li>nadakhan</li>
+    <li>krux</li>
+    <li>acronix</li>
+    <li>general cryptor</li>
+    <li>mister e</li>
+    <li>harumi</li>
+    <li>killow</li>
+    <li>ultra violet</li>
+    <li>iron baron</li>
+    <li>omega</li>
+    <li>aspheera</li>
+    <li>unagami</li>
+    <li>mechanic</li>
+    <li>skull sorcerer</li>
+    <li>prince kalmaar</li>
+    <li>empress beatrix</li>
+    <li>rapton</li>
+    <li>ras</li>
+    <li>jordana</li>
+    <li>forbidden five</li>
+    <li>zilvar</li>
+    <li>dr larow</li>
+    <li>cinder</li>
+    <li>lloyd</li>
+    <li>lloyd garmadon</li>
+    <li>kai</li>
+    <li>kai smith</li>
+    <li>cole</li>
+    <li>jay</li>
+    <li>jay walker</li>
+    <li>nya</li>
+    <li>nya smith</li>
+    <li>zane</li>
+    <li>pixal</li>
+    <li>p.i.x.a.l</li>
+    <li>arin</li>
+    <li>sora</li>
+    <li>wyldfyre</li>
+    <li>frak</li>
+    <li>riyu</li>
+    <li>euphrasia</li>
+    <li>skylor</li>
+    <li>karlof</li>
+    <li>griffin turner</li>
+    <li>griffin</li>
+    <li>neuro</li>
+    <li>bolobo</li>
+    <li>jacob</li>
+    <li>chamille</li>
+    <li>gravis</li>
+    <li>ash</li>
+    <li>tox</li>
+    <li>shade</li>
+    <li>paleman</li>
+    <li>geo</li>
+    <li>dareth</li>
+    <li>nelson</li>
+    <li>antonia</li>
+    <li>ronin</li>
+    <li>cyrus</li>
+    <li>cyrus borg</li>
+    <li>misako</li>
+    <li>ed</li>
+    <li>edna</li>
+    <li>ray</li>
+    <li>maya</li>
+    <li>benthomaar</li>
+    <li>vania</li>
+    <li>faith</li>
+    <li>dr julien</li>
+    <li>falcon</li>
+    <li>wyplash</li>
+    <li>kruncha</li>
+    <li>nuckal</li>
+    <li>fangtom</li>
+    <li>fang-suei</li>
+    <li>skalidor</li>
+    <li>mezmo</li>
+    <li>rattla</li>
+    <li>acidicus</li>
+    <li>arcturus</li>
+    <li>clancee</li>
+    <li>doubloon</li>
+    <li>dogshank</li>
+    <li>monkey wretch</li>
+    <li>flintlocke</li>
+    <li>bucko</li>
+    <li>cyren</li>
+    <li>captain soto</li>
+    <li>soto</li>
+    <li>echo zane</li>
+    <li>echozane</li>
+    <li>general kozu</li>
+    <li>kozu</li>
+    <li>akita</li>
+    <li>kataru</li>
+    <li>char</li>
+    <li>vex</li>
+    <li>grimfax</li>
+    <li>milton dyer</li>
+    <li>scott</li>
+    <li>okino</li>
+    <li>racer seven</li>
+    <li>racer 7</li>
+    <li>mammatus</li>
+    <li>gripe</li>
+    <li>glutinous</li>
+    <li>vangelis</li>
+    <li>fugi-dove</li>
+    <li>fugidove</li>
+    <li>bonzle</li>
+    <li>mr frohicky</li>
+    <li>frohicky</li>
+    <li>gandalaria</li>
+    <li>arrakore</li>
+    <li>egalt</li>
+    <li>rontu</li>
+    <li>fritz</li>
+    <li>spitz</li>
+    <li>percival</li>
+    <li>percival tartigrade</li>
+    <li>roby</li>
+    <li>gulch</li>
+    <li>chancellor gulch</li>
+</ul>
+</div>
+</div>
+        </section>
+
+
             <script>
+                function showPop() {
+                    document.querySelector(".overlay2").style.display = "block";
+                    document.querySelector(".alert2").style.display = "flex";
+                }
+
+                function removePop() {
+                    document.querySelector(".overlay2").style.display = "none";
+                    document.querySelector(".alert2").style.display = "none";
+                }
+
     function revealMenu() {
         document.querySelector(".menu-hide").style.display = "flex";
         document.querySelector(".menu-hide").style.position = "fixed"
@@ -251,105 +950,439 @@
 
     let namecharacter = document.querySelector(".search").value.toLowerCase();
 
-    if (namecharacter === "garmadon") {
-        document.querySelector(".garmadon").style.display = "flex";
+    namecharacter.scrollIntoView
 
-    } else if (namecharacter === "overlord") {
-        document.querySelector(".overlord").style.display = "flex";
+   namecharacter = namecharacter.toLowerCase();
 
-    } else if (namecharacter === "samukai") {
-        document.querySelector(".samukai").style.display = "flex";
+if (namecharacter === "garmadon") {
+    document.querySelector(".garmadon").style.display = "flex";
 
-    } else if (namecharacter === "pythor") {
-        document.querySelector(".pythor").style.display = "flex";
+} else if (namecharacter === "overlord") {
+    document.querySelector(".overlord").style.display = "flex";
 
-    } else if (namecharacter === "skales") {
-        document.querySelector(".skales").style.display = "flex";
+} else if (namecharacter === "samukai") {
+    document.querySelector(".samukai").style.display = "flex";
 
-    } else if (namecharacter === "master chen") {
-        document.querySelector(".master-chen").style.display = "flex";
+} else if (namecharacter === "pythor") {
+    document.querySelector(".pythor").style.display = "flex";
 
-    } else if (namecharacter === "clouse") {
-        document.querySelector(".clouse").style.display = "flex";
+} else if (namecharacter === "skales") {
+    document.querySelector(".skales").style.display = "flex";
 
-    } else if (namecharacter === "morro") {
-        document.querySelector(".morro").style.display = "flex";
+} else if (namecharacter === "master chen") {
+    document.querySelector(".chen").style.display = "flex";
 
-    } else if (namecharacter === "nadakhan") {
-        document.querySelector(".nadakhan").style.display = "flex";
+} else if (namecharacter === "clouse") {
+    document.querySelector(".clouse").style.display = "flex";
 
-    } else if (namecharacter === "krux") {
-        document.querySelector(".krux").style.display = "flex";
+} else if (namecharacter === "morro") {
+    document.querySelector(".morro").style.display = "flex";
 
-    } else if (namecharacter === "acronix") {
-        document.querySelector(".acronix").style.display = "flex";
+} else if (namecharacter === "nadakhan") {
+    document.querySelector(".nadakhan").style.display = "flex";
 
-    } else if (namecharacter === "general cryptor") {
-        document.querySelector(".general-cryptor").style.display = "flex";
+} else if (namecharacter === "krux") {
+    document.querySelector(".krux").style.display = "flex";
 
-    } else if (namecharacter === "mister e") {
-        document.querySelector(".mister-e").style.display = "flex";
+} else if (namecharacter === "acronix") {
+    document.querySelector(".acronix").style.display = "flex";
 
-    } else if (namecharacter === "harumi") {
-        document.querySelector(".harumi").style.display = "flex";
+} else if (namecharacter === "general cryptor") {
+    document.querySelector(".cryptor").style.display = "flex";
 
-    } else if (namecharacter === "killow") {
-        document.querySelector(".killow").style.display = "flex";
+} else if (namecharacter === "mister e") {
+    document.querySelector(".mister").style.display = "flex";
 
-    } else if (namecharacter === "ultra violet") {
-        document.querySelector(".ultra-violet").style.display = "flex";
+} else if (namecharacter === "harumi") {
+    document.querySelector(".harumi").style.display = "flex";
 
-    } else if (namecharacter === "iron baron") {
-        document.querySelector(".iron-baron").style.display = "flex";
+} else if (namecharacter === "killow") {
+    document.querySelector(".killow").style.display = "flex";
 
-    } else if (namecharacter === "omega") {
-        document.querySelector(".omega").style.display = "flex";
+} else if (namecharacter === "ultra violet") {
+    document.querySelector(".ultra").style.display = "flex";
 
-    } else if (namecharacter === "aspheera") {
-        document.querySelector(".aspheera").style.display = "flex";
+} else if (namecharacter === "iron baron") {
+    document.querySelector(".ironbaron").style.display = "flex";
 
-    } else if (namecharacter === "unagami") {
-        document.querySelector(".unagami").style.display = "flex";
+} else if (namecharacter === "omega") {
+    document.querySelector(".omega").style.display = "flex";
 
-    } else if (namecharacter === "mechanic") {
-        document.querySelector(".mechanic").style.display = "flex";
+} else if (namecharacter === "aspheera") {
+    document.querySelector(".aspheera").style.display = "flex";
 
-    } else if (namecharacter === "skull sorcerer") {
-        document.querySelector(".skull-sorcerer").style.display = "flex";
+} else if (namecharacter === "unagami") {
+    document.querySelector(".unagami").style.display = "flex";
 
-    } else if (namecharacter === "prince kalmaar") {
-        document.querySelector(".prince-kalmaar").style.display = "flex";
+} else if (namecharacter === "mechanic") {
+    document.querySelector(".mechanic").style.display = "flex";
 
-    } else if (namecharacter === "empress beatrix") {
-        document.querySelector(".empress-beatrix").style.display = "flex";
+} else if (namecharacter === "skull sorcerer") {
+    document.querySelector(".skullsorcerer").style.display = "flex";
 
-    } else if (namecharacter === "rapton") {
-        document.querySelector(".rapton").style.display = "flex";
+} else if (namecharacter === "prince kalmaar") {
+    document.querySelector(".kalmaar").style.display = "flex";
 
-    } else if (namecharacter === "lord ras") {
-        document.querySelector(".lord-ras").style.display = "flex";
+} else if (namecharacter === "empress beatrix") {
+    document.querySelector(".beatrix").style.display = "flex";
 
-    } else if (namecharacter === "jordana") {
-        document.querySelector(".jordana").style.display = "flex";
+} else if (namecharacter === "rapton") {
+    document.querySelector(".rapton").style.display = "flex";
 
-    } else if (namecharacter === "forbidden five") {
-        document.querySelector(".forbidden-five").style.display = "flex";
+} else if (namecharacter === "ras") {
+    document.querySelector(".ras").style.display = "flex";
 
-    } else if (namecharacter === "zilvar") {
-        document.querySelector(".zilvar").style.display = "flex";
+} else if (namecharacter === "jordana") {
+    document.querySelector(".jordana").style.display = "flex";
 
-    } else if (namecharacter === "dr larow") {
-        document.querySelector(".dr-larow").style.display = "flex";
-    } else {
-       alert("not found");
-    }
+} else if (namecharacter === "forbidden five") {
+    document.querySelector(".forbiddenfive").style.display = "flex";
+
+} else if (namecharacter === "zilvar") {
+    document.querySelector(".zilvar").style.display = "flex";
+
+} else if (namecharacter === "dr larow") {
+    document.querySelector(".larow").style.display = "flex";
+
+} else if (namecharacter === "cinder") {
+    document.querySelector(".cinder").style.display = "flex";
+}
+ else  if (namecharacter === "lloyd" || namecharacter === "lloyd garmadon") {
+    document.querySelector(".lloyd").style.display = "flex";
+
+} else if (namecharacter === "kai" || namecharacter === "kai smith") {
+    document.querySelector(".kai").style.display = "flex";
+
+} else if (namecharacter === "cole") {
+    document.querySelector(".cole").style.display = "flex";
+
+} else if (namecharacter === "jay" || namecharacter === "jay walker") {
+    document.querySelector(".jay").style.display = "flex";
+
+} else if (namecharacter === "nya" || namecharacter === "nya smith") {
+    document.querySelector(".nya").style.display = "flex";
+
+} else if (namecharacter === "zane") {
+    document.querySelector(".zane").style.display = "flex";
+
+} else if (namecharacter === "pixal" || namecharacter === "p.i.x.a.l") {
+    document.querySelector(".pixal").style.display = "flex";
+
+} else if (namecharacter === "arin") {
+    document.querySelector(".arin").style.display = "flex";
+
+} else if (namecharacter === "sora") {
+    document.querySelector(".sora").style.display = "flex";
+
+} else if (namecharacter === "wyldfyre") {
+    document.querySelector(".wyldfyre").style.display = "flex";
+
+} else if (namecharacter === "frak") {
+    document.querySelector(".frak").style.display = "flex";
+
+} else if (namecharacter === "riyu") {
+    document.querySelector(".riyu").style.display = "flex";
+
+} else if (namecharacter === "euphrasia") {
+    document.querySelector(".euphrasia").style.display = "flex";
+
+}  else if (namecharacter === "skylor") {
+    document.querySelector(".skylor").style.display = "flex";
+
+} else if (namecharacter === "karlof") {
+    document.querySelector(".karlof").style.display = "flex";
+
+} else if (namecharacter === "griffin turner" || namecharacter === "griffin") {
+    document.querySelector(".griffin").style.display = "flex";
+
+} else if (namecharacter === "neuro") {
+    document.querySelector(".neuro").style.display = "flex";
+
+} else if (namecharacter === "bolobo") {
+    document.querySelector(".bolobo").style.display = "flex";
+
+} else if (namecharacter === "jacob") {
+    document.querySelector(".jacob").style.display = "flex";
+
+} else if (namecharacter === "chamille") {
+    document.querySelector(".chamille").style.display = "flex";
+
+} else if (namecharacter === "gravis") {
+    document.querySelector(".gravis").style.display = "flex";
+
+} else if (namecharacter === "ash") {
+    document.querySelector(".ash").style.display = "flex";
+
+} else if (namecharacter === "tox") {
+    document.querySelector(".tox").style.display = "flex";
+
+} else if (namecharacter === "shade") {
+    document.querySelector(".shade").style.display = "flex";
+
+} else if (namecharacter === "paleman") {
+    document.querySelector(".paleman").style.display = "flex";
+
+} else if (namecharacter === "geo") {
+    document.querySelector(".geo").style.display = "flex";
+}  else if (namecharacter === "dareth") {
+    document.querySelector(".dareth").style.display = "flex";
+
+} else if (namecharacter === "nelson") {
+    document.querySelector(".nelson").style.display = "flex";
+
+} else if (namecharacter === "antonia") {
+    document.querySelector(".antonia").style.display = "flex";
+
+} else if (namecharacter === "ronin") {
+    document.querySelector(".ronin").style.display = "flex";
+
+} else if (namecharacter === "cyrus" || namecharacter === "cyrus borg") {
+    document.querySelector(".cyrus").style.display = "flex";
+
+} else if (namecharacter === "misako") {
+    document.querySelector(".misako").style.display = "flex";
+
+} else if (namecharacter === "ed") {
+    document.querySelector(".ed").style.display = "flex";
+
+} else if (namecharacter === "edna") {
+    document.querySelector(".edna").style.display = "flex";
+
+} else if (namecharacter === "ray") {
+    document.querySelector(".ray").style.display = "flex";
+
+} else if (namecharacter === "maya") {
+    document.querySelector(".maya").style.display = "flex";
+
+} else if (namecharacter === "benthomaar") {
+    document.querySelector(".benthomaar").style.display = "flex";
+
+} else if (namecharacter === "vania") {
+    document.querySelector(".vania").style.display = "flex";
+
+} else if (namecharacter === "faith") {
+    document.querySelector(".faith").style.display = "flex";
+}  else if (namecharacter === "dr julien") {
+    document.querySelector(".drjulien").style.display = "flex";
+
+} else if (namecharacter === "falcon") {
+    document.querySelector(".falcon").style.display = "flex";
+
+} else if (namecharacter === "wyplash") {
+    document.querySelector(".wyplash").style.display = "flex";
+
+} else if (namecharacter === "kruncha") {
+    document.querySelector(".kruncha").style.display = "flex";
+
+} else if (namecharacter === "nuckal") {
+    document.querySelector(".nuckal").style.display = "flex";
+
+} else if (namecharacter === "fangtom") {
+    document.querySelector(".fangtom").style.display = "flex";
+
+} else if (namecharacter === "fang-suei") {
+    document.querySelector(".fang-suei").style.display = "flex";
+
+} else if (namecharacter === "skalidor") {
+    document.querySelector(".skalidor").style.display = "flex";
+
+} else if (namecharacter === "mezmo") {
+    document.querySelector(".mezmo").style.display = "flex";
+
+} else if (namecharacter === "rattla") {
+    document.querySelector(".rattla").style.display = "flex";
+
+} else if (namecharacter === "acidicus") {
+    document.querySelector(".acidicus").style.display = "flex";
+
+} else if (namecharacter === "arcturus") {
+    document.querySelector(".arcturus").style.display = "flex";
+
+} else if (namecharacter === "clancee") {
+    document.querySelector(".clancee").style.display = "flex";
+
+} else if (namecharacter === "doubloon") {
+    document.querySelector(".doubloon").style.display = "flex";
+
+} else if (namecharacter === "dogshank") {
+    document.querySelector(".dogshank").style.display = "flex";
+
+} else if (namecharacter === "monkey wretch") {
+    document.querySelector(".monkeywretch").style.display = "flex";
+
+} else if (namecharacter === "flintlocke") {
+    document.querySelector(".flintlocke").style.display = "flex";
+
+} else if (namecharacter === "bucko") {
+    document.querySelector(".bucko").style.display = "flex";
+
+} else if (namecharacter === "cyren") {
+    document.querySelector(".cyren").style.display = "flex";
+
+} else if (namecharacter === "captain soto" || namecharacter === "soto") {
+    document.querySelector(".soto").style.display = "flex";
+
+} else if (namecharacter === "echo zane" || namecharacter === "echozane") {
+    document.querySelector(".echozane").style.display = "flex";
+
+} else if (namecharacter === "general kozu" || namecharacter === "kozu") {
+    document.querySelector(".kozu").style.display = "flex";
+
+} else if (namecharacter === "akita") {
+    document.querySelector(".akita").style.display = "flex";
+
+} else if (namecharacter === "kataru") {
+    document.querySelector(".kataru").style.display = "flex";
+
+} else if (namecharacter === "char") {
+    document.querySelector(".char").style.display = "flex";
+
+} else if (namecharacter === "vex") {
+    document.querySelector(".vex").style.display = "flex";
+
+} else if (namecharacter === "grimfax") {
+    document.querySelector(".grimfax").style.display = "flex";
+
+} else if (namecharacter === "milton dyer") {
+    document.querySelector(".miltondyer").style.display = "flex";
+
+} else if (namecharacter === "scott") {
+    document.querySelector(".scott").style.display = "flex";
+
+} else if (namecharacter === "okino") {
+    document.querySelector(".okino").style.display = "flex";
+
+} else if (namecharacter === "racer seven" || namecharacter === "racer 7") {
+    document.querySelector(".racerseven").style.display = "flex";
+
+} else if (namecharacter === "mammatus") {
+    document.querySelector(".mammatus").style.display = "flex";
+
+} else if (namecharacter === "gripe") {
+    document.querySelector(".gripe").style.display = "flex";
+
+} else if (namecharacter === "glutinous") {
+    document.querySelector(".glutinos").style.display = "flex";
+
+} else if (namecharacter === "vangelis") {
+    document.querySelector(".vangelis").style.display = "flex";
+
+} else if (namecharacter === "fugi-dove" || namecharacter === "fugidove") {
+    document.querySelector(".fugidove").style.display = "flex";
+
+} else if (namecharacter === "bonzle") {
+    document.querySelector(".bonzle").style.display = "flex";
+
+} else if (namecharacter === "mr frohicky" || namecharacter === "frohicky") {
+    document.querySelector(".frohicky").style.display = "flex";
+
+} else if (namecharacter === "gandalaria") {
+    document.querySelector(".gandalaria").style.display = "flex";
+
+} else if (namecharacter === "arrakore") {
+    document.querySelector(".arrakore").style.display = "flex";
+
+} else if (namecharacter === "egalt") {
+    document.querySelector(".egalt").style.display = "flex";
+
+} else if (namecharacter === "rontu") {
+    document.querySelector(".rontu").style.display = "flex";
+
+} else if (namecharacter === "fritz") {
+    document.querySelector(".fritz").style.display = "flex";
+
+} else if (namecharacter === "spitz") {
+    document.querySelector(".spitz").style.display = "flex";
+
+} else if (namecharacter === "percival" || namecharacter === "percival tartigrade") {
+    document.querySelector(".percival").style.display = "flex";
+
+} else if (namecharacter === "roby") {
+    document.querySelector(".roby").style.display = "flex";
+
+} else if (namecharacter === "gulch" || namecharacter === "chancellor gulch") {
+    document.querySelector(".gulch").style.display = "flex";}
+else {
+   document.querySelector(".alert").style.display = "block";
+   document.querySelector(".overlay").style.display = "block";
+   document.querySelector(".unable").innerHTML = "Unable to Find : " + `<span class="primary">${namecharacter}</span>` + " Try Again !!";
+}
+
 }
 
     function showVillains() {
+         let hidden2 = document.querySelectorAll(".team-box");
+
+    for(i = 0; i < hidden2.length; i++) {
+        hidden2[i].style.display = "none";
+    }
+
+        let hidden = document.querySelectorAll(".ninja");
+
+    for(i = 0; i < hidden.length; i++) {
+        hidden[i].style.display = "none";
+    }
+     let hiddenelement = document.querySelectorAll(".elemental");
+
+    for(i = 0; i < hiddenelement.length; i++) {
+        hiddenelement[i].style.display = "none";
+    }
         let villains = document.querySelectorAll(".villain");
 
         for (let i = 0; i < villains.length; i++) {
             villains[i].style.display = "flex";
+        }
+    }
+
+    function removeAlert() {
+        document.querySelector(".alert").style.display = "none";
+   document.querySelector(".overlay").style.display = "none";
+    }
+
+    function showNinja() {
+         let hidden1 = document.querySelectorAll(".team-box");
+
+    for(i = 0; i < hidden1.length; i++) {
+        hidden1[i].style.display = "none";
+    }
+
+    let hidden = document.querySelectorAll(".villain");
+
+    for(i = 0; i < hidden.length; i++) {
+        hidden[i].style.display = "none";
+    }
+
+    let hiddenelement = document.querySelectorAll(".elemental");
+
+    for(i = 0; i < hiddenelement.length; i++) {
+        hiddenelement[i].style.display = "none";
+    }
+
+        let ninja = document.querySelectorAll(".ninja");
+
+        for (let i = 0; i < ninja.length; i++) {
+            ninja[i].style.display = "flex";
+        }
+    }
+
+    function showAll() {
+        let all = document.querySelectorAll(".team-box");
+
+        for(let i = 0; i < all.length; i++) {
+            all[i].style.display = "flex";
+        }
+    }
+
+    function showElemental() {
+         let hidden = document.querySelectorAll(".team-box");
+
+    for(i = 0; i < hidden.length; i++) {
+        hidden[i].style.display = "none";
+    }
+
+        let element = document.querySelectorAll(".elemental");
+        for(let i = 0; i < element.length; i++) {
+            element[i].style.display = "flex";
         }
     }
     </script>
