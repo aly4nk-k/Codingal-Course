@@ -429,88 +429,11 @@ hr{
     font-weight: bold;
 }
 
-.try{
-    background-color:black;
-    border:2px solid var(--primary);
-    padding:15px 20px;
-    border-radius:20px;
-    color:white;
-    font-family: var(--font);
-    font-size:20px;
-    transition: 0.4s ease;
-}
-
-.try:hover{
-    color:var(--primary);
-    cursor: pointer;
-}
-
-.alert2{
-    border:2px solid var(--primary);
-    background-color:black;
-    max-width:800px;
-    width:800px;
-    height:500px;
-    position:fixed;
-    left:350px;
-    top:100px;
-    display:none;
-    border-radius:20px;
-}
-
-.position{
-    position:relative;
-}
-
-.alert2 h2{
-    font-size:50px;
-    display:block;
-    margin:20px auto;
-}
-
-.alert2 li{
-    font-size:20px;
-    color:white;
-    font-weight: bold;
-}
-
-.close{
-    background-color:black;
-    border:2px solid black;
-    font-size:30px;
-    width:50px;
-    height:50px;
-    position:absolute;
-    top:5px;
-    right:20px;
-    color:white;
-    transition:0.4s ease;
-}
-
 .flex-select{
     display:flex;
     gap:10px;
 }
 
-.overlay2{
-    position:fixed;
-    inset:0;
-    background: rgba(0,0,0,0.7);
-    display:none;
-}
-
-.close:hover{
-    color:var(--primary);
-    cursor: pointer;
-}
-
-.column-character{
-    display:flex;
-    flex-direction: column;
-    gap:30px;
-    width:100%;
-    overflow-x: auto;
-}
 
 
 /*================================
@@ -576,7 +499,210 @@ hr{
 }
 
 
+/*==============================
+    Weapons and Elements Page
+============================== */
 
+.hding{
+    font-size:50px;
+    text-align: center;
+}
+
+.hding2{
+    font-size:30px;
+}
+
+.flex-wep{
+    display:flex;
+    justify-content: center;
+    gap:10px;
+    width:100%;
+    text-align: center;
+}
+
+.box-flex{
+    display:flex;
+    flex-wrap: wrap;
+    gap:20px;
+    justify-content: center;
+    box-sizing: border-box;
+    margin:20px 20px;
+    border-radius: 20px;
+    border:2px solid var(--primary);
+    max-width:100%;
+    width:95%;
+    padding:20px 10px;
+}
+
+.wep-card{
+    max-width:400px;
+    width:200px;
+    height:200px;
+    border: 2px solid var(--primary);
+    border-radius: 10px;
+    position: relative;
+}
+
+.full-img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.wep-card h3{
+    position: absolute;
+    top:50px;
+    left:20px;
+    right:20px;
+    text-shadow: 2px 3px 5px black;
+    font-size:20px;
+}
+
+.main-box{
+    display:flex;
+    justify-content: center;
+    gap:30px;
+    flex-wrap: wrap;
+}
+
+.element-card{
+    border:2px solid var(--primary);
+    border-radius:20px;
+    width:300px;
+    height:350px;
+    max-width:300px;
+    margin:30px 0px;
+    display:flex;
+    flex-direction: column;
+    gap:15px;
+    align-items: center;
+}
+
+.hding-flex{
+    display:flex;
+    gap:15px;
+    align-items: center;
+    margin-top:20px;
+}
+
+.profile{
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.element-card h4{
+    font-size:20px;
+    font-weight: bold;
+}
+
+h4 span{
+    font-family: var(--font);
+}
+
+.border{
+ border:2px solid var(--primary);
+    width:95%;
+    max-width:95%;
+    min-height:600px;
+    margin:20px auto;
+    border-radius: 20px;
+}
+
+.view{
+    background-color:black;
+    border-radius:20px;
+    border:2px solid var(--primary);
+    font-family: var(--font);
+    padding:10px 15px;
+    color:white;
+    font-size:25px;
+    display:block;
+    margin: 20px auto;
+    transition: 0.4s ease;
+}
+
+.view:hover{
+    color:var(--primary);
+    cursor: pointer;
+}
+
+.element-card-hide{
+    border:2px solid var(--primary);
+    border-radius:20px;
+    width:300px;
+    height:350px;
+    max-width:300px;
+    margin:30px 0px;
+    padding:15px 15px;
+    display:none;
+    flex-direction: column;
+    gap:15px;
+    align-items: center;
+}
+
+
+.element-card-hide h4{
+    font-size:20px;
+    font-weight: bold;
+}
+
+.make{
+    display:flex;
+    gap:30px;
+    justify-content: center;
+}
+
+.details{
+    display:flex;
+    flex-direction: column;
+}
+
+.details label{
+    font-size:20px;
+    font-weight: bold;
+    margin:10px 10px;
+}
+
+.detail{
+    background-color: black;
+    border:2px solid var(--primary);
+    outline:none;
+    padding:10px 10px;
+    border-radius:15px;
+    font-family: var(--font);
+    margin:5px 10px;
+    color:white;
+}
+
+.detail::placeholder{
+    color:white;
+}
+
+.pfp-img{
+    width:100%;
+    border-radius:20px;
+    object-fit: cover;
+    height:200px;
+}
+
+.name{
+    color:var(--primary);
+    font-family: var(--font);
+    font-size:30px !important;
+    margin:0px;
+    text-align: center;
+}
+
+.element{
+    color:white;
+    font-size:20px;
+    margin:0px !important;
+    width:200px;
+    text-align: center;
+}
 /*==================================
     RESPONSIVENESS
 ==================================*/
@@ -971,6 +1097,63 @@ hr{
         font-size: 14px;
         line-height: 1.5;
     }
+
+    /* Weapons & Elements */
+.flex-wep {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.box-flex {
+    width: 95%;
+    margin: 20px auto;
+    padding: 15px 10px;
+    gap: 15px;
+}
+
+.wep-card {
+    width: 90%;
+    max-width: 300px;
+    height: 200px;
+}
+
+.main-box {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.element-card,
+.element-card-hide {
+    width: 90%;
+    max-width: 300px;
+    box-sizing: border-box;
+}
+
+.make {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.details {
+    width: 90%;
+    max-width: 350px;
+}
+
+.detail {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 5px 0;
+}
+
+.pfp-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
 }
 
 
@@ -1018,4 +1201,14 @@ hr{
     .box-img {
         width: 256px;
     }
+
+    .element-card,
+.element-card-hide,
+.wep-card {
+    width: 95%;
+}
+
+.hding {
+    font-size: 28px;
+}
 }
