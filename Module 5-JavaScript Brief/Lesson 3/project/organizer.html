@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizer - Organize All your daily Tasks</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+:root{
+    --primary:rgb(49, 177, 98);
+    --border:seagreen;
+    --font:"Playpen Sans", sans-serif;
+}
+
+header{
+    position: fixed;
+    inset:0;
+    background-color: var(--primary);
+    border-bottom:5px solid var(--border);
+    font-family: var(--font);
+    height:80px;
+    width:100%;
+    padding:10px 20px;
+    color: white;
+    z-index:1000;
+}
+
+main{
+    margin:0;
+    padding:100px 0px;
+}
+
+h2,h3{
+    font-family: var(--font);
+    font-size:25px;
+    text-align: center;
+}
+
+h2{
+    font-size:35px !important;
+}
+
+section{
+    display:flex;
+    gap:50px;
+    justify-content: center;
+    margin: 20px 0px;
+}
+
+.card{
+    max-width:600px;
+    width:600px;
+    border:3px solid var(--border);
+    min-height:450px;
+    border-radius: 20px;
+    transition: 0.4s ease;
+    text-align: center;
+}
+
+.card:hover{
+    background-color: var(--primary);
+    transform:translateY(-10px);
+    cursor: pointer;
+    box-shadow: 0px 8px 20px 5px var(--border);
+    color:white;
+    z-index:10;
+}
+
+.input-flex{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+input{
+    outline:none;
+    border:2px solid var(--border);
+    border-radius:10px;
+    width:200px;
+    height:100px;
+    text-align: center;
+    margin:10px 10px;
+}
+
+button{
+    border:3px solid var(--border);
+    font-family: var(--font);
+    font-weight: bold;
+    padding:10px 15px;
+    background-color: white;
+    border-radius: 20px;
+    transition: 0.4s ease;
+    margin:20px 0px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.flex{
+    display:flex;
+    gap:20px;
+    justify-content: center;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Organizer</h1>
+    </header>
+
+    <main>
+        
+            <h2>Organize Your Tasks</h2>
+<section>
+    <div>
+        <h3>Add Tasks</h3>
+            <div class="card">
+<h3>Insert Tasks</h3>
+<div class="input-flex">
+    <div>
+<input type="text" id="task1">
+<input type="text" id="task2">
+</div>
+<div>
+<input type="text" id="task3">
+<input type="text" id="task4">
+</div>
+</div>
+<div class="flex">
+<button onclick="sortAtoZ()">Organize A to Z</button>
+<button onclick="sortZtoA()">Organize Z to A</button>
+</div>
+            </div>
+    </div>
+
+    <div>
+        <h3>Check Task Duration's</h3>
+            <div class="card">
+<h3>Insert Time</h3>
+<div class="input-flex">
+    <div>
+<input type="text" id="time1">
+<input type="text" id="time2">
+</div>
+<div>
+<input type="text" id="time3">
+<input type="text" id="time4">
+</div>
+</div>
+<div class="flex">
+<button onclick="sortMost()">Sort by Most Time</button>
+<button onclick="sortLeast()">Sort by Least Time</button>
+</div>
+            </div>
+    </div>
+</section>
+<section>
+<div class="card">
+    <h3>Mark Completed</h3>
+    <h5>Note: Enter Completed or Not</h5>
+
+    <div class="input-flex">
+        <input type="text" id="box1">
+        <input type="text" id="box2">
+        <input type="text" id="box3">
+        <input type="text" id="box4">
+    </div>
+
+</div>
+<div class="card">
+    
+        <button onclick="check()">Check Completed</button>
+   
+
+    <div id="statusResult"></div>
+</div>
+</section>
+    </main>
+
+    <script>
+        
+
+        function sortAtoZ() {
+            let tasks = [
+     document.getElementById("task1").value,
+     document.getElementById("task2").value,
+     document.getElementById("task3").value,
+     document.getElementById("task4").value
+        ];
+
+            tasks.sort();
+             document.getElementById("task1").value = tasks[0];
+     document.getElementById("task2").value = tasks[1];
+     document.getElementById("task3").value = tasks[2];
+     document.getElementById("task4").value = tasks[3];
+        }
+
+        function sortZtoA() {
+              let tasks = [
+     document.getElementById("task1").value,
+     document.getElementById("task2").value,
+     document.getElementById("task3").value,
+     document.getElementById("task4").value
+        ];
+
+            tasks.sort();
+            tasks.reverse();
+             document.getElementById("task1").value = tasks[0];
+     document.getElementById("task2").value = tasks[1];
+     document.getElementById("task3").value = tasks[2];
+     document.getElementById("task4").value = tasks[3];
+        }
+
+         function sortMost() {
+              let time = [
+     document.getElementById("time1").value,
+     document.getElementById("time2").value,
+     document.getElementById("time3").value,
+     document.getElementById("time4").value
+        ];
+
+            time.sort(function(a,b) {
+                return b - a;
+            });
+
+             document.getElementById("time1").value = time[0];
+     document.getElementById("time2").value = time[1];
+     document.getElementById("time3").value = time[2];
+     document.getElementById("time4").value = time[3];
+        }
+
+        
+         function sortLeast() {
+              let time = [
+     document.getElementById("time1").value,
+     document.getElementById("time2").value,
+     document.getElementById("time3").value,
+     document.getElementById("time4").value
+        ];
+
+            time.sort(function(a,b) {
+                return a - b;
+            });
+
+             document.getElementById("time1").value = time[0];
+     document.getElementById("time2").value = time[1];
+     document.getElementById("time3").value = time[2];
+     document.getElementById("time4").value = time[3];
+        }
+        
+        function check() {
+    let status = [
+        document.getElementById("box1").value,
+        document.getElementById("box2").value,
+        document.getElementById("box3").value,
+        document.getElementById("box4").value
+    ];
+
+    let completed = status.map(function(s) {
+         if( s.toLowerCase() === "completed") {
+return "Completed !!";
+        } else if(s.toLowerCase() === "not"){
+            return "Not Completed !!";
+        } else{
+            return "Not Marked"
+        }
+    });
+
+    document.getElementById("statusResult").innerHTML = completed.join("<br>");
+}
+
+    </script>
+</body>
+</html>
