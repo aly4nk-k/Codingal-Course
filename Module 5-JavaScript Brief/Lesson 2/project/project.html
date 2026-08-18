@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ratings</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --primary:rgb(164, 0, 0);
+            --font: 'Bebas Neue', sans-serif;
+        }
+header{
+    position: fixed;
+    top:0;
+    left:0;
+    background-color:var(--primary);
+    border-bottom:5px solid black;
+    width:100%;
+    padding:10px 20px;
+    color:white;
+    height:80px;
+    font-family: var(--font);
+    z-index:1000;
+}
+
+main{
+    padding:150px 0px;
+    margin:0px;
+}
+
+.view{
+    display:block;
+    margin:0 auto;
+    background-color: white;
+    border:3px solid var(--primary);
+    padding:10px 15px;
+    border-radius:20px;
+    font-weight: bold;
+    font-size:20px;
+    transition: 0.4s ease;
+    font-family: var(--font);
+}
+
+.view:hover{
+    color:var(--primary);
+    cursor: pointer;
+    transform:translateY(-10px);
+}
+
+.hding{
+    font-size:40px;
+    font-weight: bold;
+   user-select: none;
+    font-family: var(--font);
+    text-align: center;
+    transition: 0.4s ease;
+}
+
+.hding:hover{
+    transform: translateY(-10px);
+    color:var(--primary);
+}
+
+.card-box{
+    display:none;
+    flex-wrap: wrap;
+    max-width:85%;
+    width:85%;
+    gap:40px;
+    border:3px solid var(--primary);
+    border-radius: 20px;
+    min-height:500px;
+    margin: 20px auto;
+    padding:50px 50px;
+    justify-content: center;
+}
+
+.card{
+   border:2px solid var(--primary);
+   max-width:500px;
+   width:300px;
+   height:300px;
+   border-radius: 20px;
+   transition: 0.4s ease;
+   text-align: center;
+   padding:10px 20px;
+}
+
+.card:hover{
+   transform: translateY(-10px);
+}
+
+.card h3{
+    font-size:25px;
+    color:var(--primary);
+    font-family: var(--font);
+}
+
+.card p{
+    font-weight: bold;
+}
+
+.card h5{
+    font-weight: bold;
+    font-size:20px;
+}
+
+mark{
+    background-color: var(--primary);
+    color:white;
+}
+
+@media(max-width:400px) {
+  header{
+    text-align: center;
+  }
+
+  .card-box{
+    width:100%;
+    padding:20px 30px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card{
+    width:90%;
+  }
+
+  .hding{
+    text-align: center;
+  }
+}
+    </style>
+</head>
+<body>
+    <header>
+<h1>Movie Ratings</h1>
+    </header>
+
+    <main>
+        <div>
+<h2 class="hding">Get Movie Ratings Now</h2>
+<button class="view" onclick="showRatings()">View</button>
+</div>
+<section>
+    <div class="card-box">
+        <div class="card1"></div>
+        <div class="card2"></div>
+        <div class="card3"></div>
+        <div class="card4"></div>
+        <div class="card5"></div>
+        <div class="card6"></div>
+    </div>
+</section>
+    </main>
+
+    <script>
+function showRatings() {
+
+    document.querySelector(".card-box").style.display = "flex";
+
+    class Movies{
+        constructor(name , genre , release , starring) {
+            this.name = name;
+            this.genre = genre;
+            this.release = release;
+            this.starring = starring;
+        }
+
+        createCard() {
+           return `<div class="card">
+                <h3>${this.name}</h3>
+                <h5>${this.genre}</h5>
+                <p> This Movie was Released in <mark>${this.release}</mark> and starred <mark>${this.starring}</mark>
+            </div>
+                `;
+        }
+    }
+
+    let movie1 = new Movies("SpiderMan : Brand New Day", "Action", 2026 , "Tom Holland");
+    let movie2 = new Movies("Wicked : For Good", "Fantasy", 2025, "Ariana Grande");
+    let movie3 = new Movies("The Odyssey", "Adventure", 2026, "Zendaya");
+    let movie4 = new Movies("The Super Mario Galaxy Movie", "Family", 2026, "Chris Pratt");
+    let movie5 = new Movies("Superman", "Superhero", 2025, "David Corenswet");
+    let movie6 = new Movies("IF", "Drama", 2024, "Cailey Fleming");
+
+    document.querySelector(".card1").innerHTML = movie1.createCard();
+    document.querySelector(".card2").innerHTML = movie2.createCard();
+    document.querySelector(".card3").innerHTML = movie3.createCard();
+    document.querySelector(".card4").innerHTML = movie4.createCard();
+    document.querySelector(".card5").innerHTML = movie5.createCard();
+    document.querySelector(".card6").innerHTML = movie6.createCard();
+}
+    </script>
+</body>
+</html>

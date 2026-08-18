@@ -703,6 +703,44 @@ h4 span{
     width:200px;
     text-align: center;
 }
+
+/*================================
+    Seasons Page
+=================================*/
+
+.current{
+    display:flex;
+    gap:50px;
+    justify-content: center;
+}
+
+.current-box{
+    border:2px solid var(--primary);
+    border-radius:20px;
+    max-width:45%;
+    width:45%;
+    min-height:500px;
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:30px;
+}
+
+.current-box h3{
+    font-size:30px;
+}
+
+.new{
+    max-width:560px;
+    width:560px;
+    height:315px;
+    object-fit: cover;
+}
+
+.learn{
+    
+}
 /*==================================
     RESPONSIVENESS
 ==================================*/
