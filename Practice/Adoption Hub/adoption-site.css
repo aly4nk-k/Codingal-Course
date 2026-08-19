@@ -53,7 +53,7 @@ header{
     height:80px;
     border-bottom:2px solid var(--primary);
     box-shadow:0px 5px 30px 10px var(--shadow);
-    transition:0.3s ease;
+    user-select: none;
 }
 
 nav li{
@@ -61,4 +61,11 @@ nav li{
     border-radius:20px;
     padding:var(--button-space);
     font-size:15px;
+    transition: 0.4s ease;
+}
+
+nav li:hover{
+   background-color: var(--primary);
+   color:var(--bg-color);
+   cursor: pointer;
 }
