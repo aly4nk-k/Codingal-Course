@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+  <head>
+    <title>My Magic Word Lab</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        background: lightyellow;
+      }
+      h1,
+      h3 {
+        color: darkorange;
+      }
+      .box {
+        background: white;
+        color: darkorange;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container py-4">
+      <h1 class="mb-1">My Magic Word Lab</h1>
+      <p class="text-muted mb-4">
+        Discover types, switch them, find and swap words, and catch sneaky
+        errors!
+      </p>
+      <!-- TOPIC 1: typeof -->
+      <div class="card mb-4">
+        <div class="card-body">
+          <h3 class="card-title">What Type Is It?</h3>
+          <button class="btn btn-warning" onclick="checkTypes()">
+            Reveal the Types!
+          </button>
+          <div id="typeResult" class="box p-3 mt-3 rounded">
+            Press the button to reveal the secret types!
+          </div>
+        </div>
+      </div>
+      <!-- TOPIC 2: String() and Number() -->
+      <div class="card mb-4">
+        <div class="card-body">
+          <h3 class="card-title">Switch the Type</h3>
+          <input
+            id="numIn"
+            class="form-control mb-2"
+            placeholder="Type any number here (try: 42)"
+          />
+          <button class="btn btn-warning mr-2" onclick="toStr()">
+            Turn into Text
+          </button>
+          <button class="btn btn-warning" onclick="toNum()">
+            Turn into Number
+          </button>
+          <div id="convResult" class="box p-3 mt-3 rounded">
+            Type a number above then press a button!
+          </div>
+        </div>
+      </div>
+      <!-- TOPIC 3: search() and replace() -->
+      <div class="card mb-4">
+        <div class="card-body">
+          <h3 class="card-title">Find and Swap a Word</h3>
+          <input
+            id="findW"
+            class="form-control mb-2"
+            placeholder="Word to find (try: dragon)"
+          />
+          <input
+            id="swapW"
+            class="form-control mb-2"
+            placeholder="Swap it with (try: wizard)"
+          />
+          <button class="btn btn-warning mr-2" onclick="Search()">
+            Find It!
+          </button>
+          <button class="btn btn-warning" onclick="replace()">Swap It!</button>
+          <div id="srResult" class="box p-3 mt-3 rounded">
+            Sentence: "The dragon flew over the big castle."
+          </div>
+        </div>
+      </div>
+      <!-- TOPIC 4: try/catch -->
+      <div class="card mb-4">
+        <div class="card-body">
+          <h3 class="card-title">Catch the Mistake</h3>
+          <input
+            id="divIn"
+            class="form-control mb-2"
+            placeholder="Divide 100 by this — try a number or type something silly!"
+          />
+          <button class="btn btn-warning" onclick="trySafe()">Try It!</button>
+          <div id="errResult" class="box p-3 mt-3 rounded">
+            Type a number or something silly and see what happens!
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function checkTypes() {
+        //String is a Collection of characters wrapped in double quotes
+        let name = "Alyan";
+        let grade = 9;
+        let isHungry = true;
+
+        document.getElementById("typeResult").innerHTML = `
+        Variable is name; Value is ${name}; Data Type is ${typeof name}<br>
+        Variable is grade; Value is ${grade}; Data Type is ${typeof grade}<br>
+        Variable is isHungry; Value is ${isHungry}; Data Type is ${typeof isHungry}
+        `;
+      }
+
+      function toStr() {
+        let val = document.getElementById("numIn").value;
+        document.getElementById("convResult").innerHTML = `
+      Converting to String = ${String(val)} , Now it is a ${typeof String(val)}
+      `;
+      }
+
+      function toNum() {
+        let val = document.getElementById("numIn").value;
+        document.getElementById("convResult").innerHTML = `
+      Converting to Number = ${Number(val)} , Now it is a ${typeof Number(val)}
+      `;
+      }
+
+      let sentence = "The Dragon Flew Over the Castle";
+
+      function Search() {
+        let word = document.getElementById("findW").value;
+        let position = sentence.search(word);
+
+        if (position == -1) {
+          document.getElementById("srResult").innerHTML = `
+        ${word} was not found
+        `;
+        } else {
+          document.getElementById("srResult").innerHTML = `
+        ${word} is present at position ${position}
+        `;
+        }
+      }
+
+      function replace() {
+        let word = document.getElementById("findW").value;
+        let target = document.getElementById("swapW").value;
+
+        document.getElementById("srResult").innerHTML = sentence.replace(
+          word,
+          target,
+        );
+      }
+
+      function trySafe() {
+        try {
+          var n = document.getElementById("divIn").value;
+
+          if (n === "" || isNaN(n)) {
+            throw "That is not a number — you caught the error!";
+          }
+
+          document.getElementById("errResult").innerHTML =
+            "100 / " + n + " = " + 100 / Number(n) + " — well done!";
+        } catch (err) {
+          document.getElementById("errResult").innerHTML =
+            "Error caught: " + err;
+        }
+      }
+    </script>
+  </body>
+</html>
