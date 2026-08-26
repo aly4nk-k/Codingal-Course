@@ -1,0 +1,12 @@
+function search() {
+
+let name = document.querySelector(".search").value.trim().toLowerCase();
+
+return `
+<div class="team-box">
+<img src="Images/${name}.jpg" class="box-img" alt="${name}">
+<h3 class="primary">${name}</h3>
+</div>
+`;
+
+}

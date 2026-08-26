@@ -320,7 +320,7 @@ hr{
     width:350px;
     height:450px;
     border-radius:20px;
-    display:none;
+    gap:10px;
 }
 
 .box-img{
@@ -354,17 +354,10 @@ hr{
     color:var(--villain) !important;
 }
 
-.team-box p{
-    color:white;
-    margin:5px 10px;
-    font-weight: bold;
-}
-
 .team-box h4{
     font-family: var(--font);
     color:var(--primary);
     font-size:30px;
-    margin:10px 0px;
 }
 
 .search{
