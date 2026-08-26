@@ -127,7 +127,9 @@
         border-radius: 20px;
         padding: 5px 10px;
         color: var(--bg);
-        text-align: center;
+        display:flex;
+        align-items: center;
+        justify-content: center;
       }
 
       .flex {
@@ -173,6 +175,7 @@
               class="word2"
               placeholder="Enter the Word to find..."
             />
+            <input type="text" class="word4" placeholder="Enter Word you want to swap">
             <input
               type="text"
               class="word3"
@@ -184,7 +187,12 @@
             </div>
             <div id="show" class="box"></div>
           </div>
-          <div class="card"></div>
+          <div class="card">
+            <h3>Guess the Number</h3>
+            <input type="number" class="guess" placeholder="Enter a number 1 to 10">
+            <button onclick="checkGuess()">Check</button>
+            <div class="box" id="num"></div>
+          </div>
         </div>
       </section>
     </main>
@@ -194,21 +202,64 @@
     let type = document.querySelector(".type").value;
 
     if (isNaN(type)) {
-        document.getElementById("typeResult").innerHTML = `${typeof type}`;
+        document.getElementById("typeResult").innerHTML = `${type} is a ${typeof (type)}`;
     } else {
-        document.getElementById("typeResult").innerHTML = "number";
+      let newNum = Number(type);
+      document.getElementById("typeResult").innerHTML = `${type} is a ${typeof(newNum)}`;
     }
 }
 
 function changeNum() {
     let change = document.querySelector(".num").value;
 
-    document.getElementById("typeSwitch").innerHTML = `${change} is now a Number`;
+      let num = Number(change)
+      document.getElementById("typeSwitch").innerHTML = `${change} is now a ${typeof(num)}`;
+    
 }
 
 function changeText() {
     let text = document.querySelector(".num").value;
-    document.getElementById("typeSwitch").innerHTML = `${text} is now a ${change}`;
+
+    if (text) {
+      let newText = String(text)
+      document.getElementById("typeSwitch").innerHTML = `${text} is now a ${typeof(newText)}`;
+    } 
+}
+
+
+function swapWord() {
+   let sentence = document.querySelector(".word").value;
+console.log(sentence);
+
+let wantSwap = document.querySelector(".word4").value;
+let swapWith = document.querySelector(".word3").value;
+
+document.querySelector("#show").innerHTML = sentence.replace(wantSwap,swapWith);
+}
+
+function findWord() {
+  let sentence = document.querySelector(".word").value;
+  let find = document.querySelector(".word2").value;
+
+  let found = sentence.search(find);
+
+  document.getElementById("show").innerHTML = `${find} is at position ${found}`;
+}
+
+function checkGuess() {
+  try{
+    let guess = document.querySelector(".guess").value;
+    let random = Math.floor(Math.random() * 10) + 1;
+
+    if (guess == random) {
+      document.getElementById("num").innerHTML = "Correct You Guessed the Number !!";
+    } else{
+      throw new Error("Aw You Guessed Wrong !!")
+    }
+} catch (error){
+  document.getElementById("num").innerHTML = error.message;
+}
+
 }
     </script>
   </body>
