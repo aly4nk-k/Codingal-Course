@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            max-width:150px;
+            height:50px;
+            border:2px solid black;
+            overflow: hidden;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+   <h1>Welcome to Keyboard Center</h1>
+
+   <input type="text" placeholder="Type Something...">
+
+   <p id="input"></p>
+   <p id="pressed"></p>
+   <p id="released"></p>
+
+   <button>Clear</button>
+
+   <script>
+let input = document.querySelector("input");
+
+input.addEventListener("input",function() {
+    let text = input.value;
+    document.getElementById("input").textContent = text;
+})
+
+document.addEventListener("keydown",function(event) {
+document.getElementById("pressed").textContent = "You Pressed : " + event.key;
+})
+
+document.addEventListener("keyup",function(event) {
+document.getElementById("released").textContent = "You Released : " + event.key;
+})
+
+let button = document.querySelector("button");
+
+button.addEventListener("click",function() {
+    let hide = document.querySelectorAll("p");
+
+    for(let i = 0; i < hide.length; i++){
+        hide[i].textContent = "";
+    }
+
+})
+   </script>
+</body>
+</html>

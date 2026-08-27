@@ -1,16 +1,172 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Elite Private School</title>
-    <style>
-        
-    </style>
-</head>
-<body>
-    <header>
 
+    <style>
+      :root {
+        --primary: rgb(0, 74, 127);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      header {
+        background-color: var(--primary);
+        width: 100%;
+        height: 85px;
+        padding: 15px 25px;
+      }
+
+      header h1 {
+        font-size: 35px;
+        color: white;
+      }
+
+      main {
+        padding: 10px 0px;
+      }
+
+      h2 {
+        text-align: center;
+        font-size: 35px;
+        margin: 0px 0px 35px 0px;
+        color: var(--primary);
+      }
+
+      .flex {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+      }
+
+      h3 {
+        text-align: center;
+        font-size: 28px;
+        color: white;
+      }
+
+      .box {
+        background-color: var(--primary);
+        border-radius: 10px;
+        min-height: 440px;
+        padding: 20px 20px;
+        width: 600px;
+        max-width: 600px;
+        color: white;
+      }
+
+      label {
+        font-size: 25px;
+      }
+
+      .input {
+        width: 100%;
+        height: 45px;
+        border: 2px solid black;
+        border-radius: 5px;
+        background-color: white;
+        margin: 15px 0px;
+      }
+
+      button {
+        font-size: 20px;
+        padding: 10px 25px;
+        background-color: var(--primary);
+        border-radius: 20px;
+        border: 2px solid white;
+        color: white;
+        font-weight: bold;
+        transition: 0.4s ease;
+        margin: 15px 0;
+      }
+
+      button:hover {
+        cursor: pointer;
+        background-color: white;
+        color: var(--primary);
+      }
+      .overlay {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.51);
+        display: none;
+      }
+
+      .loading {
+        position: fixed;
+        left: 500px;
+        top: 175px;
+        border: 2px solid black;
+        max-width: 500px;
+        width: 500px;
+        min-height: 400px;
+        border-radius: 20px;
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Elite Private School</h1>
     </header>
-</body>
+
+    <main>
+      <div class="overlay">
+        <div class="loading"></div>
+      </div>
+
+      <h2>Annual Day Event</h2>
+
+      <div class="flex">
+        <div>
+          <h3>Participate</h3>
+
+          <div class="box">
+            <label>Name</label>
+            <input type="text" class="input" />
+
+            <label>Grade</label>
+            <input type="text" class="input" />
+
+            <label>Bus or Transport</label>
+            <input type="text" class="input" />
+
+            <button>Submit</button>
+          </div>
+        </div>
+
+        <div>
+          <h3>Event Details</h3>
+
+          <div class="box">
+            <label>Timing</label>
+            <div class="input"></div>
+
+            <label>Location</label>
+            <div class="input"></div>
+
+            <label>Participants</label>
+            <div class="input"></div>
+
+            <button>View More</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+
+    </script>
+  </body>
 </html>

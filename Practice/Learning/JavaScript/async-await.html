@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async Await</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <button onclick="getJoke()">Show Joke</button>
+    <p id="joke"></p>
+    <p id="timer"></p>
+
+    <script>
+      let seconds = 0;
+
+      // so whetever is written int eh function works after every 1 second
+      setInterval(function () {
+        seconds = seconds + 1;
+        document.getElementById("timer").innerHTML =
+          `You Have Been here for ${seconds} seconds`;
+      }, 1000);
+
+      //unless a async keyword is put b4 the function you cannot await anything
+      async function getJoke() {
+        //fetching from an external website is time consuming - will take some miliseconds
+        //so lets wait for the response from the joke website
+        //until then the website keeps functioning properly
+
+        document.getElementById("joke").innerHTML = `<div class="spinner-border"></div>`;
+        let msg = await delay(2000);
+        console.log(msg);
+        let response = await fetch(
+          "https://official-joke-api.appspot.com/random_joke",
+        );
+        let data = await response.json();
+        document.getElementById("joke").innerHTML = JSON.stringify(data);
+        console.log(response);
+      }
+
+      function delay(ms) {
+        return new Promise(function (resolve) {
+          setTimeout(function () {
+            resolve("Thank You for Waiting for me !!");
+          }, ms);
+        });
+      }
+    </script>
+  </body>
+</html>

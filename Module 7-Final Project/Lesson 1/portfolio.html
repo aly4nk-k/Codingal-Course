@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alyan's Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=New+Rocker&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+<div class="container-fluid">
+      <div class="row">
+        <nav class="navbar navbar-expand-lg col-12 bg-dark bg-gradient p-3">
+          <a class="navbar-brand d-flex align-items-center gap-3">
+            <i class="fas fa-code fa-2x text-warning"></i>
+            <h5 class="text-white m-0">Alyan's Portfolio</h5>
+          </a>
+
+          <button
+            class="navbar-toggler "
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#myNavbar"
+            aria-controls="myNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon text-white"></span>
+          </button>
+
+          <div class="collapse navbar-collapse justify-content-end" id="myNavbar">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link text-white">About Me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white">Social Media</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white">Resume</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <main class="text-center container">
+        <h2 class="text-white">Hello, I'm</h2>
+        <h1 class="text-warning m-heading fw-bold">Alyan Kabir</h1>
+        <h2 class="text-white">I am a <span id="my-role"></span></h2>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+      <!-- Load library from the CDN -->
+  <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+
+  <!-- Setup and start animation! -->
+  <script>
+    var typed = new Typed('#my-role', {
+      strings: ['Web Developer', 'Footballer' , 'Ninjago Fan'],
+      typeSpeed: 100,
+      loop:true
+    });
+  </script>
+  </body>
+</html>
