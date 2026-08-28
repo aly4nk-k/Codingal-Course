@@ -7,7 +7,7 @@
 
     <style>
       :root {
-        --primary: rgb(0, 74, 127);
+        --primary: rgb(0, 78, 134);
       }
 
       * {
@@ -21,8 +21,11 @@
       header {
         background-color: var(--primary);
         width: 100%;
-        height: 85px;
-        padding: 15px 25px;
+        height: 80px;
+        padding: 10px 25px;
+        display: flex;
+        align-items: center;
+        z-index: 1000;
       }
 
       header h1 {
@@ -37,7 +40,6 @@
       h2 {
         text-align: center;
         font-size: 35px;
-        margin: 0px 0px 35px 0px;
         color: var(--primary);
       }
 
@@ -45,17 +47,18 @@
         display: flex;
         justify-content: center;
         gap: 30px;
+        margin-top: 20px;
       }
 
       h3 {
         text-align: center;
         font-size: 28px;
-        color: white;
+        color: var(--primary);
       }
 
       .box {
         background-color: var(--primary);
-        border-radius: 10px;
+        border-radius: 15px;
         min-height: 440px;
         padding: 20px 20px;
         width: 600px;
@@ -74,9 +77,12 @@
         border-radius: 5px;
         background-color: white;
         margin: 15px 0px;
+        color: black;
+        text-align: center;
+        padding: 10px 0px;
       }
 
-      button {
+      .box button {
         font-size: 20px;
         padding: 10px 25px;
         background-color: var(--primary);
@@ -85,7 +91,8 @@
         color: white;
         font-weight: bold;
         transition: 0.4s ease;
-        margin: 15px 0;
+        margin: 25px auto;
+        display: block;
       }
 
       button:hover {
@@ -106,12 +113,51 @@
         position: fixed;
         left: 500px;
         top: 175px;
-        border: 2px solid black;
+        border: 2px solid white;
+        background-color: var(--primary);
         max-width: 500px;
         width: 500px;
         min-height: 400px;
         border-radius: 20px;
         display: none;
+        padding: 10px 20px;
+        color:white;
+      }
+
+      .badge {
+        color: white;
+        background: none;
+        border: none;
+        font-size: 30px;
+      }
+
+      .warning {
+        color: white;
+      }
+
+      .progress {
+        width: 100%;
+        height: 20px;
+        background-color: white;
+        border-radius: 20px;
+        overflow: hidden;
+      }
+
+      .progress-bar {
+        background-color: var(--primary);
+        height: 100%;
+        width: 0%;
+        border-radius: 20px;
+        border: 2px solid white;
+        transition: 0.7s ease;
+      }
+
+      .loading h2{
+        color:white;
+      }
+
+      .box h3{
+        color:white;
       }
     </style>
   </head>
@@ -123,7 +169,15 @@
 
     <main>
       <div class="overlay">
-        <div class="loading"></div>
+        <div class="loading">
+          <button class="badge" onclick="removeSubmit()">&times;</button>
+
+          <h2>Loading</h2>
+          <div class="progress">
+            <div class="progress-bar"></div>
+          </div>
+          <p id="done"></p>
+        </div>
       </div>
 
       <h2>Annual Day Event</h2>
@@ -134,15 +188,19 @@
 
           <div class="box">
             <label>Name</label>
-            <input type="text" class="input" />
+            <input type="text" class="input" id="stName" />
 
             <label>Grade</label>
-            <input type="text" class="input" />
+            <input type="number" class="input" id="stGrade" />
 
-            <label>Bus or Transport</label>
-            <input type="text" class="input" />
+            <label>Choose a Role</label><br />
+            <select name="Role" id="stSelect">
+              <option value="Dance">Dance</option>
+              <option value="Sports">Sports</option>
+              <option value="Speaking">Speaking</option></select
+            ><br />
 
-            <button>Submit</button>
+            <button onclick="submitForm()">Submit</button>
           </div>
         </div>
 
@@ -150,23 +208,127 @@
           <h3>Event Details</h3>
 
           <div class="box">
-            <label>Timing</label>
-            <div class="input"></div>
+            <h3 class="warning">Details Appear only for Participants !!</h3>
+            <div style="display: none" class="block">
+              <label>Timing</label>
+              <div class="input">9 AM to 3 PM</div>
 
-            <label>Location</label>
-            <div class="input"></div>
+              <label>Location</label>
+              <div class="input">School Ground</div>
 
-            <label>Participants</label>
-            <div class="input"></div>
+              <label>Participants</label>
+              <div class="input">246</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-            <button>View More</button>
+      <div class="flex">
+        <div class="block" style="display:none;">
+          <h3>Participate Information</h3>
+          <div class="box">
+            <label>Name</label>
+            <div class="input" id="name"></div>
+
+            <label>Grade</label>
+            <div class="input" id="grade"></div>
+
+            <label>Role in Event</label>
+            <div class="input" id="role"></div>
+          </div>
+        </div>
+        <div class="block" style="display:none;">
+          <h3>Participant Rules</h3>
+          <div class="box">
+            <h3 id="ruleName"></h3>
+
+            <ul>
+              <li>Arrive to School 1 Hour Early</li>
+              <li>Must Bring the Required Dress for The Students Role</li>
+              <li>After the Event the Students must wait inside the School until Instructed</li>
+              <li>Follow the instructions of the teacher at all time</li>
+            </ul>
           </div>
         </div>
       </div>
     </main>
 
     <script>
+      async function submitForm() {
 
+  let input = document.querySelector("input").value;
+
+  if (input == "") {
+
+    let style = document.querySelectorAll("input");
+
+    for (let i = 0; i < style.length; i++) {
+      style[i].style.borderColor = "red";
+    }
+
+  } else {
+
+    document.querySelector(".overlay").style.display = "block";
+    document.querySelector(".loading").style.display = "block";
+    document.querySelector(".warning").style.display = "none";
+
+    let details = {
+      name: document.getElementById("stName").value,
+      grade: document.getElementById("stGrade").value,
+      role: document.getElementById("stSelect").value,
+    };
+
+    let store = JSON.stringify(details);
+    let newDetails = JSON.parse(store);
+
+    await new Promise(function(resolve) {
+
+      setTimeout(function() {
+        document.querySelector(".progress-bar").style.width = "50%";
+      }, 1000);
+
+      setTimeout(function() {
+        document.querySelector(".progress-bar").style.width = "75%";
+      }, 2000);
+
+      setTimeout(function() {
+        document.querySelector(".progress-bar").style.width = "100%";
+        document.getElementById("done").innerHTML =
+          `${newDetails.name} is Successfully Registered ✅`;
+
+        resolve();
+      }, 4000);
+
+    });
+
+  let block =  document.querySelectorAll(".block")
+
+    for(let i = 0; i < block.length; i++) {
+      block[i].style.display = "block";
+    }
+
+    let style = document.querySelectorAll("input");
+
+    for (let i = 0; i < style.length; i++) {
+      style[i].style.borderColor = "black";
+    }
+
+    document.getElementById("name").innerHTML = newDetails.name;
+    document.getElementById("grade").innerHTML = newDetails.grade;
+    document.getElementById("role").innerHTML = newDetails.role;
+    document.getElementById("ruleName").innerHTML = "Rules " + newDetails.name + " Has to Follow";
+
+    setTimeout(function() {
+      document.querySelector(".loading").style.display = "none";
+      document.querySelector(".overlay").style.display = "none";
+    }, 2000);
+  }
+}
+
+      function removeSubmit() {
+        document.querySelector(".overlay").style.display = "none";
+        document.querySelector(".loading").style.display = "none";
+      }
     </script>
   </body>
 </html>
