@@ -60,6 +60,10 @@
 
 
 </div>
+
+<div class="overlay">
+    <div class="alert"></div>
+</div>
         </section>
 
       
@@ -78,6 +82,55 @@
           document.body.style.overflow = "auto";
     }
 
+    let villains = [
+    "Acronix",
+    "Aspheera",
+    "Beatrix",
+    "Chen",
+    "Clouse",
+    "Crystal King",
+    "char",
+    "fugidove",
+    "Garmadon",
+    "Harumi",
+    "Killow",
+    "Kozu",
+    "Krux",
+    "Morro",
+    "Nadakhan",
+    "Omega",
+    "Pythor",
+    "Ronin",
+    "Samukai",
+    "Skales",
+    "Skull Sorcerer",
+    "Soto",
+    "Unagami",
+    "Vangelis",
+    "Vex",
+    "Wyplash",
+    "Cinder",
+    "Jordana",
+    "Rapton",
+    "Ras",
+    "Mammatus",
+    "Arcturus",
+    "Dogshank",
+    "Doubloon",
+    "Fang-Suei",
+    "Fangtom",
+    "Flintlocke",
+    "Grimfax",
+    "Gripe",
+    "Kruncha",
+    "Larow",
+    "Mezmo",
+    "Mister E",
+    "Monkey Wretch",
+    "Nuckal",
+    "Rattla"
+  ];
+  
     function search() {
 
     let name = document.querySelector(".search").value.toLowerCase().trim();
@@ -93,6 +146,8 @@
 
 let imgtype = ".jpg";
 
+let valid = false;
+
 if (
     name === "morro" ||
     name === "lloyd" ||
@@ -103,42 +158,41 @@ if (
     name === "zane"
 ) {
     imgtype = ".png";
+    valid = true;
 }
 else if (
     name === "ironbaron" ||
     name === "glutinos"
 ) {
     imgtype = ".webp";
+    valid = true;
 }
 
-document.querySelector(".flex-box").innerHTML = makeCard();
+if (valid === false) {
+document.querySelector(".overlay").style.display = "block";
+document.querySelector(".alert").style.display = "block";
+} else{
+    document.querySelector("flex-box").innerHTML = makeCard();
+}
 console.log(name);
 console.log(`<img src="Images/${name}${imgtype}" class="box-img"`);
 }
 
     function showVillains() {
-         let hidden2 = document.querySelectorAll(".team-box");
 
-    for(i = 0; i < hidden2.length; i++) {
-        hidden2[i].style.display = "none";
-    }
+  
+  let cards = "";
 
-        let hidden = document.querySelectorAll(".ninja");
-
-    for(i = 0; i < hidden.length; i++) {
-        hidden[i].style.display = "none";
-    }
-     let hiddenelement = document.querySelectorAll(".elemental");
-
-    for(i = 0; i < hiddenelement.length; i++) {
-        hiddenelement[i].style.display = "none";
-    }
-        let villains = document.querySelectorAll(".villain");
-
-        for (let i = 0; i < villains.length; i++) {
-            villains[i].style.display = "flex";
-        }
-    }
+  villains.forEach(function(villain) {
+    cards += `
+      <div class="team-box villain">
+        <img src="Images/${villain}.jpg" class="box-img" alt="${villain}">
+        <h4>${villain}</h4>
+      </div>
+    `;
+  });
+  document.querySelector(".flex-box").innerHTML = cards;
+}
 
     function removeAlert() {
         document.querySelector(".alert").style.display = "none";

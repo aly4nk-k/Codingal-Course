@@ -1,0 +1,106 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shoply</title>
+
+    <style>
+        :root{
+            --primary:#038e3d;
+        }
+        body {
+            font-family: Arial;
+            color: white;
+            margin: 0;
+        }
+
+        *{
+            box-sizing: border-box;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left:0;
+            width: 100%;
+            background-color:var(--primary);
+            height:80px;
+            padding:0px 20px;
+        }
+
+        main{
+            padding:100px 0px;
+        }
+
+        form {
+            max-width:40%;
+            width:40%;
+            padding: 20px 30px;
+            background-color: var(--primary);
+            border-radius: 10px;
+            margin: 0 auto;
+            min-height:400px;
+        }
+
+        input{
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px;
+            box-sizing: border-box;
+            background-color: white;
+            color: var(--primary);
+            border:none;
+            outline:none;
+            font-weight: bold;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: white;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            border-radius: 15px;
+            font-weight: bold;
+            transition: 0.4s ease;
+            margin:0 auto;
+            display:block;
+        }
+
+        button:hover{
+            cursor: pointer;
+            background-color: var(--primary);
+            color:white;
+            border:2px solid white;
+        }
+
+        ::placeholder{
+            color:var(--primary);
+        }
+    </style>
+</head>
+
+<body>
+<main>
+    <header>
+        <h1>Shoply</h1>
+    </header>
+
+    <form>
+        <h2>Contact Form</h2>
+
+        <label>Name</label>
+        <input type="text" placeholder="Enter your name">
+
+        <label>Email</label>
+        <input type="email" placeholder="Enter your email">
+
+        <label>Message</label>
+        <input type="text" placeholder="message">
+
+        <button type="submit">Submit</button>
+    </form>
+</main>
+</body>
+</html>
+```
+
