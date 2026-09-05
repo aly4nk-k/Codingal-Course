@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+
+    <style>
+        body {
+            background-color: #3b151f;
+            color: #fff4d6;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .container {
+            width: 400px;
+            margin: 100px auto;
+            padding: 30px;
+            background-color: #5a202b;
+            border-radius: 15px;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        #number {
+            font-size: 60px;
+            margin: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            background-color: #fff4d6;
+            color: #3b151f;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #f5d98b;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Counter</h1>
+
+        <p id="number">0</p>
+
+        <div class="buttons">
+            <button id="decrease">-1</button>
+            <button id="reset">Reset</button>
+            <button id="increase">+1</button>
+        </div>
+    </div>
+
+    <script>
+        let number = document.getElementById("number");
+        let decrease = document.getElementById("decrease");
+
+        decrease.addEventListener("click",() =>{
+            count--;
+            document.getElementById("number").innerHTML = count;
+        })
+    </script>
+
+</body>
+</html>
