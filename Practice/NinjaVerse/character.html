@@ -127,6 +127,20 @@
     "Nuckal",
     "Rattla"
   ];
+
+  let ninja = [
+    "lloyd",
+    "kai",
+    "zane",
+    "cole",
+    "sora",
+    "arin",
+    "wyldfyre",
+    "frak",
+    "riyu",
+    "Nya",
+    "Jay"
+  ]
   
     function search() {
 
@@ -169,7 +183,7 @@ if (valid === false) {
 document.querySelector(".overlay").style.display = "block";
 document.querySelector(".alert").style.display = "block";
 } else{
-    document.querySelector("flex-box").innerHTML = makeCard();
+    document.querySelector(".flex-box").innerHTML = makeCard();
 }
 console.log(name);
 console.log(`<img src="Images/${name}${imgtype}" class="box-img"`);
@@ -197,50 +211,24 @@ console.log(`<img src="Images/${name}${imgtype}" class="box-img"`);
     }
 
     function showNinja() {
-         let hidden1 = document.querySelectorAll(".team-box");
+        let cards = "";
 
-    for(i = 0; i < hidden1.length; i++) {
-        hidden1[i].style.display = "none";
+        ninja.forEach((ninja)=>{
+cards += `
+<div class="team-box">
+    <img src="Images/${ninja}.png" class="box-img" alt="${ninja}">
+    <h4>${ninja}</h4>
+</div>
+`;
+
+document.querySelector(".flex-box").innerHTML = cards;
+        })
     }
 
-    let hidden = document.querySelectorAll(".villain");
-
-    for(i = 0; i < hidden.length; i++) {
-        hidden[i].style.display = "none";
-    }
-
-    let hiddenelement = document.querySelectorAll(".elemental");
-
-    for(i = 0; i < hiddenelement.length; i++) {
-        hiddenelement[i].style.display = "none";
-    }
-
-        let ninja = document.querySelectorAll(".ninja");
-
-        for (let i = 0; i < ninja.length; i++) {
-            ninja[i].style.display = "flex";
-        }
-    }
-
-    function showAll() {
-        let all = document.querySelectorAll(".team-box");
-
-        for(let i = 0; i < all.length; i++) {
-            all[i].style.display = "flex";
-        }
-    }
+    function showAll() {}
 
     function showElemental() {
-         let hidden = document.querySelectorAll(".team-box");
-
-    for(i = 0; i < hidden.length; i++) {
-        hidden[i].style.display = "none";
-    }
-
-        let element = document.querySelectorAll(".elemental");
-        for(let i = 0; i < element.length; i++) {
-            element[i].style.display = "flex";
-        }
+        
     }
     </script>
 </body>

@@ -347,6 +347,7 @@ hr{
     align-items: center;
     justify-content: center;
     margin:50px 0px;
+    padding:10px 20px;
 }
 
 .villain h4{
@@ -732,6 +733,7 @@ h4 span{
     flex-direction: column;
     align-items: center;
     gap:30px;
+    padding:10px 10px;
 }
 
 .current-box h3{
@@ -746,7 +748,11 @@ h4 span{
 }
 
 .learn{
-    
+    background-color: black;
+    border:2px solid var(--primary);
+    padding:10px 10px;
+    border-radius:20px;
+    color:white;
 }
 /*==================================
     RESPONSIVENESS
@@ -899,6 +905,10 @@ h4 span{
 
     .mobile-text {
         display: block;
+    }
+
+    .new{
+        width:100%;
     }
 }
 
