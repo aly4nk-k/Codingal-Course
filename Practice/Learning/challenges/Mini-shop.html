@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini-Shop</title>
+    <style>
+      :root {
+        --primary: rgb(0, 0, 75);
+      }
+
+      main {
+        padding-top: 150px;
+        margin: 0;
+      }
+
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        background-color: var(--primary);
+        color: white;
+        border-bottom: 2px solid white; /*i added it so the bg doesnt blend with the other box bg*/
+        min-height: 80px;
+        z-index:10;
+      }
+
+      .items {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+      }
+
+      .item-box {
+        max-width: 400px;
+        width: 400px;
+        background-color: var(--primary);
+        border-radius: 20px;
+        min-height: 300px;
+        color:white;
+        padding:10px 40px;
+        font-size:25px;
+        transition:0.4s ease;
+      }
+
+      .hding{
+        font-size:40px;
+        text-align: center;
+      }
+
+      button{
+        padding:10px 15px;
+        color:white;
+        background-color: var(--primary);
+        border-radius:10px;
+        border:2px solid white;
+        font-weight:bold;
+        font-size:20px;
+        transition:0.4s ease;
+      }
+
+      button:hover{
+        cursor: pointer;
+        transform:translateY(-5px);
+        box-shadow:0px 5px 20px white;
+      }
+
+      .item-box:hover{
+        transform:translateY(-5px);
+        box-shadow:0px 5px 40px var(--primary);
+        cursor: pointer;
+        z-index:1;
+      }
+
+      .cart{
+        text-align: center;
+        border:2px solid var(--primary);
+        max-width:400px;
+        width:400px;
+        min-height:300px;
+        border-radius:20px;
+        margin:40px auto;
+        transition: 0.4s ease;
+        color:var(--primary);
+      }
+
+      .cart:hover{
+        background-color: var(--primary);
+        transform: translateY(-5px);
+        box-shadow:0px 5px 30px var(--primary);
+        cursor: pointer;
+        color:white;
+        z-index:1;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Mini-Shop</h1>
+      <h2>- Build Your Cart -</h2>
+    </header>
+
+    <main>
+      <section>
+        <h2 class="hding" style="color:var(--primary);">Items</h2>
+        <div class="items">
+          <div class="item-box">
+            <h3>Pizza 🍕</h3>
+            <h3>Price : 25 AED 💰</h3>
+            <button onclick="addPizza()">Add</button>
+          </div>
+          <div class="item-box">
+            <h3>Burger 🍔</h3>
+            <h3>Price : 30 AED 💰</h3>
+            <button onclick="addBurger()">Add</button>
+          </div>
+          <div class="item-box">
+            <h3>Fries 🍟</h3>
+            <h3>Price : 15 AED 💰</h3>
+            <button onclick="addFries()">Add</button>
+          </div>
+        </div>
+        </section>
+        <section class="cart">
+        <h2 class="hding">Your Cart 🛒</h2>
+        <h3 class="counter">Items : 0</h3>
+        <h3 class="price">Total : 0 AED</h3>
+        <button onclick="clearCart()">Clear Cart 🛒</button>
+      </section>
+    </main>
+
+    <script>
+let count = 0
+let total = 0
+let itemDisplay = document.querySelector(".counter");
+let priceDisplay = document.querySelector(".price");
+
+function addPizza(){
+count++;
+total += 25;
+
+itemDisplay.innerHTML = "Items : " + count;
+priceDisplay.innerHTML = "Total : " + total;
+}
+
+function addBurger(){
+count++;
+total += 30;
+
+itemDisplay.innerHTML = "Items : " + count;
+priceDisplay.innerHTML = "Total : " + total;
+}
+
+function addFries(){
+count++;
+total += 15;
+
+itemDisplay.innerHTML = "Items : " + count;
+priceDisplay.innerHTML = "Total : " + total;
+}
+
+function clearCart(){
+  count = 0;
+  total = 0;
+
+  itemDisplay.innerHTML = "Items : " + count;
+  priceDisplay.innerHTML = "Total : " + total;
+}
+    </script>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Counter</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: rgb(15, 15, 25);
+            color: white;
+            padding-top: 100px;
+        }
+
+        .box {
+            width: 350px;
+            margin: auto;
+            padding: 40px;
+            border-radius: 20px;
+            background-color: rgb(30, 30, 50);
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        #count {
+            font-size: 50px;
+            margin: 30px;
+        }
+
+        button {
+            padding: 12px 25px;
+            margin: 5px;
+            font-size: 20px;
+            border-radius: 10px;
+            border: 2px solid white;
+            background-color: rgb(0, 0, 75);
+            color: white;
+            cursor: pointer;
+            transition: 0.4s ease;
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <h1>Click Counter</h1>
+
+        <div id="count">0</div>
+
+        <button onclick="add()">+1</button>
+        <button onclick="sub()">-1</button>
+        <br><br>
+        <button onclick="reset()">Reset</button>
+    </div>
+
+    <script>
+        let count = 0;
+        let display = document.getElementById("count");
+
+function add(){
+count++;
+
+display.innerHTML = count;
+}
+
+function sub(){
+    count--;
+
+    display.innerHTML = count;
+
+    if(count <= 0){
+        count = 0;
+        display.innerHTML = count;
+    }
+}
+
+function reset(){
+    count = 0;
+    display.innerHTML = count;
+}
+    </script>
+
+</body>
+</html>

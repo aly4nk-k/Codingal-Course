@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mini Quiz</title>
+    <style>
+        body { 
+            font-family: Arial; 
+            background: #111; 
+            color: white; 
+            text-align: center; 
+            padding-top: 70px; 
+        }
+        .quiz-box { 
+            background: #222; 
+            width: 500px; 
+            margin: auto; 
+            padding: 30px; 
+            border-radius: 15px; 
+        }
+        #question { 
+            font-size: 24px; 
+            margin: 25px 0; 
+        }
+        button { 
+            display: block; 
+            width: 80%; 
+            margin: 10px auto; 
+            padding: 12px; 
+            border: none; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            font-size: 16px; 
+            transition: 0.4s ease; 
+        }
+        #result { 
+            margin: 20px; 
+            font-size: 20px; 
+            min-height: 25px; 
+        }
+        .timer { 
+            position: fixed; 
+            top: 20px; 
+            left: 30px; 
+            font-size: 20px; 
+            border: 2px solid white; 
+            padding: 10px 15px; 
+            border-radius: 10px; 
+            min-width: 25px; 
+            width: 30px; 
+            height: 25px; 
+            text-align: center; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="timer"></div>
+    <div class="quiz-box">
+        <h1>Mini Quiz 🧠</h1>
+        <div id="question"></div>
+        <button id="answer1"></button>
+        <button id="answer2"></button>
+        <div id="result"></div>
+        <button id="next">Next Question</button>
+        <button id="restart">Restart</button>
+    </div>
+
+    <script>
+        let seconds = 0;
+        setInterval(function() {
+            seconds = seconds + 1;
+            document.querySelector(".timer").innerHTML = seconds;
+            if (seconds === 50) {
+                alert("Time Up !! Restart Again");
+                q.innerHTML = questions[0].question;
+                op1.innerHTML = questions[0].option1;
+                op2.innerHTML = questions[0].option2;
+            }
+        }, 1000);
+
+        const questions = [
+            { 
+                question: "What is 10 times 23 ?", 
+                option1: "230", 
+                option2: "2300", 
+                correct: "230" 
+            },
+            { 
+                question: "which planet is called the red planet ?", 
+                option1: "mars", 
+                option2: "venus", 
+                correct: "mars" 
+            }
+        ];
+
+        let q = document.getElementById("question");
+        let op1 = document.getElementById("answer1");
+        let op2 = document.getElementById("answer2");
+
+        q.innerHTML = questions[0].question;
+        op1.innerHTML = questions[0].option1;
+        op2.innerHTML = questions[0].option2;
+
+        let clicks = 0;
+
+        op1.addEventListener("click", function() {
+            if (clicks === 1) { 
+                // do nothing
+            } else {
+                if (op1.innerHTML === questions[0].correct) {
+                    op1.style.backgroundColor = "green";
+                    op1.innerHTML = questions[0].option1 + " Correct ✅";
+                    op1.style.color = "white";
+                    op2.style.backgroundColor = "red";
+                    op2.style.color = "white";
+                } else {
+                    op1.style.backgroundColor = "red";
+                    op1.style.color = "white";
+                    op1.innerHTML = questions[0].correct + " Wrong ❌";
+                    op2.style.backgroundColor = "green";
+                    op2.style.color = "white";
+                }
+                clicks = 1;
+            }
+        })
+
+        op2.addEventListener("click", function() {
+            if (clicks === 1) { 
+                // do nothing
+            } else {
+                if (op2.innerHTML === questions[0].correct) {
+                    op1.style.backgroundColor = "red";
+                    op2.innerHTML = questions[0].option2 + " Correct ✅";
+                    op1.style.color = "white";
+                    op2.style.backgroundColor = "green";
+                    op2.style.color = "white";
+                } else {
+                    op1.style.backgroundColor = "green";
+                    op1.style.color = "white";
+                    op2.innerHTML = questions[0].correct + " Wrong ❌";
+                    op2.style.backgroundColor = "red";
+                    op2.style.color = "white";
+                }
+                clicks = 1;
+            }
+        })
+
+        let q2 = document.getElementById("question");
+        let op3 = document.getElementById("answer1");
+        let op4 = document.getElementById("answer2");
+
+        op3.addEventListener("click", function() {
+            if (clicks === 1) { 
+                // do nothing
+            } else {
+                if (op3.innerHTML === questions[1].correct) {
+                    op3.style.backgroundColor = "green";
+                    op3.innerHTML = questions[1].option1 + " Correct ✅";
+                    op3.style.color = "white";
+                    op4.style.backgroundColor = "red";
+                    op4.style.color = "white";
+                } else {
+                    op3.style.backgroundColor = "red";
+                    op3.style.color = "white";
+                    op3.innerHTML = questions[1].correct + " Wrong ❌";
+                    op4.style.backgroundColor = "green";
+                    op4.style.color = "white";
+                }
+                clicks = 1;
+            }
+        })
+
+        op4.addEventListener("click", function() {
+            if (clicks === 1) { 
+                // do nothing
+            } else {
+                if (op4.innerHTML === questions[1].correct) {
+                    op3.style.backgroundColor = "red";
+                    op4.innerHTML = questions[1].option2 + " Correct ✅";
+                    op3.style.color = "white";
+                    op4.style.backgroundColor = "green";
+                    op4.style.color = "white";
+                } else {
+                    op3.style.backgroundColor = "green";
+                    op3.style.color = "white";
+                    op4.innerHTML = questions[1].correct + " Wrong ❌";
+                    op4.style.backgroundColor = "red";
+                    op4.style.color = "white";
+                }
+                clicks = 1;
+            }
+        })
+
+        let next = document.getElementById("next");
+        next.addEventListener("click", function() {
+            q.innerHTML = questions[1].question;
+            op1.innerHTML = questions[1].option1;
+            op2.innerHTML = questions[1].option2;
+            op1.style.backgroundColor = "white";
+            op1.style.color = "black";
+            op2.style.backgroundColor = "white";
+            op2.style.color = "black";
+            clicks = 0;
+        })
+
+        let restart = document.getElementById("restart");
+        restart.addEventListener("click", function() {
+            q.innerHTML = questions[0].question;
+            op1.innerHTML = questions[0].option1;
+            op2.innerHTML = questions[0].option2;
+            op1.style.backgroundColor = "white";
+            op1.style.color = "black";
+            op2.style.backgroundColor = "white";
+            op2.style.color = "black";
+            clicks = 0;
+            seconds = 0;
+        })
+    </script>
+</body>
+</html>

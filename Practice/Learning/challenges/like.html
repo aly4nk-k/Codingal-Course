@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Like Button Challenge</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #111;
+            color: white;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        .post {
+            background-color: #222;
+            width: 350px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 15px;
+        }
+
+        button {
+            padding: 10px 18px;
+            margin: 10px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        #likeBtn {
+            background-color: #ff4d6d;
+            color: white;
+            transition:0.5s ease;
+        }
+
+        #resetBtn {
+            background-color: #555;
+            color: white;
+            transition:0.5s ease;
+        }
+
+        #likes {
+            font-size: 30px;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="post">
+        <h1>My Post</h1>
+
+        <p>This is a JavaScript challenge 👀</p>
+
+        <div id="likes">0</div>
+
+        <button id="likeBtn">Like</button>
+        <button id="resetBtn">Reset</button>
+        <button id="dislike">Dislike</button>
+    </div>
+
+    <script>
+       let like = document.getElementById("likeBtn");
+       let dislike = document.getElementById("dislike");
+       let reset = document.getElementById("resetBtn");
+
+       like.addEventListener("click",function(){
+    document.getElementById("likes").innerHTML =+ 1;
+
+    like.style.backgroundColor = "#555";
+    reset.style.backgroundColor = "#ff4d6d";
+    setTimeout(() => {
+        document.getElementById("likeBtn").innerHTML = "Max 1 Like !";
+    }, 1000);
+       })
+
+       reset.addEventListener("click",function(){
+document.getElementById("likes").innerHTML = 0;
+
+    like.style.backgroundColor = "#ff4d6d";
+    reset.style.backgroundColor = "#555";
+    setTimeout(() => {
+        document.getElementById("likeBtn").innerHTML = "Like";
+    }, 1000);
+       })
+
+       dislike.addEventListener("click",function(){
+        document.getElementById("likes").innerHTML =- 1;
+
+        dislike.style.backgroundColor = "#555";
+    setTimeout(() => {
+        document.getElementById("likeBtn").innerHTML = "Max 1 Dislike !";
+    }, 1000);
+       })
+    </script>
+
+</body>
+</html>

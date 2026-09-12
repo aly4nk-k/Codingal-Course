@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Royal Plate | Home</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Almendra:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="restaurant.css">
 </head>
 <body>
@@ -13,9 +14,9 @@
 <nav>
     <ul>
         <li><a href="home.html">Home</a></li>
-        <li><a href="">Menu</a></li>
-        <li><a href="">Book</a></li>
-        <li><a href="">Contact</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="reservations.html">Reservations</a></li>
+        <li><a href="contact.html">Contact</a></li>
     </ul>
 </nav>
     </header>
@@ -28,16 +29,88 @@
     <h2 class="hding">Learn More About The Royal Plate</h2>
     <div class="section-nav">
         <ul>
-            <li><a>About Us</a></li>
-            <li><a>Our Dishes</a></li>
-            <li><a>Booking</a></li>
-            <li><a>Contact</a></li>
+            <li><a href="#abt" class="sec-nav">About Us</a></li>
+            <li><a href="#dishes" class="sec-nav">Our Dishes</a></li>
+            <li><a href="#Reservations" class="sec-nav">Reservations</a></li>
+            <li><a href="#contact" class="sec-nav">Contact</a></li>
         </ul>
     </div>
 </section>
-<section>
-    <h2>About Us</h2>
+   <section id="abt">
+     <div class="content-flex">
+    <h2 class="hding">About Us</h2>
+        <div>
+            <p>
+                At The Royal Plate, we believe great food brings people together.
+                Our restaurant combines delicious flavors, fresh ingredients, and
+                a warm atmosphere to create an unforgettable dining experience.
+            </p>
+        </div>
+
+        <img src="images/abt-us.jpg" alt="abt-us" class="rest-img">
+    </div>
 </section>
+
+<hr>
+
+<section id="dishes">
+    <div class="content-flex">
+    <h2 class="hding">Our Dishes</h2>
+        <div>
+            <p>
+                Discover a variety of delicious dishes made with fresh ingredients
+                and carefully prepared for our guests.
+            </p>
+        </div>
+
+        <img src="images/dishes.jpg" alt="our dishes" class="rest-img">
+       <a href="menu.html">View Menu</a>
+    </div>
+</section>
+
+<hr>
+
+<section id="Reservations">
+<div class="content-flex">
+    <h2 class="hding">Reserve Your Table</h2>
+    <div>
+       <p>
+    Book your reservation now and skip the wait.
+    Choose your preferred date and time, reserve your table
+    in just a few simple steps, and get ready to enjoy an
+    unforgettable dining experience at The Royal Plate.
+</p>
+    </div>
+    <img src="images/reserve.jpg" alt="reserve a table" class="rest-img">
+    <a href="reservations.html">Reserve Now</a>
+</div>
+</section>
+<hr>
+<section id="contact">
+    <div class="content-flex">
+        <h2 class="hding">Contact Us</h2>
+        <div>
+            <p>
+    Have a question, need assistance, or simply want to get in touch?
+    We would love to hear from you. Contact The Royal Plate and our team
+    will be happy to assist you with any questions, feedback, or requests.
+</p>
+        </div>
+        <img src="images/contact.png" alt="contact" class="rest-img">
+
+        <a>Contact Us</a>
+    </div>
+</section>
+<hr>
     </main>
+
+    <footer>
+    <p>© 2026 The Royal Plate. All Rights Reserved.</p>
+    <hr>
+    <div class="flex">
+        <a class="foot">Contact Us</a>
+        <a class="foot" href="reservations.html">Book a Reservation</a>
+    </div>
+</footer>
 </body>
 </html>

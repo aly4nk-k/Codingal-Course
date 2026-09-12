@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Royal Plate | Reservations</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Almendra:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="restaurant.css" />
+  </head>
+  <body>
+    <header>
+      <h1>The Royal Plate</h1>
+      <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="reservations.html">Reservations</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="form-box">
+        <h2 class="hding">Book Your Reservation Now</h2>
+
+        <form>
+          <label>Name :</label><br /><br />
+          <input type="text" id="name" placeholder="Enter Your Name..." /><br />
+          <hr />
+          <label>Date and Time for Reservation :</label><br /><br />
+          <input type="date" id="date" /><br /><br />
+          <input type="time" id="time" /><br />
+          <hr />
+          <label>Number of People :</label><br /><br />
+          <input type="number" min="1" max="10" id="ppl" /><br />
+          <hr />
+          <label>Email :</label><br /><br />
+          <input type="email" id="email" /><br /><br />
+          <hr />
+          <button type="submit" id="submit">Book</button>
+          <h2 id="fail"></h2>
+        </form>
+      </section>
+      <section class="overlay">
+<div class="alert1">
+    <div class="badge"></div>
+<p class="hello"></p>
+<p class="confirm"></p>
+<div>
+    <button onclick="confirmForm()" class="alertBtn">Confirm</button>
+    <button onclick="cancel()" class="alertBtn">Cancel</button>
+</div>
+</div>
+<div class="alert2">
+    <div class="badge" onclick="hideAlerts()">&times;</div>
+<h2 class="hding" id="text"></h2>
+</div>
+      </section>
+    </main>
+    <footer>
+      <p>© 2026 The Royal Plate. All Rights Reserved.</p>
+      <hr />
+      <div class="flex">
+        <a class="foot">Contact Us</a>
+        <a class="foot" href="reservations.html">Book a Reservation</a>
+      </div>
+    </footer>
+
+    <script>
+      let submit = document.getElementById("submit");
+
+submit.addEventListener("click", function (event) {
+  event.preventDefault();//new concept
+
+  let name = document.getElementById("name").value;
+  let givenDate = document.getElementById("date").value;
+  let date = new Date();
+
+  let parts = givenDate.split("-"); // New concept
+  let year = parts[0];
+  let currentYear = date.getFullYear();
+
+  let currentMonth = parts[1];
+  let month = date.getMonth() + 1;
+
+  let currentDay = parts[2];
+  let day = date.getDate();
+
+  let valid = true;
+
+  let time = document.getElementById("time").value;
+  let ppl = document.getElementById("ppl").value;
+  let email = document.getElementById("email").value;
+
+  if (year < currentYear) {
+    document.getElementById("date").style.borderColor = "red";
+    valid = false;
+  } else {
+    if (currentMonth < month) {
+      document.getElementById("date").style.borderColor = "red";
+      valid = false;
+    } else {
+      if (currentMonth == month && currentDay < day) {
+        document.getElementById("date").style.borderColor = "red";
+        valid = false;
+      }
+    }
+  }
+
+  if (name === "") {
+    document.getElementById("name").style.borderColor = "red";
+    valid = false;
+  }
+
+  if (time === "") {
+    document.getElementById("time").style.borderColor = "red";
+    valid = false;
+  }
+
+  if (ppl === "") {
+    document.getElementById("ppl").style.borderColor = "red";
+    valid = false;
+  }
+
+  if (email === "") {
+    document.getElementById("email").style.borderColor = "red";
+    valid = false;
+  }
+
+  if (valid === false) {
+    document.getElementById("fail").innerHTML = "Form is Invalid ❌";
+  } else {
+    document.getElementById("fail").innerHTML = "";
+    document.getElementById("name").style.borderColor = "var(--text)";
+    document.getElementById("date").style.borderColor = "var(--text)";
+    document.getElementById("time").style.borderColor = "var(--text)";
+    document.getElementById("email").style.borderColor = "var(--text)";
+    document.getElementById("ppl").style.borderColor = "var(--text)";
+    document.querySelector(".alert2").style.display = "none";
+    document.querySelector(".overlay").style.display = "block";
+    document.querySelector(".alert1").style.display = "block";
+    document.querySelector(".hello").innerHTML =  `<span class="hding">Hello - ${name} - </span>  `;
+    document.querySelector(".confirm").innerHTML = `Would You like to Confirm Your Reservation on ${givenDate} at ${time} for a table of ${ppl} ? If yes then Confirm Below`;
+  }
+});
+
+function cancel(){
+    document.querySelector(".alert1").style.display = "none";
+    document.querySelector(".alert2").style.display = "block";
+    document.querySelector("#text").innerHTML = "Your Reservation Has Been Cancelled";
+}
+
+function hideAlerts(){
+    document.querySelector(".overlay").style.display = "none";
+    document.querySelector(".alert1").style.display = "none";
+    document.querySelector(".alert2").style.display = "none";
+}
+
+function confirmForm(){
+    let name = document.getElementById("name").value;
+    document.querySelector(".alert1").style.display = "none";
+    document.querySelector(".alert2").style.display = "block";
+    document.querySelector("#text").innerHTML = `Thank You for Confirming Your Reservation ${name}. We can't wait to see you !`;
+}
+    </script>
+  </body>
+</html>
