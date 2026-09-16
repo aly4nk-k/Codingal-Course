@@ -37,7 +37,7 @@ function reverseNumberFormat(num) {
 let operator = document.getElementsByClassName("operator");
 
 for (let i = 0; i < operator.length; i++) {
-  operator[i].addEventListener("click", function(){
+  operator[i].addEventListener("click", function () {
     if (this.id == "clear") {
       printHistory("");
       printOutput("");
@@ -82,13 +82,49 @@ for (let i = 0; i < operator.length; i++) {
 
 let number = document.getElementsByClassName("number");
 for (let i = 0; i < number.length; i++) {
-  number[i].addEventListener("click", function() {
+  number[i].addEventListener("click", function () {
     let output = reverseNumberFormat(getOutput());
     console.log("output" + output);
-    if ( output != NaN) {
-        console.log(output,this.id);
+    if (output != NaN) {
+      console.log(output, this.id);
       output = output + this.id;
       printOutput(output);
     }
   });
 }
+
+async function FetchWeather() {
+  let city = "Greenland";
+  const API_KEY = "b37c10b8775dd1365e04c25f9d9a6c5e";
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
+
+  try {
+    const response = await fetch(url);
+
+    if (!response.ok) {
+      throw new Error(`HTTP Error! Status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    console.log(data);
+
+    document.getElementById("temperature").innerHTML = data.main.temp + " °C";
+
+let weatherType = data.weather[0].main;
+let weatherEmoji;
+
+if(weatherType == "Clear"){
+  weatherEmoji = "☀️";
+} else if(weatherType == "Clouds"){
+  weatherEmoji = "🌥️";
+} else if(weatherType == "Rain"){
+  weatherEmoji = "🌧️";
+}
+    document.getElementById("city").innerHTML = city;
+    document.getElementById("weather-type").innerHTML = weatherEmoji + weatherType;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+FetchWeather();
