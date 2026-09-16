@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrainCore | Home</title>
+    <link rel="stylesheet" href="BrainCore.css">
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <header>
+<h1>BrainCore 🧠</h1>
+<nav>
+    <a href="home-page.html">Home</a>
+    <a href="">Profile</a>
+</nav>
+    </header>
+
+    <main class="bg">
+        <section>
+<h2 class="hding">Choose a Quiz 📝</h2>
+
+<div class="filter">
+    <button class="filter-choice" id="math">Math</button>
+    <button class="filter-choice" id="science">Science</button>
+    <button class="filter-choice" id="english">English</button>
+</div>
+        </section>
+
+        <section class="quiz">
+<h2 class="hding" id="quiz-hding">English Quiz 📖</h2>
+<div class="quiz-box">
+    <h2 class="hding" id="hide">Test Your Grammar and Speaking Skills</h2>
+    <button class="quiz-btn hide-btn" id="startQuiz">Start Quiz</button>
+    <div class="countdown" ></div>
+    <div class="none boxes">
+    <div class="Fulldisplay">
+        <div class="display" id="display">1/5</div>
+        <div class="display" id="timer"></div>
+    </div>
+<div class="question" id="question"></div>
+<div class="flex">
+<div class="box" id="op1"></div>
+<div class="box" id="op2"></div>
+</div>
+<div class="flex">
+<div class="box" id="op3"></div>
+<div class="box" id="op4"></div>
+</div>
+</div>
+</div>
+        </section>
+    </main>
+    <script type="module" src="BrainCore.js"></script>
+</body>
+</html>

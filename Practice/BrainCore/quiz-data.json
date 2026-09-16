@@ -1,0 +1,55 @@
+{
+  "math": [
+    ["2 + 2", "4", "6", "22", "0", "4"],
+    ["15 - 7", "6", "8", "9", "7", "8"],
+    ["6 × 4", "18", "20", "24", "28", "24"],
+    ["36 ÷ 6", "5", "6", "7", "8", "6"],
+    ["9 + 13", "20", "21", "22", "23", "22"],
+    ["7 × 8", "54", "56", "64", "48", "56"],
+    ["45 ÷ 5", "8", "9", "10", "11", "9"],
+    ["18 - 11", "6", "7", "8", "9", "7"],
+    ["12 × 3", "30", "36", "42", "48", "36"],
+    ["64 ÷ 8", "6", "7", "8", "9", "8"],
+    ["25 + 17", "40", "41", "42", "43", "42"],
+    ["50 - 26", "22", "24", "26", "28", "24"],
+    ["9 × 7", "54", "63", "72", "56", "63"],
+    ["81 ÷ 9", "7", "8", "9", "10", "9"],
+    ["14 + 29", "41", "42", "43", "44", "43"]
+  ],
+
+  "english": [
+    ["Which word is a noun?", "Quickly", "Happiness", "Beautiful", "Run", "Happiness"],
+    ["Choose the correct sentence.", "She don't like apples.", "She doesn't likes apples.", "She doesn't like apples.", "She not like apples.", "She doesn't like apples."],
+    ["What is the past tense of 'go'?", "Goed", "Gone", "Went", "Going", "Went"],
+    ["Which word is an adjective?", "Carefully", "Bright", "Jump", "Happily", "Bright"],
+    ["Choose the correct plural form of 'child'.", "Childs", "Childes", "Children", "Childrens", "Children"],
+    ["Which sentence uses 'their' correctly?", "Their going to school.", "The students packed their bags.", "I went over their yesterday.", "Their is a new book.", "The students packed their bags."],
+    ["What is the opposite of 'ancient'?", "Old", "Modern", "Historic", "Past", "Modern"],
+    ["Which word is a synonym for 'happy'?", "Angry", "Joyful", "Tired", "Worried", "Joyful"],
+    ["Choose the correct word: 'I have ___ my homework.'", "did", "done", "do", "doing", "done"],
+    ["Which sentence is in the future tense?", "He played football.", "He is playing football.", "He will play football.", "He plays football.", "He will play football."],
+    ["What type of word is 'quickly'?", "Noun", "Verb", "Adjective", "Adverb", "Adverb"],
+    ["Choose the correct article: 'She ate ___ apple.'", "a", "an", "the", "no article", "an"],
+    ["Which sentence is punctuated correctly?", "Wow that was amazing!", "Wow, that was amazing!", "Wow that was, amazing!", "Wow, that was amazing", "Wow, that was amazing!"],
+    ["What is the comparative form of 'good'?", "Gooder", "More good", "Better", "Best", "Better"],
+    ["Choose the correct sentence.", "There going to the park.", "They're going to the park.", "Their going to the park.", "Theyre going to the park.", "They're going to the park."]
+  ],
+
+  "science": [
+    ["What planet is known as the Red Planet?", "Earth", "Mars", "Jupiter", "Venus", "Mars"],
+    ["What gas do humans need to breathe?", "Carbon dioxide", "Oxygen", "Hydrogen", "Nitrogen", "Oxygen"],
+    ["What is the basic unit of life?", "Atom", "Organ", "Cell", "Tissue", "Cell"],
+    ["Which organ pumps blood around the human body?", "Lungs", "Brain", "Heart", "Kidneys", "Heart"],
+    ["What force pulls objects toward Earth?", "Friction", "Magnetism", "Gravity", "Electricity", "Gravity"],
+    ["Which state of matter has a fixed shape and volume?", "Liquid", "Gas", "Plasma", "Solid", "Solid"],
+    ["What is H₂O commonly known as?", "Oxygen", "Hydrogen", "Water", "Salt", "Water"],
+    ["Which part of a plant absorbs water from the soil?", "Flower", "Leaf", "Stem", "Roots", "Roots"],
+    ["What is the center of an atom called?", "Electron", "Nucleus", "Proton", "Shell", "Nucleus"],
+    ["Which organ is mainly responsible for breathing?", "Heart", "Liver", "Lungs", "Stomach", "Lungs"],
+    ["What do plants use to make their own food?", "Photosynthesis", "Digestion", "Respiration", "Fermentation", "Photosynthesis"],
+    ["Which vitamin is commonly produced by the body when skin is exposed to sunlight?", "Vitamin A", "Vitamin B", "Vitamin C", "Vitamin D", "Vitamin D"],
+    ["What type of energy does a moving object have?", "Chemical energy", "Kinetic energy", "Light energy", "Sound energy", "Kinetic energy"],
+    ["Which of these is a renewable source of energy?", "Coal", "Oil", "Solar energy", "Natural gas", "Solar energy"],
+    ["What is the boiling point of water at sea level?", "50°C", "75°C", "100°C", "150°C", "100°C"]
+  ]
+}

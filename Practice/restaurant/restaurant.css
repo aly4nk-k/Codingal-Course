@@ -346,9 +346,6 @@ input {
   left: 50%;
   transform: translate(-50%, -50%); /*new concept*/
   display:none;
-  display:flex;
-  justify-content: center;
-  align-items: center;
   padding:10px 20px;
 }
 
