@@ -88,7 +88,7 @@ let QuizMath = document.getElementById("math");
 
 QuizMath.addEventListener("click",function(){
   currentQuiz = "math";
- document.getElementById("quiz-hding").innerHTML = "Math Quiz 🔢";
+ document.getElementById("quiz-hding").innerHTML = "Math Quiz 🔢"; 
  document.getElementById("hide").innerHTML =
    "Test Your Operating and Mental Math Skills";
 

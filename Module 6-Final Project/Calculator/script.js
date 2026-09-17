@@ -94,7 +94,7 @@ for (let i = 0; i < number.length; i++) {
 }
 
 async function FetchWeather() {
-  let city = "Greenland";
+  let city = "";
   const API_KEY = "b37c10b8775dd1365e04c25f9d9a6c5e";
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
 
