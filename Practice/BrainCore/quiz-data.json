@@ -19,7 +19,7 @@
 
   "english": [
     ["Which word is a noun?", "Quickly", "Happiness", "Beautiful", "Run", "Happiness"],
-    ["Choose the correct sentence.", "She don't like apples.", "She doesn't likes apples.", "She doesn't like apples.", "She not like apples.", "She doesn't like apples."],
+    ["Choose the correct sentence.", "She don't like apples.", "She does not likes apples.", "She doesn't like apples.", "She not like apples.", "She doesn't like apples."],
     ["What is the past tense of 'go'?", "Goed", "Gone", "Went", "Going", "Went"],
     ["Which word is an adjective?", "Carefully", "Bright", "Jump", "Happily", "Bright"],
     ["Choose the correct plural form of 'child'.", "Childs", "Childes", "Children", "Childrens", "Children"],
